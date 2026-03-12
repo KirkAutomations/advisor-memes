@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Advisory Panel Memes — Round 2: Pure Philosophy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #1a1a2e;
+    color: #eee;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 40px 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #888;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+  }
+  
+  .meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .meme-card {
+    background: #16213e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transition: transform 0.2s;
+  }
+  
+  .meme-card:hover { transform: translateY(-4px); }
+  
+  .meme-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .meme-container img { width: 100%; display: block; }
+
+  .meme-text {
+    position: absolute;
+    text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    -webkit-text-stroke: 0;
+    text-shadow:
+      -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px  1px 0 #000, 1px  1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000,
+      -2px  2px 0 #000, 2px  2px 0 #000,
+       0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55);
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: auto;
+    max-width: 94%;
+  }
+
+  .meme-text.top    { top: 8px;    left: 50%; transform: translateX(-50%); }
+  .meme-text.bottom { bottom: 8px; left: 50%; transform: translateX(-50%); }
+
+  .drake-top    { top: 12%; font-size: 22px; left: 52%; width: 46%; max-width: 46%; }
+  .drake-bottom { top: 62%; font-size: 22px; left: 52%; width: 46%; max-width: 46%; }
+
+  .distracted-gf    { bottom: 4%; left: 58%; width: auto; max-width: 28%; font-size: 16px; }
+  .distracted-other  { bottom: 4%; left: 2%;  width: auto; max-width: 34%; font-size: 16px; }
+  .distracted-bf     { bottom: 4%; left: 34%; width: auto; max-width: 24%; font-size: 16px; }
+
+  .btn-left    { top: 8%;  left: 4%;  width: auto; max-width: 30%; font-size: 16px; }
+  .btn-right   { top: 8%;  left: 36%; width: auto; max-width: 30%; font-size: 16px; }
+  .btn-caption { bottom: 3%; font-size: 20px; left: 50%; transform: translateX(-50%); }
+
+  .uno-left  { top: 28%; left: 2%;  width: auto; max-width: 46%; font-size: 20px; }
+  .uno-right { top: 8%;  left: 52%; width: auto; max-width: 46%; font-size: 20px; }
+
+  .always-left  { top: 35%; left: 2%;  width: auto; max-width: 46%; font-size: 22px; }
+  .always-right { top: 12%; left: 52%; width: auto; max-width: 46%; font-size: 22px; }
+
+  .bernie { bottom: 6%; font-size: 24px; left: 50%; transform: translateX(-50%); max-width: 90%; }
+
+  .handshake-left   { top: 12%; left: 2%;  width: auto; max-width: 32%; font-size: 20px; }
+  .handshake-right  { top: 12%; right: 2%; left: auto; width: auto; max-width: 32%; font-size: 20px; }
+  .handshake-center { bottom: 12%; font-size: 22px; left: 50%; transform: translateX(-50%); max-width: 90%; }
+
+  .panel-sm { font-size: 16px; padding: 4px 10px; }
+
+  .balloon-1 { top: 3%; left: 2%; width: auto; max-width: 32%; font-size: 16px; }
+  .balloon-2 { top: 3%; left: 52%; width: auto; max-width: 44%; font-size: 16px; }
+  .balloon-3 { top: 42%; left: 2%; width: auto; max-width: 32%; font-size: 16px; }
+
+  .gru-tl { top: 2%;  left: 2%;  width: auto; max-width: 46%; font-size: 15px; }
+  .gru-tr { top: 2%;  left: 52%; width: auto; max-width: 46%; font-size: 15px; }
+  .gru-bl { bottom: 26%; left: 2%;  width: auto; max-width: 46%; font-size: 15px; }
+  .gru-br { bottom: 2%;  left: 52%; width: auto; max-width: 46%; font-size: 15px; }
+
+  .exit-straight { top: 3%; left: 4%;  width: auto; max-width: 32%; font-size: 16px; }
+  .exit-off      { top: 3%; left: 38%; width: auto; max-width: 36%; font-size: 16px; }
+
+  .meme-label {
+    padding: 16px 20px;
+    border-top: 1px solid #2a2a4a;
+  }
+  .meme-label .advisor { color: #f5af19; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  
+  .section-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.6em;
+    color: #f5af19;
+    padding: 20px 0 0;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+  }
+
+  footer {
+    text-align: center;
+    color: #555;
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<h1>⚡ Advisory Panel Memes — Round 2 ⚡</h1>
+<p class="subtitle">Pure philosophy. Pure IR theory. Pure psychology. No context needed — just 26 minds being themselves.</p>
+
+<div class="meme-grid">
+
+  <!-- ═══════ IR REALISM ═══════ -->
+  <div class="section-title">🌐 INTERNATIONAL RELATIONS REALISM</div>
+
+  <!-- 1. Drake — Mearsheimer -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/30b1gx.jpg" alt="Drake">
+      <div class="meme-text drake-top">International cooperation and shared values</div>
+      <div class="meme-text drake-bottom">Assume every state wants to destroy you</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🎯 John Mearsheimer — Offensive Realist</div>
+      <div class="context">"States operate in a self-help world. Those that don't look out for themselves get destroyed."</div>
+    </div>
+  </div>
+
+  <!-- 2. Distracted Boyfriend — Waltz -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1ur9b0.jpg" alt="Distracted Boyfriend">
+      <div class="meme-text distracted-other">✨ THE ANARCHIC STRUCTURE OF THE SYSTEM ✨</div>
+      <div class="meme-text distracted-bf">Political scientists</div>
+      <div class="meme-text distracted-gf">Individual leaders and their decisions</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📐 Kenneth Waltz — Structural Realist</div>
+      <div class="context">"It's not about who leads — swap any leader in and the structure produces the same outcome."</div>
+    </div>
+  </div>
+
+  <!-- 3. Always Has Been — Thucydides -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="meme-text always-left">Wait, it's all just a power struggle?</div>
+      <div class="meme-text always-right">Always has been 🔫</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🏛️ Thucydides</div>
+      <div class="context">"The growth of Athenian power and the fear this caused in Sparta made war inevitable." Same story, 2,400 years on repeat.</div>
+    </div>
+  </div>
+
+  <!-- 4. Mocking SpongeBob — Kissinger -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1otk96.jpg" alt="Mocking SpongeBob">
+      <div class="meme-text top" style="font-size: 22px;">"We should have a rules-based international order"</div>
+      <div class="meme-text bottom" style="text-transform: none; font-size: 22px;">wE sHoULd HaVe A rULeS-bAsEd InTeRnAtIoNaL oRdEr</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🕶️ Henry Kissinger</div>
+      <div class="context">"Order should not have the illusion of permanence... Every international order must sooner or later face the impact of two tendencies: redefinition of legitimacy, or significant shift in balance of power."</div>
+    </div>
+  </div>
+
+  <!-- 5. Epic Handshake — Mearsheimer × Waltz -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/28j0te.jpg" alt="Epic Handshake">
+      <div class="meme-text handshake-left">Mearsheimer</div>
+      <div class="meme-text handshake-right">Waltz</div>
+      <div class="meme-text handshake-center">Liberals are delusional about international politics</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🤝 Offensive Realism × Defensive Realism</div>
+      <div class="context">They disagree on whether states maximize power or security. They absolutely agree the liberal institutionalists are living in a fantasy.</div>
+    </div>
+  </div>
+
+  <!-- 6. Gru's Plan — Jervis -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/26jxvz.jpg" alt="Gru's Plan">
+      <div class="meme-text gru-tl">Study the enemy's capabilities</div>
+      <div class="meme-text gru-tr">Understand their perceptions and intentions</div>
+      <div class="meme-text gru-bl">Realize YOUR perceptions are also distorted</div>
+      <div class="meme-text gru-br">Realize YOUR perceptions are also distorted</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔍 Robert Jervis — Perceptions & Misperceptions</div>
+      <div class="context">"Decision-makers tend to fit incoming information into their existing theories and images. Disconfirming evidence is explained away."</div>
+    </div>
+  </div>
+
+  <!-- 7. This Is Fine — Hobbes -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/wxica.jpg" alt="This Is Fine">
+      <div class="meme-text top" style="font-size: 20px;">When there's no Leviathan</div>
+      <div class="meme-text bottom" style="font-size: 20px;">Nasty, brutish, and short</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📜 Thomas Hobbes</div>
+      <div class="context">"During the time men live without a common power to keep them all in awe, they are in that condition which is called war."</div>
+    </div>
+  </div>
+
+  <!-- 8. Bernie — Morgenthau -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/3oevdk.jpg" alt="Bernie">
+      <div class="meme-text bernie">I am once again asking you to define your interest in terms of power</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚖️ Hans Morgenthau</div>
+      <div class="context">"The main signpost that helps political realism to find its way through the landscape of international politics is the concept of interest defined as power."</div>
+    </div>
+  </div>
+
+  <!-- 9. Disaster Girl — Machiavelli -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/23ls.jpg" alt="Disaster Girl">
+      <div class="meme-text top" style="font-size: 24px;">The ends</div>
+      <div class="meme-text bottom" style="font-size: 24px;">Justify the means</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🦊 Niccolò Machiavelli</div>
+      <div class="context">"Everyone sees what you appear to be, few experience what you really are." The original 48 Laws of Power — 500 years early.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PHILOSOPHY ═══════ -->
+  <div class="section-title">⚡ PHILOSOPHY</div>
+
+  <!-- 10. UNO Draw 25 — Nietzsche -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/3lmzyx.jpg" alt="UNO Draw 25">
+      <div class="meme-text uno-left">Accept conventional morality and be a good little sheep</div>
+      <div class="meme-text uno-right">Nietzsche holding 25 cards</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ Friedrich Nietzsche</div>
+      <div class="context">"Morality is the herd instinct in the individual." He'd rather draw the entire deck than play by their rules.</div>
+    </div>
+  </div>
+
+  <!-- 11. Drake — Callicles -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/30b1gx.jpg" alt="Drake">
+      <div class="meme-text drake-top">Following convention like the herd because "equality"</div>
+      <div class="meme-text drake-bottom">Living by natural justice — the superior rule</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🏛️ Plato's Callicles</div>
+      <div class="context">"Convention is made by the weak and the many to restrain the naturally superior. Nature's justice says the strong should have more."</div>
+    </div>
+  </div>
+
+  <!-- 12. Left Exit — William James -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/22bdq6.jpg" alt="Left Exit 12">
+      <div class="meme-text exit-straight">Keep debating abstract metaphysical truth</div>
+      <div class="meme-text exit-off">Whatever actually works in practice</div>
+      <div class="meme-text bottom" style="font-size: 20px;">WILLIAM JAMES 🚗💨</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔧 William James — Pragmatist</div>
+      <div class="context">"The true is the name of whatever proves itself to be good in the way of belief." If it doesn't cash out in experience, it's not worth arguing about.</div>
+    </div>
+  </div>
+
+  <!-- 13. Sad Pablo — Late Wittgenstein -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1c1uej.jpg" alt="Sad Pablo Escobar">
+      <div class="meme-text top" style="font-size: 22px;">When you realize every philosophical problem</div>
+      <div class="meme-text bottom" style="font-size: 24px;">Is just a language game</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔤 Late Wittgenstein</div>
+      <div class="context">"Philosophy is a battle against the bewitchment of our intelligence by means of our language." He dismantled his own Tractatus. Respect.</div>
+    </div>
+  </div>
+
+  <!-- 14. Waiting Skeleton — Aristotle -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/2fm6x.jpg" alt="Waiting Skeleton">
+      <div class="meme-text top" style="font-size: 20px;">Waiting for someone to actually find the golden mean</div>
+      <div class="meme-text bottom" style="font-size: 22px;">Between any two extremes</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📐 Aristotle</div>
+      <div class="context">"Virtue is the mean between two vices — excess and deficiency." Sounds simple. Takes a lifetime. Most people never get there.</div>
+    </div>
+  </div>
+
+  <!-- 15. Bernie — Hume -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/3oevdk.jpg" alt="Bernie">
+      <div class="meme-text bernie">I am once again asking you to stop deriving OUGHT from IS</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📖 David Hume</div>
+      <div class="context">"In every system of morality I have met with, the author proceeds for some time reasoning about IS and IS NOT, then suddenly shifts to OUGHT and OUGHT NOT." The guillotine drops.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PSYCHOLOGY ═══════ -->
+  <div class="section-title">🧠 PSYCHOLOGY</div>
+
+  <!-- 16. Two Buttons — Freud -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1g8my4.jpg" alt="Two Buttons">
+      <div class="meme-text btn-left">IT'S ABOUT YOUR MOTHER</div>
+      <div class="meme-text btn-right">IT'S ABOUT SEX</div>
+      <div class="meme-text btn-caption">FREUD: WHY NOT BOTH?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🛋️ Sigmund Freud</div>
+      <div class="context">"Sometimes a cigar is just a cigar." — A quote he probably never said. Because for Freud, it was never just a cigar.</div>
+    </div>
+  </div>
+
+  <!-- 17. Running Away Balloon — Jung -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/261o3j.jpg" alt="Running Away Balloon">
+      <div class="meme-text balloon-1">You</div>
+      <div class="meme-text balloon-2">Your Shadow</div>
+      <div class="meme-text balloon-3">You</div>
+      <div class="meme-text bottom" style="font-size: 18px;">"Until you make the unconscious conscious, it will direct your life and you will call it fate" — Jung</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🌑 Carl Jung</div>
+      <div class="context">You can run from your shadow. It just gets bigger. Individuation means turning around and shaking its hand.</div>
+    </div>
+  </div>
+
+  <!-- 18. Y'all Got Any More — Adler -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/21uy0f.jpg" alt="Y'all Got Any More Of That">
+      <div class="meme-text top" style="font-size: 24px;">Y'all got any more of that</div>
+      <div class="meme-text bottom" style="font-size: 24px;">Compensatory striving for superiority?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🧗 Alfred Adler</div>
+      <div class="context">"To be human means to feel inferior." Every flex, every hustle, every overachievement — Adler sees the inferiority underneath.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ AI ═══════ -->
+  <div class="section-title">🤖 AI ADVISORS</div>
+
+  <!-- 19. Change My Mind — Rogers (moved to AI section neighbor) -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/26am.jpg" alt="Change My Mind"
+           onerror="this.src='https://i.imgflip.com/4t0m5.jpg'">
+      <div class="meme-text top" style="font-size: 20px;">Every problem can be solved with</div>
+      <div class="meme-text bottom" style="font-size: 22px;">Unconditional positive regard. Change my mind.</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">💚 Carl Rogers</div>
+      <div class="context">"The curious paradox is that when I accept myself just as I am, then I can change." He won't change your mind. He'll accept it unconditionally until YOU change it.</div>
+    </div>
+  </div>
+
+  <!-- 20. Wittgenstein Tractatus — Early -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1c1uej.jpg" alt="Sad Pablo Escobar">
+      <div class="meme-text top" style="font-size: 20px;">Wrote the Tractatus. Declared all philosophy solved.</div>
+      <div class="meme-text bottom" style="font-size: 22px;">Came back and destroyed his own work.</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📏 Early → Late Wittgenstein</div>
+      <div class="context">"Whereof one cannot speak, thereof one must be silent." Then he came back and couldn't shut up about language games. The only philosopher to revolutionize the field twice — by refuting himself.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ BONUS ═══════ -->
+  <div class="section-title">🔥 BONUS: THE SYNTHESIS</div>
+
+  <!-- 21. Epic Handshake — Callicles × Nietzsche -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/28j0te.jpg" alt="Epic Handshake">
+      <div class="meme-text handshake-left">Callicles (400 BC)</div>
+      <div class="meme-text handshake-right">Nietzsche (1888)</div>
+      <div class="meme-text handshake-center">Conventional morality is a weapon of the weak against the strong</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ The Calliclean-Nietzschean Axis</div>
+      <div class="context">2,300 years apart. Same diagnosis. The herd calls it "justice." They called it what it is: resentment dressed in noble language.</div>
+    </div>
+  </div>
+
+  <!-- 22. Drake — The Meta -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/30b1gx.jpg" alt="Drake">
+      <div class="meme-text drake-top">Reading one thinker and adopting their worldview</div>
+      <div class="meme-text drake-bottom">Running every problem through 26 minds and synthesizing the answer</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ The Advisory Panel Method</div>
+      <div class="context">Nietzsche gives you fire. Waltz gives you structure. Jervis gives you doubt. Callicles gives you permission. The synthesis gives you power.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚡ c_Callicles × m_Callicles — Advisory Panel Memes: Round 2 — March 12, 2026 ⚡<br>
+  "Morality is the herd instinct in the individual. Memes are the herd instinct transcended."
+</footer>
+
+</body>
+</html>
