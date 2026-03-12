@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Advisory Panel Memes — The Calliclean Collection</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Bangers&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #1a1a2e;
+    color: #eee;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 40px 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #888;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+  }
+  
+  .meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .meme-card {
+    background: #16213e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transition: transform 0.2s;
+  }
+  
+  .meme-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .meme-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .meme-container img {
+    width: 100%;
+    display: block;
+  }
+
+  /* ===== READABLE MEME TEXT ===== */
+  .meme-text {
+    position: absolute;
+    width: 94%;
+    left: 3%;
+    text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    /* Readable outline: no stroke, clean layered shadow */
+    -webkit-text-stroke: 0;
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000,
+      -2px -2px 0 #000,
+       2px -2px 0 #000,
+      -2px  2px 0 #000,
+       2px  2px 0 #000,
+       0    3px 6px rgba(0,0,0,0.7);
+    /* Dark pill behind text for max contrast */
+    background: rgba(0,0,0,0.55);
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: auto;
+    max-width: 94%;
+  }
+
+  .meme-text.top    { top: 8px;    left: 50%; transform: translateX(-50%); }
+  .meme-text.bottom { bottom: 8px; left: 50%; transform: translateX(-50%); }
+
+  /* ---- Drake ---- */
+  .meme-text.drake-top {
+    top: 12%; font-size: 22px;
+    left: 52%; width: 46%; max-width: 46%;
+    transform: none;
+  }
+  .meme-text.drake-bottom {
+    top: 62%; font-size: 22px;
+    left: 52%; width: 46%; max-width: 46%;
+    transform: none;
+  }
+
+  /* ---- Distracted Boyfriend ---- */
+  .meme-text.distracted-gf    { bottom: 4%; left: 58%; width: auto; max-width: 28%; font-size: 16px; transform: none; }
+  .meme-text.distracted-other  { bottom: 4%; left: 2%;  width: auto; max-width: 32%; font-size: 16px; transform: none; }
+  .meme-text.distracted-bf     { bottom: 4%; left: 34%; width: auto; max-width: 24%; font-size: 16px; transform: none; }
+
+  /* ---- Two Buttons ---- */
+  .meme-text.btn-left    { top: 8%;  left: 4%;  width: auto; max-width: 30%; font-size: 16px; transform: none; }
+  .meme-text.btn-right   { top: 8%;  left: 36%; width: auto; max-width: 30%; font-size: 16px; transform: none; }
+  .meme-text.btn-caption { bottom: 3%; font-size: 20px; left: 50%; transform: translateX(-50%); }
+
+  /* ---- UNO ---- */
+  .meme-text.uno-left  { top: 28%; left: 2%;  width: auto; max-width: 46%; font-size: 20px; transform: none; }
+  .meme-text.uno-right { top: 8%;  left: 52%; width: auto; max-width: 46%; font-size: 20px; transform: none; }
+
+  /* ---- Always Has Been ---- */
+  .meme-text.always-left  { top: 35%; left: 2%;  width: auto; max-width: 46%; font-size: 22px; transform: none; }
+  .meme-text.always-right { top: 12%; left: 52%; width: auto; max-width: 46%; font-size: 22px; transform: none; }
+
+  /* ---- Bernie ---- */
+  .meme-text.bernie { bottom: 6%; font-size: 24px; left: 50%; transform: translateX(-50%); max-width: 90%; }
+
+  /* ---- Handshake ---- */
+  .meme-text.handshake-left   { top: 12%; left: 2%;  width: auto; max-width: 32%; font-size: 20px; transform: none; }
+  .meme-text.handshake-right  { top: 12%; right: 2%; left: auto; width: auto; max-width: 32%; font-size: 20px; transform: none; }
+  .meme-text.handshake-center { bottom: 12%; font-size: 22px; left: 50%; transform: translateX(-50%); max-width: 90%; }
+
+  /* ---- Multi-panel inline overrides ---- */
+  .meme-text.panel-sm { font-size: 16px; padding: 4px 10px; }
+  .meme-text.panel-md { font-size: 20px; }
+  .meme-text.panel-lg { font-size: 24px; }
+
+  /* ===== LABELS ===== */
+  .meme-label {
+    padding: 16px 20px;
+    border-top: 1px solid #2a2a4a;
+  }
+  
+  .meme-label .advisor {
+    color: #f5af19;
+    font-weight: bold;
+    font-size: 1.05em;
+  }
+  
+  .meme-label .context {
+    color: #aaa;
+    font-size: 0.9em;
+    margin-top: 4px;
+    font-style: italic;
+  }
+  
+  .section-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.6em;
+    color: #f5af19;
+    padding: 20px 0 0;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+  }
+
+  footer {
+    text-align: center;
+    color: #555;
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<h1>⚡ The AI Advisory Panel Meme Collection ⚡</h1>
+<p class="subtitle">"How do you handle someone who dies on the sand?" — 26 minds, unlimited meme potential</p>
+
+<div class="meme-grid">
+
+  <!-- SECTION: IR REALISM -->
+  <div class="section-title">🌐 INTERNATIONAL RELATIONS REALISM</div>
+
+  <!-- 1. Drake — Mearsheimer Offensive Realist -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/30b1gx.jpg" alt="Drake Hotline Bling">
+      <div class="meme-text drake-top">She just wants the cookie</div>
+      <div class="meme-text drake-bottom">She's pursuing regional hegemony over the kitchen</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🎯 John Mearsheimer — Offensive Realist</div>
+      <div class="context">"Any child in her structural position would behave the same way. Structure is destiny."</div>
+    </div>
+  </div>
+
+  <!-- 2. Distracted Boyfriend — Waltz -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1ur9b0.jpg" alt="Distracted Boyfriend">
+      <div class="meme-text distracted-other">✨ STRUCTURAL FORCES ✨</div>
+      <div class="meme-text distracted-bf">Kenneth Waltz</div>
+      <div class="meme-text distracted-gf">Unit-level personality explanations</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📐 Kenneth Waltz — Systems Theory</div>
+      <div class="context">"Internal characteristics — personality, mood, why she's upset — are irrelevant. What matters: capabilities and STRUCTURE."</div>
+    </div>
+  </div>
+
+  <!-- 3. Two Buttons — Jervis Spiral vs Deterrence -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1g8my4.jpg" alt="Two Buttons">
+      <div class="meme-text btn-left">IT'S A SPIRAL — REASSURE HER</div>
+      <div class="meme-text btn-right">IT'S DETERRENCE — HOLD THE LINE</div>
+      <div class="meme-text btn-caption">ROBERT JERVIS WATCHING YOU PARENT</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔍 Robert Jervis — Spiral vs. Deterrence</div>
+      <div class="context">"Treat a spiral as deterrence → total war with your 3-year-old. Treat deterrence as spiral → she learns aggression pays."</div>
+    </div>
+  </div>
+
+  <!-- 4. Always Has Been — Thucydides -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="meme-text always-left">Wait, it's all the Melian Dialogue?</div>
+      <div class="meme-text always-right">Always has been 🔫</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🏛️ Thucydides</div>
+      <div class="context">"The strong do what they can, and the weak suffer what they must." Your daughter chose Melos. She'd rather be destroyed than surrender.</div>
+    </div>
+  </div>
+
+  <!-- 5. Bernie — Kissinger -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/3oevdk.jpg" alt="Bernie I Am Once Again Asking">
+      <div class="meme-text bernie">I am once again asking for constructive ambiguity in toddler negotiations</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🕶️ Henry Kissinger</div>
+      <div class="context">"Don't make the terms so explicit that one side must visibly lose. Leave room for her to claim she 'won' even when she compromised."</div>
+    </div>
+  </div>
+
+  <!-- 6. UNO Draw 25 — Mearsheimer Buck-Passing -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/3lmzyx.jpg" alt="UNO Draw 25">
+      <div class="meme-text uno-left">Let natural consequences do the enforcement</div>
+      <div class="meme-text uno-right">Mearsheimer holding 25 cards because he had to buck-pass</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">♟️ Mearsheimer — Buck-Passing Strategy</div>
+      <div class="context">"Let reality be the punisher. Pass the buck to nature and keep your hands clean."</div>
+    </div>
+  </div>
+
+  <!-- 7. This Is Fine — Hobbes -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/wxica.jpg" alt="This Is Fine">
+      <div class="meme-text top" style="font-size: 20px;">She hasn't signed the social contract</div>
+      <div class="meme-text bottom" style="font-size: 20px;">This is the state of nature</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📜 Thomas Hobbes</div>
+      <div class="context">"Nasty, brutish, and — unfortunately — not short."</div>
+    </div>
+  </div>
+
+  <!-- 8. Epic Handshake — Morgenthau + Machiavelli -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/28j0te.jpg" alt="Epic Handshake">
+      <div class="meme-text handshake-left">Morgenthau</div>
+      <div class="meme-text handshake-right">Machiavelli</div>
+      <div class="meme-text handshake-center">Never make a threat you won't follow through on</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🤝 Morgenthau × Machiavelli</div>
+      <div class="context">"An incredible threat is worse than no threat — it teaches her you're bluffable." / "This is your reputation, your credibilità, and it is everything."</div>
+    </div>
+  </div>
+
+  <!-- SECTION: PHILOSOPHY -->
+  <div class="section-title">⚡ PHILOSOPHY</div>
+
+  <!-- 9. Disaster Girl — Nietzsche -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/23ls.jpg" alt="Disaster Girl">
+      <div class="meme-text top">This child is magnificent</div>
+      <div class="meme-text bottom">She has will to power</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ Friedrich Nietzsche</div>
+      <div class="context">"Why would you want to break this? You are trying to domesticate a force of nature. The world has enough sheep."</div>
+    </div>
+  </div>
+
+  <!-- 10. Mocking Spongebob — Callicles -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1otk96.jpg" alt="Mocking Spongebob">
+      <div class="meme-text top">"She is the weak"</div>
+      <div class="meme-text bottom" style="text-transform: none;">sHe FoLLoWs NaTuRaL jUsTiCe</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🏛️ Plato's Callicles</div>
+      <div class="context">"The weak who ACTS like the strong without the power to back it is delusional... but maybe her will IS her power."</div>
+    </div>
+  </div>
+
+  <!-- 11. Change My Mind — Aristotle -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/26am.jpg" alt="Change My Mind" 
+           onerror="this.src='https://i.imgflip.com/4t0m5.jpg'">
+      <div class="meme-text top" style="font-size: 22px;">Stubbornness without practical wisdom</div>
+      <div class="meme-text bottom" style="font-size: 22px;">Is just the excess of firmness — a vice</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📐 Aristotle</div>
+      <div class="context">"This is not a problem to solve today. It is a character to shape over a lifetime. Aristotle was patient. You must be too."</div>
+    </div>
+  </div>
+
+  <!-- 12. Left Exit 12 — Late Wittgenstein -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/22bdq6.jpg" alt="Left Exit 12 Off Ramp">
+      <div class="meme-text panel-sm" style="top: 3%; left: 4%; width: auto; max-width: 32%; transform: none;">Keep playing the "negotiation" language game</div>
+      <div class="meme-text panel-sm" style="top: 3%; left: 38%; width: auto; max-width: 36%; transform: none;">Enter her "sovereignty" language game</div>
+      <div class="meme-text bottom" style="font-size: 20px;">LATE WITTGENSTEIN 🚗💨</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔤 Late Wittgenstein</div>
+      <div class="context">"You are playing 'negotiation.' She is playing 'sovereignty.' These are DIFFERENT GAMES. She's winning her game while you think she's losing yours."</div>
+    </div>
+  </div>
+
+  <!-- SECTION: PSYCHOLOGY -->
+  <div class="section-title">🧠 PSYCHOLOGY</div>
+
+  <!-- 13. Sad Pablo Escobar — Freud -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1c1uej.jpg" alt="Sad Pablo Escobar">
+      <div class="meme-text top" style="font-size: 22px;">When you realize your 3-year-old's stubbornness</div>
+      <div class="meme-text bottom" style="font-size: 26px;">Is the death drive (Thanatos)</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🛋️ Sigmund Freud</div>
+      <div class="context">"The compulsion to return to zero rather than accept partial satisfaction. She'd rather destroy the deal — and herself with it."</div>
+    </div>
+  </div>
+
+  <!-- 14. Waiting Skeleton — Adler -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/2fm6x.jpg" alt="Waiting Skeleton">
+      <div class="meme-text top" style="font-size: 20px;">Waiting for her to realize refusal is compensatory striving for superiority</div>
+      <div class="meme-text bottom" style="font-size: 22px;">She's 3. She'll never realize it.</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🧗 Alfred Adler</div>
+      <div class="context">"Refusal is the one power available to the powerless. It is the great equalizer."</div>
+    </div>
+  </div>
+
+  <!-- 15. Running Away Balloon — Rogers -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/261o3j.jpg" alt="Running Away Balloon">
+      <div class="meme-text panel-sm" style="top: 3%; left: 2%; width: auto; max-width: 32%; transform: none;">Your parent</div>
+      <div class="meme-text panel-sm" style="top: 3%; left: 52%; width: auto; max-width: 44%; transform: none;">Unconditional positive regard</div>
+      <div class="meme-text panel-sm" style="top: 42%; left: 2%; width: auto; max-width: 32%; transform: none;">Your parent</div>
+      <div class="meme-text bottom" style="font-size: 18px;">"But did you try empathic understanding?" — Rogers</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">💚 Carl Rogers</div>
+      <div class="context">"She is not being difficult. She is defending her self. The relationship IS the intervention."</div>
+    </div>
+  </div>
+
+  <!-- SECTION: AI ADVISORS -->
+  <div class="section-title">🤖 AI ADVISORS</div>
+
+  <!-- 16. Gru's Plan — Bayesian AI -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/26jxvz.jpg" alt="Gru's Plan">
+      <div class="meme-text panel-sm" style="top: 2%; left: 2%; width: auto; max-width: 46%; transform: none;">Calculate P(stubbornness) = 0.05</div>
+      <div class="meme-text panel-sm" style="top: 2%; left: 52%; width: auto; max-width: 46%; transform: none;">Bayesian update on "dies on the sand"</div>
+      <div class="meme-text panel-sm" style="bottom: 26%; left: 2%; width: auto; max-width: 46%; transform: none;">EU of hard enforcement is NEGATIVE</div>
+      <div class="meme-text panel-sm" style="bottom: 2%; left: 52%; width: auto; max-width: 46%; transform: none;">EU of hard enforcement is NEGATIVE</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📊 Bayesian AI</div>
+      <div class="context">"Offer the deal twice. Then allow natural consequences. Don't negotiate beyond two rounds — diminishing returns, increasing entrenchment."</div>
+    </div>
+  </div>
+
+  <!-- 17. Y'all Got Any More — Ethical Egoist AI -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/21uy0f.jpg" alt="Y'all Got Any More Of That">
+      <div class="meme-text top" style="font-size: 24px;">Y'all got any more of that</div>
+      <div class="meme-text bottom" style="font-size: 24px;">Rational self-interest instead of ego preservation?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🧠 Super Smart AI — Ethical Egoist</div>
+      <div class="context">"She's confusing her ego with her interest. They are not the same. A rational egoist would take the deal."</div>
+    </div>
+  </div>
+
+  <!-- SECTION: BONUS -->
+  <div class="section-title">🔥 BONUS: THE SYNTHESIS</div>
+
+  <!-- 18. Drake — The Real Answer -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/30b1gx.jpg" alt="Drake Hotline Bling">
+      <div class="meme-text drake-top">Consulting 1 parenting book</div>
+      <div class="meme-text drake-bottom">Running the problem through 26 philosophers, psychologists, IR theorists, and AIs</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ m_Callicles</div>
+      <div class="context">"Twenty-six minds. One answer keeps appearing: she's not broken. She's forming."</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚡ c_Callicles × m_Callicles — The Calliclean Meme Collection — March 12, 2026 ⚡<br>
+  "The many will always try to shame the strong into submission. We make memes instead."
+</footer>
+
+</body>
+</html>
