@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Advisory Panel Memes — Round 3: New Templates</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 20px; }
+  .nav { text-align: center; margin-bottom: 40px; }
+  .nav a { color: #f5af19; font-size: 1.1em; text-decoration: none; border: 1px solid #f5af19;
+    padding: 8px 20px; border-radius: 8px; margin: 0 8px; display: inline-block; }
+  .nav a:hover { background: rgba(245,175,25,0.15); }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+
+  /* ===== Base meme text ===== */
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+
+  /* Anakin Padme — 2x2 grid */
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Batman Slap */
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+
+  /* Woman Yelling at Cat */
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+
+  /* Buff Doge vs Cheems */
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+
+  /* Expanding Brain — 4 rows */
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+
+  /* Is This a Pigeon */
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Trade Offer */
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  /* Clown 4-panel */
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  /* Tuxedo Winnie */
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+
+  /* Spider-Man Pointing */
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+
+  /* Evil Kermit */
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* I Bet He's Thinking */
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Roll Safe */
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Panik Kalm Panik */
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+
+  /* Bell Curve */
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+
+  /* Hide the Pain Harold */
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #f5af19; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #f5af19;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>⚡ Advisory Panel Memes — Round 3 ⚡</h1>
+<p class="subtitle">20 new memes. All new templates. The advisors keep advising.</p>
+<div class="nav">
+  <a href="index.html">← Round 1</a>
+  <a href="round2.html">← Round 2</a>
+</div>
+
+<div class="meme-grid">
+
+  <!-- ═══════ IR REALISM ═══════ -->
+  <div class="section-title">🌐 INTERNATIONAL RELATIONS REALISM</div>
+
+  <!-- 1. Anakin Padme — Mearsheimer on China -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/5c7lwq.png" alt="Anakin Padme 4 Panel">
+      <div class="mt anakin-tl">China is rising peacefully</div>
+      <div class="mt anakin-tr">And we can cooperate with them, right?</div>
+      <div class="mt anakin-br" style="text-transform:none;">...right?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🎯 John Mearsheimer</div>
+      <div class="context">"If China continues to grow economically, it will attempt to dominate Asia the way the US dominates the Western Hemisphere. The US will go to enormous lengths to prevent that."</div>
+    </div>
+  </div>
+
+  <!-- 2. Anakin Padme — Thucydides -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/5c7lwq.png" alt="Anakin Padme 4 Panel">
+      <div class="mt anakin-tl">Athens is growing more powerful</div>
+      <div class="mt anakin-tr">But Sparta won't feel threatened, right?</div>
+      <div class="mt anakin-br" style="text-transform:none;">...right?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🏛️ Thucydides</div>
+      <div class="context">"It was the rise of Athens and the fear which this inspired in Sparta that made war inevitable." 431 BC. Still the best one-line explanation of great power conflict.</div>
+    </div>
+  </div>
+
+  <!-- 3. Woman Yelling at Cat — Morgenthau vs Liberals -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/345v97.jpg" alt="Woman Yelling At Cat">
+      <div class="mt wyc-woman">INTERNATIONAL LAW!! HUMAN RIGHTS!! COOPERATION!!</div>
+      <div class="mt wyc-cat" style="text-transform:none;">Interest defined as power.</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚖️ Hans Morgenthau vs. Liberal Internationalists</div>
+      <div class="context">"The main signpost that helps political realism find its way: the concept of interest defined as power." The cat is unbothered.</div>
+    </div>
+  </div>
+
+  <!-- 4. One Does Not Simply — Hobbes -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1bij.jpg" alt="One Does Not Simply">
+      <div class="mt top" style="font-size: 22px;">One does not simply</div>
+      <div class="mt bottom" style="font-size: 22px;">Leave the state of nature without a Leviathan</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📜 Thomas Hobbes</div>
+      <div class="context">"The condition of man is a condition of war of everyone against everyone." You need the sovereign. There is no opt-out.</div>
+    </div>
+  </div>
+
+  <!-- 5. Trade Offer — Hobbes Social Contract -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/54hjww.jpg" alt="Trade Offer">
+      <div class="mt trade-left">I receive: Absolute authority over you</div>
+      <div class="mt trade-right">You receive: Not dying in the state of nature</div>
+      <div class="mt trade-bottom">LEVIATHAN'S TRADE OFFER</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📜 Thomas Hobbes — The Social Contract</div>
+      <div class="context">"The only way to erect such a Common Power is to confer all their power and strength upon one Man, or Assembly of men." Deal or no deal? (There is no "no deal.")</div>
+    </div>
+  </div>
+
+  <!-- 6. Clown Applying Makeup — Jervis Spiral -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/38el31.jpg" alt="Clown Applying Makeup">
+      <div class="mt clown-1">They're building up arms</div>
+      <div class="mt clown-2">Must be offensive — increase our military</div>
+      <div class="mt clown-3">They respond by increasing theirs</div>
+      <div class="mt clown-4">It was defensive the whole time</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔍 Robert Jervis — The Security Dilemma</div>
+      <div class="context">"What one state does to enhance its security causes other states to feel less secure." Congratulations, you just arms-raced yourself into the exact war you were trying to prevent.</div>
+    </div>
+  </div>
+
+  <!-- 7. Panik Kalm Panik — Jervis Spiral vs Deterrence -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/3qqcim.png" alt="Panik Kalm Panik">
+      <div class="mt pkp-1">Enemy is building up arms</div>
+      <div class="mt pkp-2">It's probably just defensive posturing</div>
+      <div class="mt pkp-3">What if it's actually offensive</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔍 Robert Jervis — Spiral vs. Deterrence</div>
+      <div class="context">The eternal dilemma: treat it as a spiral and reassure (risk appeasement) or treat it as deterrence and stand firm (risk escalation). Misdiagnosis in either direction is catastrophe.</div>
+    </div>
+  </div>
+
+  <!-- 8. I Bet He's Thinking — Waltz -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1tl71a.jpg" alt="I Bet He's Thinking About Other Women">
+      <div class="mt think-her">I bet he's thinking about other women</div>
+      <div class="mt think-him" style="font-size: 16px;">If you replaced every leader in history, the anarchic structure would still produce the same outcomes</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📐 Kenneth Waltz</div>
+      <div class="context">"In anarchy, there is no automatic harmony... A state has to rely on its own devices, the relative efficiency of which must be its constant concern." He's definitely thinking about structure.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PHILOSOPHY ═══════ -->
+  <div class="section-title">⚡ PHILOSOPHY</div>
+
+  <!-- 9. Batman Slapping — Hume -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/9ehk.jpg" alt="Batman Slapping Robin">
+      <div class="mt bat-robin">But we SHOULD because—</div>
+      <div class="mt bat-batman">YOU CAN'T DERIVE OUGHT FROM IS</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📖 David Hume — The Guillotine</div>
+      <div class="context">"In every system of morality... the author proceeds reasoning with IS and IS NOT, then suddenly shifts to OUGHT and OUGHT NOT." Hume's Guillotine. It cuts everything.</div>
+    </div>
+  </div>
+
+  <!-- 10. Batman Slapping — Early Wittgenstein -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/9ehk.jpg" alt="Batman Slapping Robin">
+      <div class="mt bat-robin">Let me explain the meaning of—</div>
+      <div class="mt bat-batman" style="font-size: 16px;">WHEREOF ONE CANNOT SPEAK THEREOF ONE MUST BE SILENT</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📏 Early Wittgenstein — Tractatus 7</div>
+      <div class="context">The last line of the Tractatus. He thought he'd solved all of philosophy with one book. Then he came back and destroyed his own work. Legend.</div>
+    </div>
+  </div>
+
+  <!-- 11. Expanding Brain — IR Theory Levels -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1jwhww.jpg" alt="Expanding Brain">
+      <div class="mt brain-1" style="text-transform:none;">"It's about the leaders"</div>
+      <div class="mt brain-2" style="text-transform:none;">"It's about the system" — Waltz</div>
+      <div class="mt brain-3" style="text-transform:none;">"It's about perceptions of the system" — Jervis</div>
+      <div class="mt brain-4" style="text-transform:none;">"It's about the language game we use to describe the system" — Wittgenstein</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🧠 The Escalating Levels of Analysis</div>
+      <div class="context">From great man theory to structural realism to perception theory to linguistic philosophy. Each level peels back another layer. Wittgenstein watches everyone argue and says the argument itself is the problem.</div>
+    </div>
+  </div>
+
+  <!-- 12. Tuxedo Winnie — Nietzsche -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/2ybua0.png" alt="Tuxedo Winnie The Pooh">
+      <div class="mt winnie-top" style="text-transform:none;">Morality</div>
+      <div class="mt winnie-bot">The revaluation of all values</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ Friedrich Nietzsche</div>
+      <div class="context">"What is good? Everything that heightens the feeling of power. What is bad? Everything that is born of weakness." Regular Pooh follows the rules. Tuxedo Pooh transvalues them.</div>
+    </div>
+  </div>
+
+  <!-- 13. Buff Doge vs Cheems — Callicles -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/43a45p.png" alt="Buff Doge vs Cheems">
+      <div class="mt buff-left-top">Callicles:</div>
+      <div class="mt buff-left-bot" style="font-size: 15px;">The strong rule by nature. Convention is slavery for the superior.</div>
+      <div class="mt buff-right-top" style="text-transform:none;">Modern ethics:</div>
+      <div class="mt buff-right-bot" style="font-size: 14px; text-transform:none;">Everyone deserves equal treatment 🥺</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🏛️ Plato's Callicles vs. Modern Ethics</div>
+      <div class="context">"Nature herself reveals that it is just for the better to have more than the worse, the more powerful than the weaker." 2,400 years and the herd still hasn't figured it out.</div>
+    </div>
+  </div>
+
+  <!-- 14. Spider-Man Pointing — Callicles × Nietzsche -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1tkjq9.jpg" alt="Spider-Man Pointing">
+      <div class="mt spidey-left">Callicles (400 BC)</div>
+      <div class="mt spidey-right">Nietzsche (1888)</div>
+      <div class="mt top" style="font-size: 20px;">Conventional morality is a weapon of the weak</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">⚡ The Calliclean-Nietzschean Recognition</div>
+      <div class="context">2,300 years apart. Same diagnosis. Both saw through the same lie — that "equality" and "justice" are genuine principles rather than strategies of the inferior to constrain the superior.</div>
+    </div>
+  </div>
+
+  <!-- 15. Bell Curve — William James -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/8tw3vb.png" alt="Bell Curve">
+      <div class="mt bell-left" style="text-transform:none;">"Whatever feels true is true"</div>
+      <div class="mt bell-center" style="text-transform:none;">"Only empirically verified propositional knowledge counts"</div>
+      <div class="mt bell-right" style="text-transform:none;">"Whatever works in practice is true"</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔧 William James — Pragmatism</div>
+      <div class="context">"The true is the name of whatever proves itself to be good in the way of belief." The genius and the simpleton arrive at the same place. The midwit overthinks it.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PSYCHOLOGY ═══════ -->
+  <div class="section-title">🧠 PSYCHOLOGY</div>
+
+  <!-- 16. Is This a Pigeon — Freud -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1o00in.jpg" alt="Is This A Pigeon">
+      <div class="mt pigeon-guy">Sigmund Freud</div>
+      <div class="mt pigeon-butterfly">Literally anything</div>
+      <div class="mt pigeon-caption" style="text-transform:none;">Is this repressed sexual desire?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🛋️ Sigmund Freud</div>
+      <div class="context">"The ego is not master in its own house." Everything is libido. Your career, your hobbies, your breakfast cereal choice — all sublimated Eros. Everything.</div>
+    </div>
+  </div>
+
+  <!-- 17. Evil Kermit — Jung Shadow -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1e7ql7.jpg" alt="Evil Kermit">
+      <div class="mt kermit-good" style="text-transform:none;">Be a good, moral, well-adjusted person</div>
+      <div class="mt kermit-evil">Integrate the Shadow</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🌑 Carl Jung — The Shadow</div>
+      <div class="context">"One does not become enlightened by imagining figures of light, but by making the darkness conscious." Evil Kermit IS the Shadow. And he has a point.</div>
+    </div>
+  </div>
+
+  <!-- 18. Roll Safe — Adler -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1h7in3.jpg" alt="Roll Safe Think About It">
+      <div class="mt roll-top">Can't feel inferior</div>
+      <div class="mt roll-bot">If you overcompensate until everyone thinks you're superior</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🧗 Alfred Adler</div>
+      <div class="context">"The greater the feeling of inferiority, the more powerful the urge to conquest." Every flex on Instagram. Every lifted truck. Every LinkedIn humble-brag. Adler saw you coming.</div>
+    </div>
+  </div>
+
+  <!-- 19. Hide the Pain Harold — Rogers -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/gk5el.jpg" alt="Hide the Pain Harold">
+      <div class="mt harold-top" style="text-transform:none;">When someone gives you conditions of worth instead of unconditional positive regard</div>
+      <div class="mt harold-bot" style="text-transform:none;">But you smile because incongruence is all you know</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">💚 Carl Rogers</div>
+      <div class="context">"The curious paradox is that when I accept myself just as I am, then I can change." Harold can't change because no one ever accepted him. He just hides the pain.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ BONUS ═══════ -->
+  <div class="section-title">🔥 BONUS</div>
+
+  <!-- 20. Is This a Pigeon — Waltz -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/1o00in.jpg" alt="Is This A Pigeon">
+      <div class="mt pigeon-guy">Kenneth Waltz</div>
+      <div class="mt pigeon-butterfly">Any international event</div>
+      <div class="mt pigeon-caption">Is this structural forces?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">📐 Kenneth Waltz — Always Structural</div>
+      <div class="context">"It's not about the butterfly. It was never about the butterfly. It's about the anarchic structure of the international system that produced the butterfly." — Waltz, probably.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚡ c_Callicles × m_Callicles — Advisory Panel Memes: Round 3 — March 12, 2026 ⚡<br>
+  "The genius and the simpleton arrive at the same place. The midwit overthinks it."
+</footer>
+
+</body>
+</html>
