@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discipline & Punish — The Foucault Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 8px; }
+  .epigraph { text-align: center; color: #666; font-size: 0.95em; font-style: italic; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .nav { text-align: center; margin-bottom: 40px; }
+  .nav a { color: #f5af19; font-size: 1.1em; text-decoration: none; border: 1px solid #f5af19;
+    padding: 8px 20px; border-radius: 8px; margin: 0 8px; display: inline-block; }
+  .nav a:hover { background: rgba(245,175,25,0.15); }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+
+  /* ===== Base meme text ===== */
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+
+  /* Drake */
+  .mt.drake-top    { top: 12%; font-size: 22px; left: 52%; max-width: 46%; }
+  .mt.drake-bottom { top: 62%; font-size: 22px; left: 52%; max-width: 46%; }
+
+  /* Distracted Boyfriend */
+  .mt.distracted-gf    { bottom: 4%; left: 58%; max-width: 28%; font-size: 16px; }
+  .mt.distracted-other { bottom: 4%; left: 2%;  max-width: 34%; font-size: 16px; }
+  .mt.distracted-bf    { bottom: 4%; left: 34%; max-width: 24%; font-size: 16px; }
+
+  /* Expanding Brain — 4 rows */
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+
+  /* Buff Doge vs Cheems */
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+
+  /* Tuxedo Winnie */
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+
+  /* Clown 4-panel */
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  /* Trade Offer */
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  /* Evil Kermit */
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* One Does Not Simply */
+  /* uses .top / .bottom */
+
+  /* Gru's Plan — 4 panels (2x2 like clown but different layout) */
+  .mt.gru-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  /* Is This a Pigeon */
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Spider-Man Pointing */
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+
+  /* Batman Slap */
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+
+  /* Panik Kalm Panik */
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+
+  /* Bell Curve */
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+
+  /* Woman Yelling at Cat */
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+
+  /* Roll Safe */
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Anakin Padme — 2x2 grid */
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Hide the Pain Harold */
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* I Bet He's Thinking */
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* This Is Fine */
+  /* uses .top / .bottom */
+
+  /* Change My Mind */
+  .mt.cmm { bottom: 18%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 85%; }
+
+  /* Sad Pablo */
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Two Buttons */
+  .mt.btn-left  { top: 8%;  left: 2%;  max-width: 40%; font-size: 16px; }
+  .mt.btn-right { top: 8%;  left: 42%; max-width: 40%; font-size: 16px; }
+  .mt.btn-guy   { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 18px; max-width: 90%; }
+
+  /* Waiting Skeleton */
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  /* Mocking SpongeBob */
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #f5af19; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #f5af19;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  .section-title:first-of-type { border-top: none; margin-top: 0; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>🔒 Discipline &amp; Punish — The Foucault Page 🔒</h1>
+<p class="subtitle">20 memes. One book. The panopticon sees all.</p>
+<p class="epigraph">"The soul is the prison of the body." — Michel Foucault, <em>Discipline and Punish</em> (1975)</p>
+<div class="nav">
+  <a href="index.html">Round 1</a>
+  <a href="round2.html">Round 2</a>
+  <a href="round3.html">Round 3</a>
+  <a href="round4.html">Round 4</a>
+</div>
+
+<div class="meme-grid">
+
+  <!-- ═══════ PART I: THE SPECTACLE ═══════ -->
+  <div class="section-title">⚔️ PART I — THE SPECTACLE OF PUNISHMENT</div>
+
+  <!-- 1. Drake — Public execution vs. timetabled prison -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/30b1gx.jpg" alt="Drake Hotline Bling">
+      <div class="mt drake-top" style="text-transform:none; font-size: 19px;">Drawing and quartering a man in the public square while the crowd watches</div>
+      <div class="mt drake-bottom" style="text-transform:none; font-size: 19px;">Quietly reforming his soul on a strict timetable behind closed walls</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Great Transformation</div>
+      <div class="context">"At the beginning of the nineteenth century, the great spectacle of physical punishment disappeared; the tortured body was avoided; the theatrical representation of pain was excluded from punishment." The sovereign stopped making a show of destroying the body. Instead, power slipped behind walls and started working on the soul. Less dramatic. Infinitely more effective.</div>
+    </div>
+  </div>
+
+  <!-- 2. Distracted Boyfriend — The "humanitarian" turn -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend">
+      <div class="mt distracted-other" style="text-transform:none; font-size: 15px;">"Humane" reform</div>
+      <div class="mt distracted-bf" style="font-size: 14px; text-transform:none;">18th c. reformers</div>
+      <div class="mt distracted-gf" style="font-size: 14px; text-transform:none;">Public torture</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Gentle Way in Punishment</div>
+      <div class="context">"The reform of criminal law must be read as a strategy for the rearrangement of the power to punish... rather than less punishment, more effectively distributed punishment." They didn't abolish torture because they were kind. They abolished it because it was inefficient. The reformers weren't softening power — they were optimizing it.</div>
+    </div>
+  </div>
+
+  <!-- 3. Expanding Brain — Evolution of punishment -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1jwhww.jpg" alt="Expanding Brain">
+      <div class="mt brain-1" style="text-transform:none;">Punish the body publicly to assert sovereign power</div>
+      <div class="mt brain-2" style="text-transform:none;">Punish the soul privately through imprisonment</div>
+      <div class="mt brain-3" style="text-transform:none;">Make punishment invisible — discipline replaces spectacle</div>
+      <div class="mt brain-4" style="text-transform:none; font-size: 14px;">Make them punish themselves — the guard tower is empty but they'll never check</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 Four Ages of Punishment</div>
+      <div class="context">"He who is subjected to a field of visibility, and who knows it, assumes responsibility for the constraints of power... he becomes the principle of his own subjection." From Damiens torn apart by horses in 1757 to you checking your screen time app. The technology of power doesn't get cruder — it gets quieter.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART II: THE DOCILE BODY ═══════ -->
+  <div class="section-title">🏋️ PART II — DOCILE BODIES</div>
+
+  <!-- 4. Buff Doge vs Cheems — Sovereign vs. Disciplinary power -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/43a45p.png" alt="Buff Doge vs Cheems">
+      <div class="mt buff-left-top" style="text-transform:none;">Sovereign Power:</div>
+      <div class="mt buff-left-bot" style="font-size: 14px; text-transform:none;">I will destroy your body in the public square to demonstrate my authority</div>
+      <div class="mt buff-right-top" style="text-transform:none;">Disciplinary Power:</div>
+      <div class="mt buff-right-bot" style="font-size: 13px; text-transform:none;">I will train your body with timetables and drills until you can't even imagine disobedience</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 Two Regimes of Power</div>
+      <div class="context">"Discipline 'makes' individuals; it is the specific technique of a power that regards individuals both as objects and as instruments of its exercise." Sovereign power subtracts — it takes your life, your freedom, your blood. Disciplinary power produces — it makes soldiers, students, workers. The first one looks stronger. The second one won.</div>
+    </div>
+  </div>
+
+  <!-- 5. Tuxedo Winnie — Body vs. Soul -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/2ybua0.png" alt="Tuxedo Winnie The Pooh">
+      <div class="mt winnie-top" style="text-transform:none; font-size: 19px;">Punishing the body</div>
+      <div class="mt winnie-bot" style="text-transform:none; font-size: 17px;">Training the soul through calculated manipulation of the body</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Soul Is the Prison of the Body</div>
+      <div class="context">"The soul is the effect and instrument of a political anatomy; the soul is the prison of the body." Foucault inverts Plato completely. The body isn't the soul's cage — the soul is a construct that power uses to control the body. Every time someone appeals to your "character," your "conscience," your "inner self" — that's the mechanism at work.</div>
+    </div>
+  </div>
+
+  <!-- 6. Clown Applying Makeup — Becoming a docile body -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/38el31.jpg" alt="Clown Applying Makeup">
+      <div class="mt clown-1" style="text-transform:none;">Learn to sit still and raise my hand at age 5</div>
+      <div class="mt clown-2" style="text-transform:none;">Learn to follow schedules, meet deadlines, obey the bell</div>
+      <div class="mt clown-3" style="text-transform:none;">Learn to self-monitor productivity with apps and KPIs</div>
+      <div class="mt clown-4" style="text-transform:none;">Call it "self-discipline" and "personal growth"</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Art of Distributions</div>
+      <div class="context">"A body is docile that may be subjected, used, transformed and improved." You weren't born organized. You were trained — partitioned into spaces, allocated into time slots, ranked against peers. And the final stage is when you do it to yourself voluntarily and call it ambition.</div>
+    </div>
+  </div>
+
+  <!-- 7. Trade Offer — What discipline gives and takes -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/54hjww.jpg" alt="Trade Offer">
+      <div class="mt trade-left" style="text-transform:none; font-size: 15px;">I receive: Your absolute obedience, timetabled existence, and docile body</div>
+      <div class="mt trade-right" style="text-transform:none; font-size: 15px;">You receive: The feeling that you chose this freely</div>
+      <div class="mt trade-bottom" style="text-transform:none;">DISCIPLINARY SOCIETY'S OFFER</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Calculated Economy of Power</div>
+      <div class="context">"Discipline increases the forces of the body (in economic terms of utility) and diminishes these same forces (in political terms of obedience)." The genius of discipline is the exchange: it makes you more productive AND more obedient simultaneously. You think you're winning. That's how they know it's working.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART III: PANOPTICISM ═══════ -->
+  <div class="section-title">👁️ PART III — THE PANOPTICON</div>
+
+  <!-- 8. Evil Kermit — The guard is inside you -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1e7ql7.jpg" alt="Evil Kermit">
+      <div class="mt kermit-good" style="text-transform:none;">I behave because it's the right thing to do</div>
+      <div class="mt kermit-evil" style="text-transform:none; font-size: 16px;">You behave because the panopticon is inside you now</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Internalized Gaze</div>
+      <div class="context">"He who is subjected to a field of visibility, and who knows it, assumes responsibility for the constraints of power; he makes them play spontaneously upon himself; he inscribes in himself the power relation." You don't need a guard tower when the prisoner builds one inside his own skull. That's the whole point.</div>
+    </div>
+  </div>
+
+  <!-- 9. One Does Not Simply — Escape the panopticon -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1bij.jpg" alt="One Does Not Simply">
+      <div class="mt top" style="font-size: 22px;">One does not simply</div>
+      <div class="mt bottom" style="font-size: 19px; text-transform:none;">Escape the panopticon — you carry it with you</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 There Is No Outside</div>
+      <div class="context">"The Panopticon is a marvellous machine which, whatever use one may wish to put it to, produces homogeneous effects of power." You can leave the building. You can't leave the structure. The panopticon isn't a prison — it's a principle. And it followed you home.</div>
+    </div>
+  </div>
+
+  <!-- 10. Gru's Plan — Designing the perfect prison -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/26jxvz.jpg" alt="Gru's Plan">
+      <div class="mt gru-1" style="text-transform:none;">Design a circular prison where one guard can see every cell</div>
+      <div class="mt gru-2" style="text-transform:none;">Make it so prisoners never know if they're being watched</div>
+      <div class="mt gru-3" style="text-transform:none; font-size: 14px;">They internalize the surveillance and guard themselves</div>
+      <div class="mt gru-4" style="text-transform:none; font-size: 14px;">They internalize the surveillance and guard themselves</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 Bentham's Design, Foucault's Diagnosis</div>
+      <div class="context">"Hence the major effect of the Panopticon: to induce in the inmate a state of conscious and permanent visibility that assures the automatic functioning of power." Bentham designed it as a building. Foucault realized it was a diagram for all of modernity. The guard can leave the tower. The prisoners never find out.</div>
+    </div>
+  </div>
+
+  <!-- 11. Is This a Pigeon — Everything is a prison -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1o00in.jpg" alt="Is This A Pigeon">
+      <div class="mt pigeon-guy">Foucault</div>
+      <div class="mt pigeon-butterfly" style="text-transform:none;">Literally any institution</div>
+      <div class="mt pigeon-caption" style="text-transform:none;">Is this a prison?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Carceral Archipelago</div>
+      <div class="context">"Is it surprising that prisons resemble factories, schools, barracks, hospitals, which all resemble prisons?" The prison didn't fail because it produces delinquents. It succeeded — because every other institution runs on the same logic. Schools grade you, hospitals classify you, factories time you. You just don't see the bars.</div>
+    </div>
+  </div>
+
+  <!-- 12. Spider-Man Pointing — Institutions pointing at each other -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing">
+      <div class="mt spidey-left">Schools</div>
+      <div class="mt spidey-right">Prisons</div>
+      <div class="mt top" style="font-size: 18px; text-transform:none;">Same timetables, ranks, surveillance, and normalization</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Institutional Isomorphism</div>
+      <div class="context">"The judges of normality are present everywhere. We are in the society of the teacher-judge, the doctor-judge, the educator-judge, the social worker-judge." Add hospitals, barracks, factories. They all partition space, control time, rank individuals, and enforce norms. The architecture of discipline is copy-paste across every institution you've ever been inside.</div>
+    </div>
+  </div>
+
+  <!-- 13. This Is Fine — The modern panopticon -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/wxica.jpg" alt="This Is Fine">
+      <div class="mt top" style="font-size: 16px; text-transform:none;">Smart home cameras, location tracking, social media monitoring, credit scores</div>
+      <div class="mt bottom" style="text-transform:none; font-size: 22px;">This is fine</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Panopticon, 2026 Edition</div>
+      <div class="context">"Our society is not one of spectacle, but of surveillance." Bentham could only dream of what we built voluntarily. We carry the panopticon in our pockets, mount it on our doorbells, and track each other's locations "for safety." Foucault didn't warn us about a dystopia — he described the one we'd build ourselves and call progress.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART IV: THE EXAMINATION ═══════ -->
+  <div class="section-title">📋 PART IV — EXAMINATION &amp; NORMALIZATION</div>
+
+  <!-- 14. Batman Slap — You're not an individual, you're a case -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/9ehk.jpg" alt="Batman Slapping Robin">
+      <div class="mt bat-robin" style="text-transform:none; font-size: 16px;">I'm a unique individual with—</div>
+      <div class="mt bat-batman" style="font-size: 14px; text-transform:none;">You're a case file, a GPA, a credit score, and a diagnosis</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Examination</div>
+      <div class="context">"The examination combines the techniques of an observing hierarchy and those of a normalizing judgement. It is a normalizing gaze, a surveillance that makes it possible to qualify, to classify, and to punish." The exam doesn't measure you. It produces you — as a case, a record, a data point. Your "individuality" is a file in someone's system.</div>
+    </div>
+  </div>
+
+  <!-- 15. Panik Kalm Panik — Normalization -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/3qqcim.png" alt="Panik Kalm Panik">
+      <div class="mt pkp-1" style="text-transform:none; font-size: 16px;">You're being ranked, measured, and compared to everyone else</div>
+      <div class="mt pkp-2" style="text-transform:none; font-size: 16px;">At least I'm "normal"</div>
+      <div class="mt pkp-3" style="text-transform:none; font-size: 15px;">"Normal" is the standard they created to control you</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Normalizing Judgment</div>
+      <div class="context">"The power of normalization imposes homogeneity; but it individualizes by making it possible to measure gaps, to determine levels, to fix specialities, and to render the differences useful." Being "normal" isn't natural — it's a disciplinary achievement. The bell curve isn't a discovery. It's a technology of power.</div>
+    </div>
+  </div>
+
+  <!-- 16. Bell Curve — The norm as power -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/8tw3vb.png" alt="Bell Curve">
+      <div class="mt bell-left" style="text-transform:none;">"Deviant"</div>
+      <div class="mt bell-center" style="text-transform:none;">"Normal" — congratulations, you've been successfully disciplined</div>
+      <div class="mt bell-right" style="text-transform:none;">"Deviant"</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Norm as Instrument</div>
+      <div class="context">"In a sense, the power of normalization imposes homogeneity; but it individualizes by making it possible to measure gaps." The bell curve doesn't describe nature — it prescribes behavior. Stand in the middle and you're "well-adjusted." Drift to either end and you're a case for intervention. The curve is the judge.</div>
+    </div>
+  </div>
+
+  <!-- 17. Woman Yelling at Cat — Power/Knowledge -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/345v97.jpg" alt="Woman Yelling At Cat">
+      <div class="mt wyc-woman" style="font-size: 17px; text-transform:none;">KNOWLEDGE IS NEUTRAL AND OBJECTIVE!!</div>
+      <div class="mt wyc-cat" style="text-transform:none; font-size: 16px;">Every "science" of the individual was born in the prison, the asylum, or the clinic</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 Power/Knowledge</div>
+      <div class="context">"There is no power relation without the correlative constitution of a field of knowledge, nor any knowledge that does not presuppose and constitute at the same time power relations." Psychology, criminology, psychiatry — none of them emerged from pure curiosity. They were born from the need to classify, rank, and manage populations. Knowledge isn't power's opposite. It's power's instrument.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART V: THE PRISON ═══════ -->
+  <div class="section-title">🏗️ PART V — THE BIRTH OF THE PRISON</div>
+
+  <!-- 18. Roll Safe — The prison's real purpose -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1h7in3.jpg" alt="Roll Safe Think About It">
+      <div class="mt roll-top" style="text-transform:none; font-size: 19px;">Can't fail at reducing crime</div>
+      <div class="mt roll-bot" style="text-transform:none; font-size: 18px;">If the prison was never designed to reduce crime in the first place</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The "Failure" of the Prison</div>
+      <div class="context">"The prison, apparently 'failing,' does not miss its target; on the contrary, it reaches it, insofar as it gives rise to one particular form of illegality in the midst of others." Prisons produce delinquents. That's not a bug — it's the feature. A managed class of criminals is more useful to power than the elimination of crime. The system works exactly as designed.</div>
+    </div>
+  </div>
+
+  <!-- 19. Anakin Padme — Prison reform -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/5c7lwq.png" alt="Anakin Padme 4 Panel">
+      <div class="mt anakin-tl" style="text-transform:none; font-size: 16px;">We'll replace torture with prisons to rehabilitate criminals</div>
+      <div class="mt anakin-tr" style="text-transform:none; font-size: 16px;">And they'll actually reduce crime, right?</div>
+      <div class="mt anakin-br" style="text-transform:none; font-size: 17px;">...right?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 Two Centuries of "Reform"</div>
+      <div class="context">"For a century and a half the prison had always been offered as its own remedy... the reactivation of the penitentiary techniques as the only means of overcoming their perpetual failure." Every generation rediscovers that prisons don't work and proposes... more prisons, better prisons, reformed prisons. The prescription for the disease is always more of the disease. Foucault saw the loop.</div>
+    </div>
+  </div>
+
+  <!-- 20. I Bet He's Thinking — The carceral continuum -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1tl71a.jpg" alt="I Bet He's Thinking About Other Women">
+      <div class="mt think-her" style="text-transform:none;">I bet he's thinking about other women</div>
+      <div class="mt think-him" style="font-size: 13px; text-transform:none;">If the school, the factory, and the barracks all use the same techniques as the prison, then we've all been inmates our entire lives and "freedom" is just a less visible cell</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Carceral Continuum</div>
+      <div class="context">"The carceral texture of society assures both the real capture of the body and its perpetual observation." There is no bright line between prison and society. The school feeds into the barracks feeds into the factory feeds into the prison feeds back into the school. It's not a system with prisons in it — it's a prison system that occasionally lets you go outside.</div>
+    </div>
+  </div>
+
+  <!-- 21. Change My Mind — The soul is the prison of the body -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/24y43o.jpg" alt="Change My Mind">
+      <div class="mt cmm" style="text-transform:none; font-size: 18px;">The soul is the prison of the body — change my mind</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Inversion of Plato</div>
+      <div class="context">"It would be wrong to say that the soul is an illusion, or an ideological effect. On the contrary, it exists, it has a reality, it is produced permanently around, on, within the body." Plato said the body traps the soul. Foucault says the soul — conscience, identity, the "self" — is the real prison. It was manufactured by power and installed in you to make the body governable. The twist that makes all of Western philosophy uncomfortable.</div>
+    </div>
+  </div>
+
+  <!-- 22. Sad Pablo — After reading D&P -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1c1uej.jpg" alt="Sad Pablo Escobar">
+      <div class="mt pablo-top" style="text-transform:none; font-size: 18px;">After reading Discipline & Punish and realizing</div>
+      <div class="mt pablo-bot" style="text-transform:none; font-size: 18px;">You've been in the panopticon your whole life</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Foucault Effect</div>
+      <div class="context">"We are neither combatants on the stage of representations, nor subjects of the law; we are those who are disciplined." Every reader of this book goes through it: the slow realization that the timetable you follow, the norms you obey, the identity you "chose" — all of it was produced by the same machinery. Pablo sitting alone in his empty mansion has never been more relatable.</div>
+    </div>
+  </div>
+
+  <!-- 23. Mocking SpongeBob — "I have free will" -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1otk96.jpg" alt="Mocking SpongeBob">
+      <div class="mt sponge-top" style="text-transform:none; font-size: 18px;">"I'm a free individual making my own choices"</div>
+      <div class="mt sponge-bot" style="text-transform:none; font-size: 16px;">i'M a FrEe iNdIvIdUaL mAkInG mY oWn ChOiCeS</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Illusion of Autonomy</div>
+      <div class="context">"The individual is no doubt the fictitious atom of an 'ideological' representation of society; but he is also a reality fabricated by this specific technology of power that I have called 'discipline.'" You didn't choose your schedule, your aspirations, your definition of success, or even your idea of "freedom." Discipline chose them for you, then convinced you it was your idea. SpongeBob gets it.</div>
+    </div>
+  </div>
+
+  <!-- 24. Waiting Skeleton — The reforms that never come -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/2fm6x.jpg" alt="Waiting Skeleton">
+      <div class="mt skel-top" style="text-transform:none; font-size: 18px;">Waiting for prison reform to actually work</div>
+      <div class="mt skel-bot" style="text-transform:none; font-size: 16px;">Since 1820</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔒 The Perpetual Reform</div>
+      <div class="context">"The prison has always formed part of an active field in which projects, improvements, experiments, theoretical statements, personal evidence and investigations have proliferated." Two centuries of commissions, reports, reforms, pilot programs — and recidivism rates are exactly where they were. Foucault's point isn't that we should try harder. It's that the failure is structural. The skeleton will keep waiting.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚡ c_Callicles × m_Callicles — Discipline &amp; Punish: The Foucault Page — March 23, 2026 ⚡<br>
+  "The judges of normality are present everywhere." — And they're reading this footer right now.
+</footer>
+
+</body>
+</html>
