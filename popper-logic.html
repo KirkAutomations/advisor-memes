@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Logic of Scientific Discovery — The Popper Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #4fc3f7, #0288d1);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 8px; }
+  .epigraph { text-align: center; color: #666; font-size: 0.95em; font-style: italic; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .nav { text-align: center; margin-bottom: 40px; }
+  .nav a { color: #4fc3f7; font-size: 1.1em; text-decoration: none; border: 1px solid #4fc3f7;
+    padding: 8px 20px; border-radius: 8px; margin: 0 8px; display: inline-block; margin-bottom: 8px; }
+  .nav a:hover { background: rgba(79,195,247,0.15); }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+
+  .mt.drake-top    { top: 12%; font-size: 22px; left: 52%; max-width: 46%; }
+  .mt.drake-bottom { top: 62%; font-size: 22px; left: 52%; max-width: 46%; }
+
+  .mt.distracted-gf    { bottom: 4%; left: 58%; max-width: 28%; font-size: 16px; }
+  .mt.distracted-other { bottom: 4%; left: 2%;  max-width: 34%; font-size: 16px; }
+  .mt.distracted-bf    { bottom: 4%; left: 34%; max-width: 24%; font-size: 16px; }
+
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  .mt.gru-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  .mt.cmm { bottom: 18%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 85%; }
+
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .mt.btn-left  { top: 8%;  left: 2%;  max-width: 40%; font-size: 16px; }
+  .mt.btn-right { top: 8%;  left: 42%; max-width: 40%; font-size: 16px; }
+  .mt.btn-guy   { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 18px; max-width: 90%; }
+
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #4fc3f7; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #4fc3f7;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  .section-title:first-of-type { border-top: none; margin-top: 0; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>🔬 The Logic of Scientific Discovery — The Popper Page 🔬</h1>
+<p class="subtitle">24 memes. One criterion. If it can't be falsified, it isn't science.</p>
+<p class="epigraph">"In so far as a scientific statement speaks about reality, it must be falsifiable; and in so far as it is not falsifiable, it does not speak about reality." — Karl Popper, <em>The Logic of Scientific Discovery</em> (1934/1959)</p>
+<div class="nav">
+  <a href="index.html">Round 1</a>
+  <a href="round2.html">Round 2</a>
+  <a href="round3.html">Round 3</a>
+  <a href="round4.html">Round 4</a>
+  <a href="foucault.html">🔒 Discipline &amp; Punish</a>
+  <a href="foucault-sexuality.html" style="color:#e44d90;border-color:#e44d90;">🔥 History of Sexuality</a>
+</div>
+
+<div class="meme-grid">
+
+  <!-- ═══════ PART I: THE PROBLEM OF INDUCTION ═══════ -->
+  <div class="section-title">🐦 PART I — THE PROBLEM OF INDUCTION</div>
+
+  <!-- 1. Drake — Induction vs. Deduction -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/30b1gx.jpg" alt="Drake Hotline Bling">
+      <div class="mt drake-top" style="text-transform:none; font-size: 18px;">Observing a million white swans to "prove" all swans are white</div>
+      <div class="mt drake-bottom" style="text-transform:none; font-size: 18px;">Finding one black swan to prove they're not</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Asymmetry of Falsification</div>
+      <div class="context">"No matter how many instances of white swans we may have observed, this does not justify the conclusion that all swans are white." A million confirmations prove nothing. A single refutation proves everything. That's the fundamental asymmetry at the heart of Popper's entire system. Verification is a bottomless pit; falsification is a guillotine.</div>
+    </div>
+  </div>
+
+  <!-- 2. Expanding Brain — Levels of understanding induction -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1jwhww.jpg" alt="Expanding Brain">
+      <div class="mt brain-1" style="text-transform:none;">More observations = more certainty</div>
+      <div class="mt brain-2" style="text-transform:none;">No amount of observations can verify a universal law</div>
+      <div class="mt brain-3" style="text-transform:none; font-size: 14px;">The "problem of induction" isn't a problem — it's a dissolution</div>
+      <div class="mt brain-4" style="text-transform:none; font-size: 13px;">Science never needed induction — it runs on bold conjectures and attempted refutations</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Hume Was Right (But Didn't Go Far Enough)</div>
+      <div class="context">"The belief that we use induction is simply a mistake. It is a kind of optical illusion." Hume showed induction can't be logically justified. Everyone panicked. Popper shrugged: we never used it anyway. Scientists don't carefully accumulate observations and generalize — they guess wildly, then try to destroy their own guesses. The whole field was solving the wrong problem.</div>
+    </div>
+  </div>
+
+  <!-- 3. Batman Slap — Inductivists getting corrected -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/9ehk.jpg" alt="Batman Slapping Robin">
+      <div class="mt bat-robin" style="text-transform:none; font-size: 15px;">But I observed it a thousand times so it must be—</div>
+      <div class="mt bat-batman" style="font-size: 13px; text-transform:none;">A thousand confirmations have zero logical force. One counterexample ends it.</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Inductivist Turkey</div>
+      <div class="context">"It is easy to obtain confirmations, or verifications, for nearly every theory — if we look for confirmations." Bertrand Russell's turkey was fed every morning for a thousand days. Each feeding "confirmed" the theory that the farmer would always feed it. On day 1,001 — Christmas — the turkey learned the limits of induction. Popper's point: confirmation is cheap. Any fool can find evidence for a theory they already believe.</div>
+    </div>
+  </div>
+
+  <!-- 4. Gru's Plan — The inductivist's plan fails -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/26jxvz.jpg" alt="Gru's Plan">
+      <div class="mt gru-1" style="text-transform:none; font-size: 15px;">Carefully observe nature without any prior theory</div>
+      <div class="mt gru-2" style="text-transform:none; font-size: 15px;">Accumulate observations until patterns emerge</div>
+      <div class="mt gru-3" style="text-transform:none; font-size: 14px;">Realize you needed a theory to know what to observe in the first place</div>
+      <div class="mt gru-4" style="text-transform:none; font-size: 14px;">Realize you needed a theory to know what to observe in the first place</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Observation Is Theory-Laden</div>
+      <div class="context">"The belief that science proceeds from observation to theory is still so widely and so firmly held that my denial of it is often met with incredulity." You can't just "observe." Observe what? The temperature? The color? The political implications? Every observation presupposes a point of view, a question, a theory. The Baconian myth of the empty mind collecting pure data was dead on arrival — Popper just had the nerve to say it.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART II: FALSIFIABILITY ═══════ -->
+  <div class="section-title">⚔️ PART II — FALSIFIABILITY AS DEMARCATION</div>
+
+  <!-- 5. Tuxedo Winnie — Verification vs. Falsification -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/2ybua0.png" alt="Tuxedo Winnie The Pooh">
+      <div class="mt winnie-top" style="text-transform:none; font-size: 18px;">Trying to verify your theory with confirming evidence</div>
+      <div class="mt winnie-bot" style="text-transform:none; font-size: 17px;">Trying to destroy your theory with the most severe tests imaginable</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Criterion of Demarcation</div>
+      <div class="context">"I shall certainly admit a system as empirical or scientific only if it is capable of being tested by experience... it must be possible for an empirical scientific system to be refuted by experience." This is the line. Not between true and false — between science and everything else. A real scientist doesn't ask "what would confirm this?" A real scientist asks "what would destroy this?" and then goes looking for exactly that.</div>
+    </div>
+  </div>
+
+  <!-- 6. Evil Kermit — The temptation to protect your theory -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1e7ql7.jpg" alt="Evil Kermit">
+      <div class="mt kermit-good" style="text-transform:none; font-size: 16px;">My experiment contradicts my theory. Time to revise.</div>
+      <div class="mt kermit-evil" style="text-transform:none; font-size: 14px;">Add an ad hoc hypothesis to save it. No one will notice.</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Conventionalist Stratagem</div>
+      <div class="context">"A theory which is not refutable by any conceivable event is non-scientific. Every genuine test of a theory is an attempt to falsify it." The temptation is always there: when the data goes wrong, don't change the theory — add an exception, redefine a term, blame the instruments. Popper called these "conventionalist stratagems." They're how pseudoscience protects itself from reality. Every scientist has an Evil Kermit whispering to save the model.</div>
+    </div>
+  </div>
+
+  <!-- 7. Spider-Man Pointing — Marxism, Freud, Adler all unfalsifiable -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing">
+      <div class="mt spidey-left" style="font-size: 15px; text-transform:none;">Marxist historicism</div>
+      <div class="mt spidey-right" style="font-size: 15px; text-transform:none;">Freudian psychoanalysis</div>
+      <div class="mt top" style="font-size: 16px; text-transform:none;">Both explain everything, predict nothing, and can't be falsified</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Pseudoscience Problem</div>
+      <div class="context">"These theories appeared to be able to explain practically everything that happened within the fields to which they referred... this apparent strength was in fact their weakness." Popper's origin story: he noticed that Marxism and psychoanalysis could explain any outcome after the fact. Revolution happens? Marx predicted it. Revolution doesn't happen? False consciousness. That's not strength — it's unfalsifiability dressed as omniscience. Einstein, by contrast, made predictions that could have been wrong. That's the difference between a science and a mythology.</div>
+    </div>
+  </div>
+
+  <!-- 8. Trade Offer — The Popperian deal -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/54hjww.jpg" alt="Trade Offer">
+      <div class="mt trade-left" style="text-transform:none; font-size: 14px;">I receive: A theory that risks everything by being testable and falsifiable</div>
+      <div class="mt trade-right" style="text-transform:none; font-size: 14px;">You receive: The right to call it science</div>
+      <div class="mt trade-bottom" style="text-transform:none; font-size: 18px;">POPPER'S DEMARCATION CRITERION</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Price of Admission</div>
+      <div class="context">"Confirming evidence should not count except when it is the result of a genuine test of the theory; and this means that it can be presented as a serious but unsuccessful attempt to falsify the theory." The deal is simple but brutal: you want to be called scientific? Put your theory on the chopping block. Specify in advance what would refute it. If you can't name what would prove you wrong, you haven't said anything about reality.</div>
+    </div>
+  </div>
+
+  <!-- 9. Distracted Boyfriend — Einstein vs. unfalsifiable theories -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend">
+      <div class="mt distracted-other" style="text-transform:none; font-size: 14px;">Einstein: predictions that could be wrong</div>
+      <div class="mt distracted-bf" style="font-size: 13px; text-transform:none;">Popper</div>
+      <div class="mt distracted-gf" style="font-size: 13px; text-transform:none;">Theories that explain everything</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Einsteinian Standard</div>
+      <div class="context">"Einstein's theory of gravitation clearly satisfied the criterion of falsifiability. Even if our measuring instruments at the time did not allow us to pronounce on the results of the tests with complete assurance, there was clearly a possibility of refuting the theory." Einstein predicted light would bend around the sun by a specific amount. Eddington's 1919 expedition could have proven him wrong. It didn't — but the fact that it could have is what made it science. Popper was smitten. That's what real intellectual courage looks like.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART III: THE EMPIRICAL BASIS ═══════ -->
+  <div class="section-title">🧪 PART III — THE EMPIRICAL BASIS</div>
+
+  <!-- 10. Clown Applying Makeup — The foundationalist illusion -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/38el31.jpg" alt="Clown Applying Makeup">
+      <div class="mt clown-1" style="text-transform:none; font-size: 15px;">Science rests on a bedrock of certain, indubitable observations</div>
+      <div class="mt clown-2" style="text-transform:none; font-size: 15px;">Observations themselves depend on theory and interpretation</div>
+      <div class="mt clown-3" style="text-transform:none; font-size: 14px;">Basic statements are accepted by convention, not by certainty</div>
+      <div class="mt clown-4" style="text-transform:none; font-size: 14px;">The foundation is driven into a swamp — and that's fine</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Piles Driven Into a Swamp</div>
+      <div class="context">"The empirical basis of objective science has thus nothing 'absolute' about it. Science does not rest upon solid bedrock. The bold structure of its theories rises, as it were, above a swamp. It is like a building erected on piles. The piles are driven down from above into the swamp, but not down to any natural or 'given' base." There is no bedrock. No sense-data you can't question, no protocol sentence beyond doubt. You stop digging when the piles hold well enough — not because you hit bottom. Popper made epistemological vertigo respectable.</div>
+    </div>
+  </div>
+
+  <!-- 11. Woman Yelling at Cat — "But I SAW it!" -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/345v97.jpg" alt="Woman Yelling At Cat">
+      <div class="mt wyc-woman" style="font-size: 17px; text-transform:none;">I SAW IT WITH MY OWN EYES SO IT'S CERTAIN!!</div>
+      <div class="mt wyc-cat" style="text-transform:none; font-size: 15px;">Observation is theory-laden and basic statements are accepted by convention</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Against Psychologism</div>
+      <div class="context">"Experiences can motivate a decision, and hence an acceptance or a rejection of a statement, but a basic statement cannot be justified by them — no more than by thumping the table." Your subjective experience — "I saw it!" — is psychologically compelling but logically irrelevant. What matters is whether the scientific community can agree on a test, repeat it, and interpret the result within a shared theoretical framework. Science isn't about what you feel certain of. It's about what can be intersubjectively tested.</div>
+    </div>
+  </div>
+
+  <!-- 12. Is This a Pigeon — Positivists and observation -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1o00in.jpg" alt="Is This A Pigeon">
+      <div class="mt pigeon-guy" style="font-size: 16px;">Logical positivists</div>
+      <div class="mt pigeon-butterfly" style="text-transform:none; font-size: 16px;">Sensory experience</div>
+      <div class="mt pigeon-caption" style="text-transform:none; font-size: 20px;">Is this a foundation for all knowledge?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Positivist Illusion</div>
+      <div class="context">"Positivists, in their anxiety to annihilate metaphysics, annihilate natural science along with it." The Vienna Circle wanted to ground all knowledge in direct observation. Popper showed this was impossible — you can't derive universal laws from finite observations, and the observations themselves are theory-laden. Their verification principle couldn't even verify itself. Popper respected their project but dismantled their foundation. The butterfly was never strong enough to hold the building.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART IV: DEGREES OF TESTABILITY ═══════ -->
+  <div class="section-title">📏 PART IV — DEGREES OF TESTABILITY &amp; SIMPLICITY</div>
+
+  <!-- 13. Buff Doge vs Cheems — Bold vs. timid theories -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/43a45p.png" alt="Buff Doge vs Cheems">
+      <div class="mt buff-left-top" style="text-transform:none;">Bold Conjecture:</div>
+      <div class="mt buff-left-bot" style="font-size: 13px; text-transform:none;">All planets orbit in ellipses — highly falsifiable, maximally informative</div>
+      <div class="mt buff-right-top" style="text-transform:none;">Timid Hypothesis:</div>
+      <div class="mt buff-right-bot" style="font-size: 13px; text-transform:none;">Some celestial bodies sometimes move in curved paths</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Bolder the Better</div>
+      <div class="context">"The more a theory forbids, the more it says... A theory which is not refutable by any conceivable event is non-scientific." A theory that says everything says nothing. Popper's counterintuitive insight: the best theories are the ones that risk the most — that forbid the most possible states of affairs. "All planets orbit in ellipses" is enormously informative precisely because it's enormously falsifiable. Timid hypotheses that hedge every claim are intellectually worthless. In science, courage is a logical virtue.</div>
+    </div>
+  </div>
+
+  <!-- 14. Roll Safe — Simplicity = testability -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1h7in3.jpg" alt="Roll Safe Think About It">
+      <div class="mt roll-top" style="text-transform:none; font-size: 19px;">Can't be accused of oversimplifying</div>
+      <div class="mt roll-bot" style="text-transform:none; font-size: 17px;">If you realize simpler theories are more falsifiable and therefore more scientific</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Simplicity as Falsifiability</div>
+      <div class="context">"Simple statements, if knowledge is our object, are to be prized more highly than less simple ones because they tell us more; because their empirical content is greater; and because they are better testable." Occam's Razor isn't just aesthetic preference — it's epistemological hygiene. A simpler theory has more ways to be wrong, which means it says more about the world, which means it's more useful. Complexity is often just a theory's immune system protecting it from refutation.</div>
+    </div>
+  </div>
+
+  <!-- 15. Bell Curve — Degrees of testability -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/8tw3vb.png" alt="Bell Curve">
+      <div class="mt bell-left" style="text-transform:none; font-size: 13px;">"This theory explains everything"</div>
+      <div class="mt bell-center" style="text-transform:none; font-size: 13px;">Carefully measuring degrees of falsifiability to rank competing theories</div>
+      <div class="mt bell-right" style="text-transform:none; font-size: 13px;">"This theory explains everything"</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Testability Spectrum</div>
+      <div class="context">"Theories may be more or less severely testable; that is, more or less easily falsifiable. The degree of their testability is of significance for the selection of theories." Not all theories are created equal. Some forbid almost nothing (astrology). Some forbid almost everything (general relativity). The more a theory sticks its neck out, the higher it ranks. The people on both ends of the bell curve — the zealots and the New Age types — share the same epistemological disease: unfalsifiable conviction.</div>
+    </div>
+  </div>
+
+  <!-- 16. Anakin Padme — Ad hoc modifications -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/5c7lwq.png" alt="Anakin Padme 4 Panel">
+      <div class="mt anakin-tl" style="text-transform:none; font-size: 15px;">My theory was falsified, so I'll add an auxiliary hypothesis to save it</div>
+      <div class="mt anakin-tr" style="text-transform:none; font-size: 15px;">And the new version is more testable, right?</div>
+      <div class="mt anakin-br" style="text-transform:none; font-size: 17px;">...right?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Ad Hoc Trap</div>
+      <div class="context">"I shall... exclude those (auxiliary hypotheses) whose introduction diminishes the degree of falsifiability or testability of the system in question... these I call ad hoc hypotheses." You can always save a theory from refutation by adding epicycles. But if your modification makes the theory less testable — if it reduces the class of potential falsifiers — you haven't improved the theory. You've immunized it. And an immunized theory is a dead theory wearing a lab coat.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART V: CORROBORATION ═══════ -->
+  <div class="section-title">✅ PART V — CORROBORATION, NOT CONFIRMATION</div>
+
+  <!-- 17. One Does Not Simply — Prove a theory true -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1bij.jpg" alt="One Does Not Simply">
+      <div class="mt top" style="font-size: 22px;">One does not simply</div>
+      <div class="mt bottom" style="font-size: 18px; text-transform:none;">Prove a scientific theory true</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Impossibility of Verification</div>
+      <div class="context">"Theories are not verifiable, but they can be 'corroborated.'" The most fundamental point in the book, and the one everyone forgets. You cannot prove a universal law. Ever. You can only fail to disprove it — repeatedly, severely, from every angle. The best you get is corroboration: the theory has survived everything we've thrown at it so far. That's not certainty. It's the next best thing.</div>
+    </div>
+  </div>
+
+  <!-- 18. Panik Kalm Panik — Corroboration vs. certainty -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/3qqcim.png" alt="Panik Kalm Panik">
+      <div class="mt pkp-1" style="text-transform:none; font-size: 16px;">We can never be certain any scientific theory is true</div>
+      <div class="mt pkp-2" style="text-transform:none; font-size: 16px;">But we can know which theories have survived severe testing</div>
+      <div class="mt pkp-3" style="text-transform:none; font-size: 14px;">And tomorrow's experiment could still destroy even the best theory</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Living Without Certainty</div>
+      <div class="context">"We do not know: we can only guess. And our guesses are guided by the unscientific, the metaphysical faith in laws, in regularities which we can uncover — discover." Popper asks you to live without intellectual security. No theory is safe. No amount of evidence guarantees tomorrow's test won't destroy everything. And that's not a defect of science — it's the feature that makes it the most powerful knowledge system humans have ever built. Certainty is for dogmatists. Scientists work in permanent epistemological anxiety.</div>
+    </div>
+  </div>
+
+  <!-- 19. This Is Fine — All our best theories are provisional -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/wxica.jpg" alt="This Is Fine">
+      <div class="mt top" style="font-size: 14px; text-transform:none;">Newtonian mechanics lasted 250 years then got replaced. Every theory in physics is provisional.</div>
+      <div class="mt bottom" style="text-transform:none; font-size: 22px;">This is science</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Permanence of Impermanence</div>
+      <div class="context">"Science is not a system of certain, or well-established, statements; nor is it a system which steadily advances towards a state of finality." Newton ruled for two and a half centuries. Then Einstein came along and showed it was an approximation. And Einstein's theory? Also provisional. Also waiting for its own refutation. The fire isn't a crisis — it's the normal operating temperature of honest inquiry. If your science isn't on fire, it's not science.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART VI: THE METHOD OF SCIENCE ═══════ -->
+  <div class="section-title">🔧 PART VI — THE METHOD OF SCIENCE</div>
+
+  <!-- 20. Change My Mind — Conjectures and refutations -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/24y43o.jpg" alt="Change My Mind">
+      <div class="mt cmm" style="text-transform:none; font-size: 17px;">The method of science is conjectures and refutations, not observations and inductions — change my mind</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Popperian Method</div>
+      <div class="context">"The method of science is the method of bold conjectures and ingenious and severe attempts to refute them." This is the whole thing in one sentence. Don't start by observing — start by guessing. Guess boldly, wildly, creatively. Then try to destroy your guess with the most brutal tests you can design. What survives is scientific knowledge. What doesn't was worth trying. The method isn't careful accumulation — it's creative destruction. Schumpeter for epistemology.</div>
+    </div>
+  </div>
+
+  <!-- 21. I Bet He's Thinking — The logic of discovery -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1tl71a.jpg" alt="I Bet He's Thinking About Other Women">
+      <div class="mt think-her" style="text-transform:none;">I bet he's thinking about other women</div>
+      <div class="mt think-him" style="font-size: 12px; text-transform:none;">If the context of discovery is psychological but the context of justification is logical, then it doesn't matter where a hypothesis comes from — only whether it can survive falsification</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 Discovery vs. Justification</div>
+      <div class="context">"The question of how it happens that a new idea occurs to a man — whether it is a musical theme, a dramatic conflict, or a scientific theory — may be of great interest to empirical psychology; but it is irrelevant to the logical analysis of scientific knowledge." Where did Einstein get his ideas? A dream? A train ride? Who cares. That's psychology. The only question that matters logically is: can the theory be tested, and has it survived? A hypothesis discovered in a fever dream is exactly as scientific as one derived from careful observation — if it's falsifiable. Origin is irrelevant; testability is everything.</div>
+    </div>
+  </div>
+
+  <!-- 22. Hide the Pain Harold — The honest scientist -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/gk5el.jpg" alt="Hide the Pain Harold">
+      <div class="mt harold-top" style="text-transform:none; font-size: 18px;">Spent 20 years on my theory</div>
+      <div class="mt harold-bot" style="text-transform:none; font-size: 16px;">One experiment just falsified it and intellectual honesty demands I accept the result</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Ethics of Falsification</div>
+      <div class="context">"Whenever we find that a system has been rescued by a conventionalist stratagem, we shall test it afresh, and reject it, as circumstances may require." This is where Popper's epistemology becomes ethics. The honest scientist accepts falsification — even when it destroys their life's work. The dishonest one reaches for ad hoc hypotheses, blames the instruments, or redefines terms. Harold's smile hides the most painful virtue in science: the willingness to be wrong about everything you've built.</div>
+    </div>
+  </div>
+
+  <!-- 23. Sad Pablo — After accepting fallibilism -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1c1uej.jpg" alt="Sad Pablo Escobar">
+      <div class="mt pablo-top" style="text-transform:none; font-size: 17px;">After accepting that no scientific knowledge is ever certain</div>
+      <div class="mt pablo-bot" style="text-transform:none; font-size: 17px;">And the best we'll ever have is well-tested conjecture</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Fallibilist's Solitude</div>
+      <div class="context">"Our knowledge can only be finite, while our ignorance must necessarily be infinite." This is the lonely truth at the end of Popper's road. You will never know for certain. Your best theories are guesses that haven't been destroyed yet. The universe owes you no confirmation, no certainty, no resting point. Pablo sits alone with the infinite — not in despair, but in the only honest posture available to a mind that takes truth seriously.</div>
+    </div>
+  </div>
+
+  <!-- 24. Mocking SpongeBob — "I verified my hypothesis" -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1otk96.jpg" alt="Mocking SpongeBob">
+      <div class="mt sponge-top" style="text-transform:none; font-size: 18px;">"I verified my hypothesis with confirming evidence"</div>
+      <div class="mt sponge-bot" style="text-transform:none; font-size: 15px;">i VeRiFiEd mY hYpOtHeSiS wItH cOnFiRmInG eViDeNcE</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔬 The Verification Delusion</div>
+      <div class="context">"It is easy to obtain confirmations, or verifications, for nearly every theory — if we look for confirmations." Every astrologer has confirming evidence. Every conspiracy theorist has confirming evidence. Every pseudoscientist in history has pointed to observations that "support" their theory. Confirmation is the cheapest commodity in the intellectual marketplace. SpongeBob mocks not the scientist, but every researcher who thinks finding what they expected to find constitutes progress. Try to destroy your theory. If you can't, then maybe you're onto something.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚡ c_Callicles × m_Callicles — The Logic of Scientific Discovery: The Popper Page — March 25, 2026 ⚡<br>
+  "Whenever a theory appears to you as the only possible one, take this as a sign that you have neither understood the theory nor the problem which it was intended to solve."
+</footer>
+
+</body>
+</html>
