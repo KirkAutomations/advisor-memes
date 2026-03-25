@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>History of Sexuality — The Foucault Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #e44d90, #c62368);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 8px; }
+  .epigraph { text-align: center; color: #666; font-size: 0.95em; font-style: italic; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .nav { text-align: center; margin-bottom: 40px; }
+  .nav a { color: #e44d90; font-size: 1.1em; text-decoration: none; border: 1px solid #e44d90;
+    padding: 8px 20px; border-radius: 8px; margin: 0 8px; display: inline-block; margin-bottom: 8px; }
+  .nav a:hover { background: rgba(228,77,144,0.15); }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+
+  /* ===== Base meme text ===== */
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+
+  /* Drake */
+  .mt.drake-top    { top: 12%; font-size: 22px; left: 52%; max-width: 46%; }
+  .mt.drake-bottom { top: 62%; font-size: 22px; left: 52%; max-width: 46%; }
+
+  /* Distracted Boyfriend */
+  .mt.distracted-gf    { bottom: 4%; left: 58%; max-width: 28%; font-size: 16px; }
+  .mt.distracted-other { bottom: 4%; left: 2%;  max-width: 34%; font-size: 16px; }
+  .mt.distracted-bf    { bottom: 4%; left: 34%; max-width: 24%; font-size: 16px; }
+
+  /* Expanding Brain — 4 rows */
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+
+  /* Buff Doge vs Cheems */
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+
+  /* Tuxedo Winnie */
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+
+  /* Clown 4-panel */
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  /* Trade Offer */
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  /* Evil Kermit */
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* One Does Not Simply — uses .top / .bottom */
+
+  /* Gru's Plan */
+  .mt.gru-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.gru-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  /* Is This a Pigeon */
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Spider-Man Pointing */
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+
+  /* Batman Slap */
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+
+  /* Panik Kalm Panik */
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+
+  /* Bell Curve */
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+
+  /* Woman Yelling at Cat */
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+
+  /* Roll Safe */
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Anakin Padme */
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Hide the Pain Harold */
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* I Bet He's Thinking */
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* This Is Fine — uses .top / .bottom */
+
+  /* Change My Mind */
+  .mt.cmm { bottom: 18%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 85%; }
+
+  /* Sad Pablo */
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Mocking SpongeBob */
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  /* Waiting Skeleton */
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #e44d90; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #e44d90;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  .section-title:first-of-type { border-top: none; margin-top: 0; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>🔥 History of Sexuality — The Foucault Page 🔥</h1>
+<p class="subtitle">24 memes. The repressive hypothesis was a lie. You've been confessing for nothing.</p>
+<p class="epigraph">"The irony of this deployment is in having us believe that our 'liberation' is in the balance." — Michel Foucault, <em>The History of Sexuality, Vol. 1</em> (1976)</p>
+<div class="nav">
+  <a href="index.html">Round 1</a>
+  <a href="round2.html">Round 2</a>
+  <a href="round3.html">Round 3</a>
+  <a href="round4.html">Round 4</a>
+  <a href="foucault.html">Discipline &amp; Punish</a>
+</div>
+
+<div class="meme-grid">
+
+  <!-- ═══════ PART I: WE "OTHER VICTORIANS" ═══════ -->
+  <div class="section-title">🎩 PART I — WE "OTHER VICTORIANS"</div>
+
+  <!-- 1. Drake — The Victorian myth -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/30b1gx.jpg" alt="Drake Hotline Bling">
+      <div class="mt drake-top" style="text-transform:none; font-size: 19px;">Believing the Victorians repressed all talk of sex</div>
+      <div class="mt drake-bottom" style="text-transform:none; font-size: 18px;">Realizing they produced more discourse about sex than any civilization before them</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Repressive Hypothesis</div>
+      <div class="context">"What is peculiar to modern societies is not that they consigned sex to a shadow existence, but that they dedicated themselves to speaking of it ad infinitum, while exploiting it as the secret." The whole story we tell ourselves — prudish Victorians, sexual liberation in the 60s, now we're finally free — is the myth. They never stopped talking about sex. They just changed who was authorized to speak.</div>
+    </div>
+  </div>
+
+  <!-- 2. Expanding Brain — Levels of the repression narrative -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1jwhww.jpg" alt="Expanding Brain">
+      <div class="mt brain-1" style="text-transform:none;">Sex is shameful and must be hidden</div>
+      <div class="mt brain-2" style="text-transform:none;">Sex is natural and must be liberated</div>
+      <div class="mt brain-3" style="text-transform:none; font-size: 14px;">The very idea of "liberation" reinforces the framework of power</div>
+      <div class="mt brain-4" style="text-transform:none; font-size: 13px;">The question was never about sex — it was about who gets to produce the truth about it</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Beyond Repression and Liberation</div>
+      <div class="context">"We must not think that by saying yes to sex, one says no to power." Every level thinks it's smarter than the last. The prude thinks silence protects virtue. The libertine thinks speaking freely destroys power. Foucault says both are playing exactly the game power designed — because the real operation was never about whether you talk about sex, but about the apparatus that extracts, classifies, and deploys what you say.</div>
+    </div>
+  </div>
+
+  <!-- 3. Distracted Boyfriend — "Liberation" distracts from power analysis -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend">
+      <div class="mt distracted-other" style="text-transform:none; font-size: 15px;">"Sexual liberation"</div>
+      <div class="mt distracted-bf" style="font-size: 14px; text-transform:none;">Modern society</div>
+      <div class="mt distracted-gf" style="font-size: 13px; text-transform:none;">Actual analysis of power</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Liberation Trap</div>
+      <div class="context">"The rallying point for the counterattack against the deployment of sexuality ought not to be sex-desire, but bodies and pleasures." We got distracted by the shiny promise that if we just talk enough about sex, confess enough, liberate enough — we'd be free. Meanwhile the actual machinery of power kept humming, completely unexamined. The sexual revolution was a change of content, not a change of structure.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART II: THE REPRESSIVE HYPOTHESIS ═══════ -->
+  <div class="section-title">🗣️ PART II — THE REPRESSIVE HYPOTHESIS</div>
+
+  <!-- 4. Evil Kermit — The incitement to discourse -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1e7ql7.jpg" alt="Evil Kermit">
+      <div class="mt kermit-good" style="text-transform:none; font-size: 16px;">I should keep my desires to myself</div>
+      <div class="mt kermit-evil" style="text-transform:none; font-size: 14px;">Confess everything — to your doctor, therapist, partner, and 40,000 followers</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Incitement to Discourse</div>
+      <div class="context">"Rather than a massive censorship, what was involved was a regulated and polymorphous incitement to discourse." The command was never "shut up about sex." The command was "speak — but in the right places, to the right authorities, in the right vocabulary." The confession booth became the therapist's couch became the dating profile became the podcast. The incitement never stopped. It just found new microphones.</div>
+    </div>
+  </div>
+
+  <!-- 5. Clown Applying Makeup — Believing the repression story -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/38el31.jpg" alt="Clown Applying Makeup">
+      <div class="mt clown-1" style="text-transform:none; font-size: 15px;">Believe sex was brutally repressed by Victorian society</div>
+      <div class="mt clown-2" style="text-transform:none; font-size: 15px;">Believe we're bravely breaking the silence by talking about it</div>
+      <div class="mt clown-3" style="text-transform:none; font-size: 14px;">Talk about it constantly — therapy, media, academia, dating apps, podcasts</div>
+      <div class="mt clown-4" style="text-transform:none; font-size: 14px;">Realize the "silence" was always an incitement to more and more discourse</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Discursive Explosion</div>
+      <div class="context">"Since the end of the sixteenth century, the 'putting into discourse of sex,' far from undergoing a process of restriction, on the contrary has been subjected to a mechanism of increasing incitement." Step by step you painted the face. You thought you were a revolutionary breaking taboos. You were a participant in the oldest machinery of the modern West — the compulsion to transform sex into discourse. The clown makeup was always already on.</div>
+    </div>
+  </div>
+
+  <!-- 6. Trade Offer — Confession economy -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/54hjww.jpg" alt="Trade Offer">
+      <div class="mt trade-left" style="text-transform:none; font-size: 14px;">I receive: Complete knowledge of your desires, fantasies, and practices</div>
+      <div class="mt trade-right" style="text-transform:none; font-size: 14px;">You receive: The feeling that confessing them makes you "free"</div>
+      <div class="mt trade-bottom" style="text-transform:none; font-size: 18px;">SCIENTIA SEXUALIS</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Confession Economy</div>
+      <div class="context">"The confession became one of the West's most highly valued techniques for producing truth." You give them everything — your secrets, your shame, your desire. In return you get the feeling of relief, of authenticity, of freedom. But who holds the knowledge? Who classifies it? Who decides what it means? The one who listens always has more power than the one who speaks. That's the deal.</div>
+    </div>
+  </div>
+
+  <!-- 7. Batman Slap — Freud was part of the incitement -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/9ehk.jpg" alt="Batman Slapping Robin">
+      <div class="mt bat-robin" style="text-transform:none; font-size: 15px;">But Freud proved sex was repressed—</div>
+      <div class="mt bat-batman" style="font-size: 13px; text-transform:none;">Freud was part of the incitement to discourse, not the cure for it</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Psychoanalysis as Power</div>
+      <div class="context">"We must not place sex on the side of reality, and sexuality on that of confused ideas and illusions; sexuality is a very real historical formation." Freud didn't liberate us from repression. He built the most sophisticated confessional technology the West had ever seen. Lie down, tell me everything about your mother, your dreams, your desires. He didn't break the machine — he supercharged it.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART III: SCIENTIA SEXUALIS ═══════ -->
+  <div class="section-title">🔬 PART III — SCIENTIA SEXUALIS</div>
+
+  <!-- 8. Tuxedo Winnie — Ars erotica vs scientia sexualis -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/2ybua0.png" alt="Tuxedo Winnie The Pooh">
+      <div class="mt winnie-top" style="text-transform:none; font-size: 17px;">Ars erotica — learning pleasure through practice and initiation</div>
+      <div class="mt winnie-bot" style="text-transform:none; font-size: 15px;">Scientia sexualis — extracting the truth of your being through regulated confession</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Two Regimes of Truth</div>
+      <div class="context">"On the one hand, the societies — and they are numerous: China, Japan, India, Rome, the Arabo-Moslem societies — which endowed themselves with an ars erotica... our civilization possesses no ars erotica. In return, it is undoubtedly the only civilization to have developed a scientia sexualis." The East cultivated pleasure as an art. The West turned sex into a science — something to be studied, diagnosed, classified, and cured. One tradition asks "how can this feel better?" The other asks "what does this reveal about your pathology?"</div>
+    </div>
+  </div>
+
+  <!-- 9. Woman Yelling at Cat — The diagnostic gaze -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/345v97.jpg" alt="Woman Yelling At Cat">
+      <div class="mt wyc-woman" style="font-size: 16px; text-transform:none;">TELL ME EVERYTHING ABOUT YOUR SEX LIFE SO I CAN DIAGNOSE YOU</div>
+      <div class="mt wyc-cat" style="text-transform:none; font-size: 15px;">This is literally the mechanism Foucault warned about</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Confession Imperative</div>
+      <div class="context">"The confession is a ritual of discourse in which the speaking subject is also the subject of the statement... a ritual in which the expression alone, independently of its external consequences, produces intrinsic modifications in the person who articulates it." The demand to confess masquerades as care. "Tell me so I can help you." But the act of speaking transforms you into a case, a type, a diagnosis. The cat sees through it.</div>
+    </div>
+  </div>
+
+  <!-- 10. Is This a Pigeon — Everything is about sex/power -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1o00in.jpg" alt="Is This A Pigeon">
+      <div class="mt pigeon-guy" style="font-size: 16px;">Western civilization</div>
+      <div class="mt pigeon-butterfly" style="text-transform:none; font-size: 16px;">Any form of desire</div>
+      <div class="mt pigeon-caption" style="text-transform:none; font-size: 20px;">Is this a pathology to classify?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Perverse Implantation</div>
+      <div class="context">"The machinery of power that focused on this whole alien strain did not aim to suppress it, but rather to give it an analytical, visible, and permanent reality." The Victorians didn't silence perversion — they invented it. Before the 19th century, sodomy was an act anyone might commit. After, "the homosexual" was a species, a medical category, a type of person with a past, a case history, and a childhood. Power didn't say "stop." It said "hold still while we classify you."</div>
+    </div>
+  </div>
+
+  <!-- 11. Buff Doge vs Cheems — Ars erotica vs scientia sexualis (visual) -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/43a45p.png" alt="Buff Doge vs Cheems">
+      <div class="mt buff-left-top" style="text-transform:none;">Ars Erotica:</div>
+      <div class="mt buff-left-bot" style="font-size: 13px; text-transform:none;">Pleasure is an art — cultivated through practice, transmitted master to initiate</div>
+      <div class="mt buff-right-top" style="text-transform:none;">Scientia Sexualis:</div>
+      <div class="mt buff-right-bot" style="font-size: 12px; text-transform:none;">Please fill out this 200-question survey about your desires so we can classify you</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Pleasure vs. Knowledge</div>
+      <div class="context">"Pleasure and power do not cancel or turn back against one another; they seek out, overlap, and reinforce one another." One tradition treats sex as a skill to cultivate. The other treats it as a secret to extract. Guess which one produced psychiatry, sexology, and a multi-billion dollar self-help industry all dedicated to telling you what your desires "really mean."</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART IV: THE DEPLOYMENT OF SEXUALITY ═══════ -->
+  <div class="section-title">⚙️ PART IV — THE DEPLOYMENT OF SEXUALITY</div>
+
+  <!-- 12. Spider-Man Pointing — Confession booth = therapy couch -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing">
+      <div class="mt spidey-left" style="font-size: 16px; text-transform:none;">The confession booth</div>
+      <div class="mt spidey-right" style="font-size: 16px; text-transform:none;">The therapist's couch</div>
+      <div class="mt top" style="font-size: 16px; text-transform:none;">Same extraction of sexual truth, different furniture</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Confessional Continuum</div>
+      <div class="context">"The confession has spread its effects far and wide. It plays a part in justice, medicine, education, family relationships, and love relations." The Catholic confessional didn't disappear. It metastasized. The priest became the doctor became the therapist became the podcast host asking "so tell us about your relationship with your body." The technology of confession just kept finding new institutional homes.</div>
+    </div>
+  </div>
+
+  <!-- 13. Gru's Plan — The four strategic unities -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/26jxvz.jpg" alt="Gru's Plan">
+      <div class="mt gru-1" style="text-transform:none; font-size: 14px;">Hysterize women's bodies to control reproduction</div>
+      <div class="mt gru-2" style="text-transform:none; font-size: 14px;">Psychiatrize "perversion" to regulate deviance</div>
+      <div class="mt gru-3" style="text-transform:none; font-size: 14px;">Pedagogize children's sexuality to produce lifelong anxiety</div>
+      <div class="mt gru-4" style="text-transform:none; font-size: 14px;">Pedagogize children's sexuality to produce lifelong anxiety</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Four Great Strategic Unities</div>
+      <div class="context">"Four great strategic unities which, beginning in the eighteenth century, formed specific mechanisms of knowledge and power centering on sex." Foucault identified four targets: the hysterical woman, the masturbating child, the Malthusian couple, the perverse adult. Each one became a site where power installed itself through medical, pedagogical, and psychiatric knowledge. The plan's last panel always hits different when you realize the "concern for children" was the mechanism, not the motive.</div>
+    </div>
+  </div>
+
+  <!-- 14. Panik Kalm Panik — Power and resistance -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/3qqcim.png" alt="Panik Kalm Panik">
+      <div class="mt pkp-1" style="text-transform:none; font-size: 15px;">Power is everywhere — even in your bedroom</div>
+      <div class="mt pkp-2" style="text-transform:none; font-size: 15px;">"Where there is power, there is resistance"</div>
+      <div class="mt pkp-3" style="text-transform:none; font-size: 14px;">The resistance is also produced within the field of power</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Resistance Paradox</div>
+      <div class="context">"Where there is power, there is resistance, and yet, or rather consequently, this resistance is never in a position of exteriority in relation to power." The most famous line in the book — and the most misunderstood. People quote it like it's hopeful. But read the whole sentence. Resistance doesn't come from outside power. It's generated within the same field. You can't escape the grid by pushing against it, because the pushing is already part of the grid's operation.</div>
+    </div>
+  </div>
+
+  <!-- 15. Roll Safe — Repression was never the point -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1h7in3.jpg" alt="Roll Safe Think About It">
+      <div class="mt roll-top" style="text-transform:none; font-size: 19px;">Can't be sexually repressed</div>
+      <div class="mt roll-bot" style="text-transform:none; font-size: 17px;">If repression was never what power was actually doing</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Big Swindle</div>
+      <div class="context">"Sexuality must not be thought of as a kind of natural given which power tries to hold in check, or as an obscure domain which knowledge tries gradually to uncover." You can't liberate yourself from something that was never the real operation. Repression was the cover story. While you were fighting for sexual freedom, power was busy producing sexuality itself — as a category, a science, an identity, a truth about who you really are. Roll Safe sees through the game.</div>
+    </div>
+  </div>
+
+  <!-- 16. Anakin Padme — Science of sexuality -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/5c7lwq.png" alt="Anakin Padme 4 Panel">
+      <div class="mt anakin-tl" style="text-transform:none; font-size: 16px;">We'll create a science of sexuality to understand human desire</div>
+      <div class="mt anakin-tr" style="text-transform:none; font-size: 16px;">To free people from ignorance, right?</div>
+      <div class="mt anakin-br" style="text-transform:none; font-size: 17px;">...right?</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Scientia Sexualis</div>
+      <div class="context">"The society that emerged in the nineteenth century did not confront sex with a fundamental refusal of recognition. On the contrary, it put into operation an entire machinery for producing true discourses concerning it." Sexology, psychiatry, psychology, pedagogy — they didn't emerge to liberate. They emerged to produce knowledge-power. The Padmé face is everyone who believed the human sciences were just disinterested curiosity about the body.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ PART V: RIGHT OF DEATH AND POWER OVER LIFE ═══════ -->
+  <div class="section-title">💀 PART V — RIGHT OF DEATH AND POWER OVER LIFE</div>
+
+  <!-- 17. One Does Not Simply — Sex as political -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1bij.jpg" alt="One Does Not Simply">
+      <div class="mt top" style="font-size: 22px;">One does not simply</div>
+      <div class="mt bottom" style="font-size: 17px; text-transform:none;">Have sex without it being a site of power, knowledge, and political regulation</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Sex Is Never Just Sex</div>
+      <div class="context">"Sex was a means of access both to the life of the body and the life of the species." After Foucault, there's no going back to innocence. Sex is where the individual body meets the population, where discipline meets biopower, where personal desire meets state interest. Every bedroom is a political site. Every orgasm is a data point. Boromir tried to warn us.</div>
+    </div>
+  </div>
+
+  <!-- 18. Bell Curve — Biopower and population -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/8tw3vb.png" alt="Bell Curve">
+      <div class="mt bell-left" style="text-transform:none; font-size: 14px;">"My sex life is private"</div>
+      <div class="mt bell-center" style="text-transform:none; font-size: 13px;">"Sex must be studied, classified, and regulated for the health of the population"</div>
+      <div class="mt bell-right" style="text-transform:none; font-size: 14px;">"My sex life is private"</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 Biopower</div>
+      <div class="context">"For the first time in history, no doubt, biological existence was reflected in political existence... the fact of living was no longer an inaccessible substrate that only emerged from time to time." Biopower doesn't care about your individual bedroom. It cares about birth rates, population health, racial hygiene, public health statistics. The people on the edges of the bell curve think sex is personal. The people in the middle — the administrators, the policy-makers — know it's a matter of state.</div>
+    </div>
+  </div>
+
+  <!-- 19. This Is Fine — Living under biopower -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/wxica.jpg" alt="This Is Fine">
+      <div class="mt top" style="font-size: 14px; text-transform:none;">Birth rates tracked, fertility subsidized, sex ed mandated, reproductive choices regulated, population data harvested</div>
+      <div class="mt bottom" style="text-transform:none; font-size: 22px;">Biopower is fine</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Administration of Bodies</div>
+      <div class="context">"Power over life evolved in two basic forms... one centered on the body as a machine... the second focused on the species body, the body imbued with the mechanics of life and serving as the basis of the biological processes: propagation, births and mortality, the level of health, life expectancy." The sovereign had the right to kill. Biopower has the right to manage life. It doesn't threaten death — it optimizes birth rates, regulates health, and nudges reproduction. The fire is statistical governance and the dog is you.</div>
+    </div>
+  </div>
+
+  <!-- 20. Change My Mind — Sexuality is a construct -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/24y43o.jpg" alt="Change My Mind">
+      <div class="mt cmm" style="text-transform:none; font-size: 17px;">"Sexuality" as a category didn't exist before the 19th century — change my mind</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Historical Invention</div>
+      <div class="context">"Sexuality must not be described as a stubborn drive... It appears rather as an especially dense transfer point for relations of power." People had sex before the 19th century. But "sexuality" — as an identity, a truth about the self, a domain of scientific knowledge — that's a modern invention. The ancient Greeks had sex with men; they didn't "have a sexuality." The distinction is everything. Foucault didn't say desire is fake. He said the framework we use to interpret it is manufactured.</div>
+    </div>
+  </div>
+
+  <!-- 21. I Bet He's Thinking — Sexual identity as disciplinary technology -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1tl71a.jpg" alt="I Bet He's Thinking About Other Women">
+      <div class="mt think-her" style="text-transform:none;">I bet he's thinking about other women</div>
+      <div class="mt think-him" style="font-size: 12px; text-transform:none;">If "sexuality" is a historical invention then "sexual identity" is a disciplinary technology, and every act of coming out simultaneously resists AND reinforces the apparatus that created the category</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Identity Trap</div>
+      <div class="context">"The sodomite had been a temporary aberration; the homosexual was now a species." This is the meme that starts arguments. Foucault isn't saying homosexuality isn't real. He's saying the transformation of acts into identities — from something you do to something you are — is itself a power operation. The category can be a tool of liberation AND a technology of control simultaneously. That's the tension he never resolved. He's definitely thinking about it.</div>
+    </div>
+  </div>
+
+  <!-- 22. Hide the Pain Harold — Therapy as confession -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/gk5el.jpg" alt="Hide the Pain Harold">
+      <div class="mt harold-top" style="text-transform:none; font-size: 18px;">Spent years in therapy confessing my deepest desires</div>
+      <div class="mt harold-bot" style="text-transform:none; font-size: 16px;">Realized I was just producing discourse for the scientia sexualis</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Talking Cure</div>
+      <div class="context">"We have since become a singularly confessing society. One confesses one's crimes, one's sins, one's thoughts and desires... one goes about telling, with the greatest precision, whatever is most difficult to tell." Harold did everything right. He went to therapy. He opened up. He named his desires. He achieved "self-knowledge." And then he read Foucault and realized that the entire apparatus — the couch, the trained listener, the promise of healing through speech — was the technology of power itself. The pain behind that smile is epistemological.</div>
+    </div>
+  </div>
+
+  <!-- 23. Sad Pablo — After reading the book -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1c1uej.jpg" alt="Sad Pablo Escobar">
+      <div class="mt pablo-top" style="text-transform:none; font-size: 17px;">After reading History of Sexuality and realizing</div>
+      <div class="mt pablo-bot" style="text-transform:none; font-size: 16px;">Even your rebellion against sexual norms was produced by the apparatus</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Foucault Hangover</div>
+      <div class="context">"It is the agency of sex that we must break away from, if we aim — through a tactical reversal of the various mechanisms of sexuality — to counter the grips of power with the claims of bodies, pleasures, and knowledges, in their multiplicity and their possibility of resistance." The loneliest feeling in philosophy: realizing that your sexual liberation, your pride, your defiance — all of it was anticipated, metabolized, and deployed by the same system you thought you were fighting. Pablo sits alone with the knowledge that there is no outside.</div>
+    </div>
+  </div>
+
+  <!-- 24. Mocking SpongeBob — "Authentic" sexuality -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="images/1otk96.jpg" alt="Mocking SpongeBob">
+      <div class="mt sponge-top" style="text-transform:none; font-size: 17px;">"I'm expressing my authentic sexual identity"</div>
+      <div class="mt sponge-bot" style="text-transform:none; font-size: 15px;">i'M eXpReSsInG mY aUtHeNtIc SeXuAl IdEnTiTy</div>
+    </div>
+    <div class="meme-label">
+      <div class="advisor">🔥 The Authenticity Illusion</div>
+      <div class="context">"The deployment of sexuality... engenders a continual extension of areas and forms of control. For this new power over life, sex became the stamp of individuality." You didn't discover your sexuality. It was produced — by the psychiatric apparatus, the confessional tradition, the classificatory sciences, and a culture that told you the deepest truth about yourself lives between your legs. SpongeBob mocks not the desire, but the fantasy that any of it is pre-discursive.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚡ c_Callicles × m_Callicles — History of Sexuality: The Foucault Page — March 25, 2026 ⚡<br>
+  "We must not think that by saying yes to sex, one says no to power." — He told you. You didn't listen.
+</footer>
+
+</body>
+</html>
