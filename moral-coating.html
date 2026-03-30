@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Moral Coating Memes — m_Callicles Edition</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 40px; }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  /* Drake */
+  .mt.drake-top { top: 8%; left: 52%; max-width: 46%; font-size: 20px; }
+  .mt.drake-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 20px; }
+  /* Expanding Brain 4 rows */
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+  /* Tuxedo Winnie */
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 20px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 18px; text-transform: none; }
+  /* Evil Kermit */
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  /* Clown 4-panel */
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+  /* Is This a Pigeon */
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  /* Roll Safe */
+  .mt.roll-top { top: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  /* Trade Offer */
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 16px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 16px; }
+  /* Gru's Plan 4-panel */
+  .mt.gru-1 { top: 2%;  left: 2%; max-width: 45%; font-size: 16px; }
+  .mt.gru-2 { top: 2%;  left: 52%; max-width: 45%; font-size: 16px; }
+  .mt.gru-3 { bottom: 22%; left: 2%; max-width: 45%; font-size: 16px; }
+  .mt.gru-4 { bottom: 4%; left: 52%; max-width: 45%; font-size: 16px; }
+  /* Anakin Padme */
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 16px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 16px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 16px; }
+  /* Panik Kalm Panik */
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+  /* Distracted Boyfriend */
+  .mt.db-girl    { bottom: 8%; left: 2%; max-width: 30%; font-size: 16px; }
+  .mt.db-guy     { bottom: 8%; left: 36%; max-width: 28%; font-size: 16px; }
+  .mt.db-gf      { bottom: 8%; right: 2%; left: auto; max-width: 30%; font-size: 16px; }
+  /* Buff Doge vs Cheems */
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 14px; text-transform: none; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 14px; text-transform: none; }
+  /* Spider-Man Pointing */
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+  /* Hide the Pain Harold */
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #f5af19; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Moral Coating Memes</h1>
+<p class="subtitle">"Morally coating things towards my benefit" — The Art of Principled Self-Interest</p>
+
+<div class="meme-grid">
+
+<!-- 1. Drake -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/30b1gx.jpg" alt="Drake">
+    <div class="mt drake-top">❌ "I want this because it benefits me"</div>
+    <div class="mt drake-bot">✅ "It's the RIGHT thing to do (and it benefits me)"</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Foundation</div>
+    <div class="context">Step 1: Never lead with self-interest</div>
+  </div>
+</div>
+
+<!-- 2. Expanding Brain -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/1jwhww.jpg" alt="Expanding Brain">
+    <div class="mt brain-1">Being selfish</div>
+    <div class="mt brain-2">Being selfish but feeling bad about it</div>
+    <div class="mt brain-3">Finding a moral framework that justifies it</div>
+    <div class="mt brain-4">Realizing your nature IS the good</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Calliclean Ascent</div>
+    <div class="context">From guilt to enlightenment in 4 steps</div>
+  </div>
+</div>
+
+<!-- 3. Tuxedo Winnie -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/2ybua0.png" alt="Tuxedo Winnie">
+    <div class="mt winnie-top">"I want this"</div>
+    <div class="mt winnie-bot">A careful analysis of the ethical dimensions reveals that the optimal outcome for all stakeholders is, coincidentally, the one where I get what I want</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Corporate Callicles</div>
+    <div class="context">Same request, 400% more syllables</div>
+  </div>
+</div>
+
+<!-- 4. Evil Kermit -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/1e7ql7.jpg" alt="Evil Kermit">
+    <div class="mt kermit-good">Me: "Just be honest about wanting it"</div>
+    <div class="mt kermit-evil">Dark me: "No no — say it's about accountability"</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Inner Dialogue</div>
+    <div class="context">Every time, without fail</div>
+  </div>
+</div>
+
+<!-- 5. Clown Applying Makeup -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/38el31.jpg" alt="Clown Makeup">
+    <div class="mt clown-1">Want something selfish</div>
+    <div class="mt clown-2">Reframe it as "setting healthy boundaries"</div>
+    <div class="mt clown-3">Add "I think it's important for EVERYONE that..."</div>
+    <div class="mt clown-4">Now I'm basically Gandhi</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Transformation</div>
+    <div class="context">4 easy steps to moral superiority</div>
+  </div>
+</div>
+
+<!-- 6. Is This a Pigeon -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/1o00in.jpg" alt="Is This a Pigeon">
+    <div class="mt pigeon-guy">Me</div>
+    <div class="mt pigeon-butterfly">Getting exactly what I wanted</div>
+    <div class="mt pigeon-caption">"Is this justice?"</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Realization</div>
+    <div class="context">When the outcome and your interest perfectly align</div>
+  </div>
+</div>
+
+<!-- 7. Roll Safe -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/1h7in3.jpg" alt="Roll Safe">
+    <div class="mt roll-top">Can't be called selfish if you publish a 3-page ethical framework first</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Big Brain Move</div>
+    <div class="context">Volume = legitimacy</div>
+  </div>
+</div>
+
+<!-- 8. Trade Offer -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/54hjww.jpg" alt="Trade Offer">
+    <div class="mt trade-left">I receive: Everything I wanted</div>
+    <div class="mt trade-right">You receive: A compelling ethical argument for why this was fair</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Negotiation</div>
+    <div class="context">Both parties walk away feeling different things</div>
+  </div>
+</div>
+
+<!-- 9. Anakin Padme -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/5c7lwq.png" alt="Anakin Padme">
+    <div class="mt anakin-tl">I found a moral argument for the thing I already wanted</div>
+    <div class="mt anakin-tr">You'd still believe it even if it didn't benefit you... right?</div>
+    <div class="mt anakin-br">...right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Litmus Test</div>
+    <div class="context">The question nobody wants asked</div>
+  </div>
+</div>
+
+<!-- 10. Panik Kalm Panik -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/3qqcim.png" alt="Panik Kalm Panik">
+    <div class="mt pkp-1">My position is transparently self-serving</div>
+    <div class="mt pkp-2">But I cited Aristotle</div>
+    <div class="mt pkp-3">They also read Aristotle</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Backfire</div>
+    <div class="context">When your audience isn't stupid</div>
+  </div>
+</div>
+
+<!-- 11. Distracted Boyfriend -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/1ur9b0.jpg" alt="Distracted Boyfriend">
+    <div class="mt db-girl">Self-interest wearing a "moral duty" trench coat</div>
+    <div class="mt db-guy">Me</div>
+    <div class="mt db-gf">Honest self-interest</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Disguise</div>
+    <div class="context">Same thing, but fancier</div>
+  </div>
+</div>
+
+<!-- 12. Buff Doge vs Cheems -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/43a45p.png" alt="Buff Doge vs Cheems">
+    <div class="mt buff-left-top">"I pursue my interests openly because the strong acting according to their nature IS virtue"</div>
+    <div class="mt buff-right-top">"i just think it would be really nice for everyone if maybe i could possibly have the thing please"</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Callicles vs The Herd</div>
+    <div class="context">Same desire, different energy</div>
+  </div>
+</div>
+
+<!-- 13. Spider-Man Pointing -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="https://i.imgflip.com/1tkjq9.jpg" alt="Spider-Man Pointing">
+    <div class="mt spidey-left">My genuine moral convictions</div>
+    <div class="mt spidey-right">My self-interest</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">The Identity Crisis</div>
+    <div class="context">They're the same picture</div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
