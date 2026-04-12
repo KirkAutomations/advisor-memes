@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foucault — Always Has Been</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Oswald', Impact, 'Arial Black', sans-serif;
+  padding: 30px 20px;
+}
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #e44d90, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.1em;
+  color: #aaa;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-style: italic;
+}
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.meme-card {
+  background: #161620;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2a3a;
+  transition: transform 0.2s;
+}
+.meme-card:hover { transform: translateY(-3px); }
+.meme-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 960 / 540;
+  overflow: hidden;
+}
+.meme-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mt {
+  position: absolute;
+  font-family: 'Oswald', Impact, 'Arial Black', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-shadow:
+    -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 2px 2px 0 #000,
+    0 3px 6px rgba(0,0,0,0.7);
+  text-align: center;
+  line-height: 1.2;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.55);
+}
+/* Question astronaut (left side, looking at Earth) */
+.mt-question {
+  bottom: 8%;
+  left: 2%;
+  width: 52%;
+  font-size: clamp(14px, 2.2vw, 20px);
+}
+/* Gun astronaut (right side) */
+.mt-answer {
+  bottom: 8%;
+  right: 2%;
+  width: 32%;
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+.meme-label {
+  padding: 14px 18px;
+  font-size: 0.95em;
+  color: #ccc;
+  font-weight: 400;
+  border-top: 1px solid #2a2a3a;
+}
+.meme-label .concept {
+  color: #e44d90;
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+nav a {
+  color: #e44d90;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+nav a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>FOUCAULT — ALWAYS HAS BEEN 🔫</h1>
+<p class="subtitle">"Where there is power, there is resistance." — History of Sexuality, Vol. 1</p>
+
+<nav>
+  <a href="index.html">Round 1</a>
+  <a href="round2.html">Round 2</a>
+  <a href="round3.html">Round 3</a>
+  <a href="round4.html">Round 4</a>
+  <a href="foucault.html">D&P</a>
+  <a href="foucault-sexuality.html">Sexuality</a>
+  <a href="popper-logic.html">Popper</a>
+</nav>
+
+<div class="meme-grid">
+
+  <!-- 1 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, all sexual taboos exist to manage population output?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Biopower</span>
+      Sex isn't repressed — it's <em>regulated</em>. The state doesn't care what you do in bed until it affects birth rates, labor supply, and public health statistics.
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, confessing your desires was never about forgiveness?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">The Confessional</span>
+      From the priest's booth to the therapist's couch — confession doesn't liberate you, it makes you legible to power. You hand over the map to your own subjugation.
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, the sexual revolution was still a form of control?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">The Repressive Hypothesis</span>
+      You think you're liberated because you <em>talk</em> about sex? That's exactly the mechanism. The demand to speak your truth IS the power apparatus. You didn't escape the cage — they just made the bars invisible.
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, psychiatry invented "the homosexual" as a species in 1870?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Scientia Sexualis</span>
+      Before the 19th century, sodomy was an act. Then medicine turned it into an identity — a type of person with a "secret" that explained everything about them. The category didn't describe reality. It produced it.
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, "normal" is just whatever makes you a productive worker?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Normalization</span>
+      The norm isn't natural — it's engineered. Schools, clinics, and factories all converge on the same project: producing docile bodies that show up on time and don't ask questions.
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, the Victorians weren't repressed — they were obsessed with cataloguing sex?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Discourse Proliferation</span>
+      The "repressed" Victorians produced more discourse about sex than any civilization before them. Censorship wasn't silence — it was an incitement to speak, classify, confess, and document. The mouth never stopped moving.
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, public health campaigns are just the state managing who lives and who dies?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Right of Death / Power Over Life</span>
+      The sovereign used to kill. Modern power <em>optimizes</em>. Vaccination schedules, dietary guidelines, fitness culture — it's not about your health. It's about maintaining the species as a productive resource.
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, "knowing yourself" is a technology of domination?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Power/Knowledge</span>
+      "Know thyself" sounds like wisdom. Foucault hears a command. Every time you excavate your inner truth — in therapy, in journals, on social media — you're producing knowledge that power can grip. Self-knowledge is self-surveillance.
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, "deviants" were invented so the state could define what's normal?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Deployment of Sexuality</span>
+      The pervert, the hysteric, the masturbating child, the Malthusian couple — four figures invented in the 19th century. Not discovered. <em>Invented.</em> You need the abnormal to draw the boundary around the normal.
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="meme-card">
+    <div class="meme-container">
+      <img src="https://i.imgflip.com/46e43q.png" alt="Always Has Been">
+      <div class="mt mt-question">Wait, every identity you claim is a category power gave you?</div>
+      <div class="mt mt-answer">Always has been.</div>
+    </div>
+    <div class="meme-label">
+      <span class="concept">Subjectification</span>
+      You didn't find yourself. You were <em>made</em>. Every label — your sexuality, your diagnosis, your personality type — is a grid of intelligibility that existed before you did. You stepped into a role that was already written.
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align:center; padding: 40px 0 20px; color:#555; font-size:0.85em;">
+  c_Callicles × Foucault — "Always Has Been" Series ⚡
+</div>
+
+</body>
+</html>
