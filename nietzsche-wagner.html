@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Case of Wagner and Nietzsche contra Wagner &mdash; Nietzsche Memes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 20px; }
+  .nav { text-align: center; margin-bottom: 40px; flex-wrap: wrap; display: flex; justify-content: center; gap: 8px; }
+  .nav a { color: #7f8c8d; font-size: 0.95em; text-decoration: none; border: 1px solid #7f8c8d;
+    padding: 6px 14px; border-radius: 8px; display: inline-block; white-space: nowrap; }
+  .nav a:hover { background: rgba(255,255,255,0.05); }
+  .nav a.active { background: #7f8c8d; color: #fff; }
+  .toc { max-width: 800px; margin: 0 auto 40px; padding: 20px; background: #16213e; border-radius: 12px; }
+  .toc h2 { color: #7f8c8d; margin-bottom: 12px; font-size: 1.3em; }
+  .toc ul { list-style: none; columns: 2; gap: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { color: #aaa; text-decoration: none; font-size: 0.95em; }
+  .toc a:hover { color: #7f8c8d; }
+  .toc .count { color: #555; font-size: 0.85em; }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.drake-top { top: 8%;  left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.drake-bot { bottom: 8%; left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.db-girl   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 17px; }
+  .mt.db-guy    { bottom: 6%; left: 38%; max-width: 28%; font-size: 17px; }
+  .mt.db-gf     { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 17px; }
+  .mt.ahb-left  { top: 20%; left: 2%;  max-width: 40%; font-size: 20px; }
+  .mt.ahb-right { top: 20%; right: 2%; left: auto; max-width: 40%; font-size: 20px; }
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.gru-1 { top: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-2 { top: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-3 { bottom: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-4 { bottom: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.fine-left  { top: 6%; left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.fine-right { top: 6%; right: 2%; left: auto; max-width: 46%; font-size: 18px; }
+  .mt.cmm { bottom: 8%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #7f8c8d; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #7f8c8d;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+  @media (max-width: 600px) {
+    .meme-grid { grid-template-columns: 1fr; gap: 20px; }
+    h1 { font-size: 1.8em; }
+    .toc ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<h1>The Case of Wagner and Nietzsche contra Wagner</h1>
+<p class="subtitle"> &mdash; 80 memes</p>
+<div class="nav">
+  <a href="nietzsche-index.html">&larr; Index</a>
+  <a href="nietzsche-antichrist.html">Antichrist</a>
+  <a href="nietzsche-beyond-good-and-evil.html">Beyond G&E</a>
+  <a href="nietzsche-birth-of-tragedy.html">Birth of Tragedy</a>
+  <a href="nietzsche-daybreak.html">Daybreak</a>
+  <a href="nietzsche-ecce-homo.html">Ecce Homo</a>
+  <a href="nietzsche-gay-science.html">Gay Science</a>
+  <a href="nietzsche-genealogy-of-morality.html">Genealogy</a>
+  <a href="nietzsche-human-all-too-human.html">Human</a>
+  <a href="nietzsche-life-and-legacy.html">Life and Legacy</a>
+  <a href="nietzsche-twilight-of-the-idols.html">Twilight</a>
+  <a href="nietzsche-untimely-meditations.html">Untimely</a>
+  <a href="nietzsche-wagner.html" class="active">Wagner</a>
+  <a href="nietzsche-will-to-power.html">Will to Power</a>
+  <a href="nietzsche-zarathustra.html">Zarathustra</a>
+</div>
+
+<div class="toc"><h2>Sections</h2><ul><li><a href="#the-case-of-wagner-a-musicians-problem">The Case of Wagner A Musicians Problem <span class="count">(20)</span></a></li><li><a href="#wagner-as-danger">Wagner as Danger <span class="count">(20)</span></a></li><li><a href="#where-wagner-belongs">Where Wagner Belongs <span class="count">(20)</span></a></li><li><a href="#nietzsche-contra-wagner-selected-passages">Nietzsche contra Wagner Selected Passages <span class="count">(20)</span></a></li></ul></div>
+
+<div class="meme-grid">
+
+<div class="section-title" id="the-case-of-wagner-a-musicians-problem">&mdash; The Case of Wagner A Musicians Problem &mdash;</div>
+
+<div class="meme-card" data-id="W-0001">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Wagner's endless leitmotifs</div>
+    <div class="mt drake-bot" style="text-transform: none;">Bizet's Carmen on repeat</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Musical Preferences</div>
+    <div class="context">&ldquo;Bizet makes me a better man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0002">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Listening to Wagner for the drama</div>
+    <div class="mt brain-2" style="text-transform: none;">Listening to Wagner for the philosophy</div>
+    <div class="mt brain-3" style="text-transform: none;">Realizing Wagner has no philosophy</div>
+    <div class="mt brain-4" style="text-transform: none;">Listening to Bizet in the Mediterranean sun</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Musical Evolution</div>
+    <div class="context">&ldquo;This music seems perfect to me. It approaches lightly, supplely, with politeness.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0003">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Carmen by Bizet</div>
+    <div class="mt db-guy" style="text-transform: none;">Nietzsche</div>
+    <div class="mt db-gf" style="text-transform: none;">Entire Wagnerian corpus</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Musical Affair</div>
+    <div class="context">&ldquo;Has Wagner been a musician at all? At any rate, there was something else he was more: namely, an incomparable histrio.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0004">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, Wagner is just theater?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner Was Never Music</div>
+    <div class="context">&ldquo;Wagner was not a musician by instinct. He became one by proving this.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0005">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Attending first Ring Cycle</div>
+    <div class="mt clown-2" style="text-transform: none;">Buying the complete recordings</div>
+    <div class="mt clown-3" style="text-transform: none;">Building a shrine to Bayreuth</div>
+    <div class="mt clown-4" style="text-transform: none;">Calling Wagner the greatest philosopher</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Becoming a Wagnerite</div>
+    <div class="context">&ldquo;Is Wagner a human being at all? Is he not rather a disease?&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0006">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Mediterranean music</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Clear, light, danceable perfection</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Northern fog music</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Four hours of screaming about a ring</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mediterranean vs Northern Music</div>
+    <div class="context">&ldquo;I bury my ignorant and involuntary fight against the real needs of my soul.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0007">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Create the total work of art</div>
+    <div class="mt gru-2" style="text-transform: none;">Unite music, drama, and poetry</div>
+    <div class="mt gru-3" style="text-transform: none;">The music becomes background noise</div>
+    <div class="mt gru-4" style="text-transform: none;">The music becomes background noise</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Master Plan</div>
+    <div class="context">&ldquo;Wagner's art is sick. The problems he presents on the stage are all problems of hysterics.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0008">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Nietzsche just published a book destroying Wagner</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, he's just jealous</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagnerite Cope</div>
+    <div class="context">&ldquo;I understood Wagner for a long time already. The rest, I experienced.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0009">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Wagner is the greatest actor who ever lived</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Real Talent</div>
+    <div class="context">&ldquo;What does Wagner have in common with the music of the future? Nothing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0010">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But the Ring Cycle is the greatest--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Bizet cured me of that illness</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Anti-Wagnerian Therapy</div>
+    <div class="context">&ldquo;My objections to the music of Wagner are physiological objections.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0011">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Wagner's music makes me feel sick</div>
+    <div class="mt pkp-2" style="text-transform: none;">Discovered Bizet's Carmen</div>
+    <div class="mt pkp-3" style="text-transform: none;">Carmen is still not philosophy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Musical Journey</div>
+    <div class="context">&ldquo;Yesterday I heard Carmen for the twentieth time.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0012">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't be criticized as a musician</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you call yourself a total artist</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Genius Move</div>
+    <div class="context">&ldquo;The actor Wagner is a tyrant; his pathos topples every taste.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0013">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Walk out of a sixteen-hour opera cycle</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Leaving Wagner</div>
+    <div class="context">&ldquo;Wagner's music, without the theater, is simply bad music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0014">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Sixteen hours of your life</div>
+    <div class="mt trade-right" style="text-transform: none;">Some leitmotifs and fog machines</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Richard Wagner</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Deal</div>
+    <div class="context">&ldquo;Dramatic music is a contradiction in terms as long as it remains merely bad music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0015">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should analyze Wagner's flaws rationally</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Write the most savage philosophical breakup letter ever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Inner Conflict</div>
+    <div class="context">&ldquo;I am, no less than Wagner, a child of this age, that is, a decadent.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0016">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">I like dramatic German opera</div>
+    <div class="mt winnie-bot" style="text-transform: none;">I prefer the gay science of Mediterranean melody</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Music Taste Upgrade</div>
+    <div class="context">&ldquo;One must Mediterraneanize music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0017">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Wagner</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Theatrical excess</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this the music of the future?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Self-Image</div>
+    <div class="context">&ldquo;Wagner increases exhaustion: that is what attracts the weak.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0018">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Nietzsche calling Wagner decadent</div>
+    <div class="mt spidey-right" style="text-transform: none;">Wagner calling Nietzsche ungrateful</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Decadents Recognizing Decadents</div>
+    <div class="context">&ldquo;I too am a child of this age, that is, a decadent: but I comprehended this.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0019">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">Carmen is objectively superior to Parsifal</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche At the Opera</div>
+    <div class="context">&ldquo;How the theatrical scream of passion corrupts our senses!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0020">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Wagner is overrated lol</div>
+    <div class="mt bell-center" style="text-transform: none;">Wagner is the culmination of Western art</div>
+    <div class="mt bell-right" style="text-transform: none;">Wagner is overrated lol</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner Opinions</div>
+    <div class="context">&ldquo;Against Wagner I have lodged what I call my aesthetic objection.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="wagner-as-danger">&mdash; Wagner as Danger &mdash;</div>
+
+<div class="meme-card" data-id="W-0021">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Five hours into Parsifal</div>
+    <div class="mt harold-bot" style="text-transform: none;">Smiling through the redemption scene</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Attending Bayreuth</div>
+    <div class="context">&ldquo;All of us have, unconsciously, bodies full of bad music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0022">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Wagner is DESTROYING German culture!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat vibing to Ride of the Valkyries</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner Debate</div>
+    <div class="context">&ldquo;Wagner is a great corruption for music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0023">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">Wagner writes music for all Germany</div>
+    <div class="mt anakin-tr" style="text-transform: none;">For all Germany, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">...</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Nationalism</div>
+    <div class="context">&ldquo;Wagner flatters every nihilistic Buddhist instinct and disguises it in music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0024">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">You just don't understand the depth of Wagner</div>
+    <div class="mt sponge-bot" style="text-transform: none;">yOu JuSt DoN't UnDeRsTaNd ThE dEpTh Of WaGnEr</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagnerite Defense</div>
+    <div class="context">&ldquo;They actually think it a sign of superiority when a work of art seizes hold of them.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0025">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Spent a decade worshipping Wagner</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Realizing it was all theatrical manipulation</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Post-Wagner Depression</div>
+    <div class="context">&ldquo;I admired Wagner. I loved Wagner. There was nobody else.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0026">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for Parsifal Act III to finish</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still waiting through the Good Friday music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Wagner to End</div>
+    <div class="context">&ldquo;Is Wagner a human being at all? Is he not rather a disease?&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0027">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To stop treating music as narcotics</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Demand</div>
+    <div class="context">&ldquo;Against the sickness brought on by Wagnerian music, my best medicine is Bizet.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0028">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche smiling while publishing The Case of Wagner</div>
+    <div class="mt bottom" style="text-transform: none;">Former best friend's legacy burning</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Breakup Energy</div>
+    <div class="context">&ldquo;I have the right to understand myself as the foremost anti-Wagnerite.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0029">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Staying in Wagner's fog of decadence</div>
+    <div class="mt bottom" style="text-transform: none;">Pursuing clarity and Mediterranean health</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Cultural Fork</div>
+    <div class="context">&ldquo;My greatest experience was a recovery. Wagner is merely one of my sicknesses.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0030">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche chasing artistic integrity</div>
+    <div class="mt bottom" style="text-transform: none;">Wagner floating toward nationalism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche Losing Wagner</div>
+    <div class="context">&ldquo;Wagner's art presses upon us with a hundred atmospheres.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0031">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit Wagner is a decadent</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25 more Ring Cycle tickets</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagnerites in Denial</div>
+    <div class="context">&ldquo;The danger that lies in Wagner is extraordinary.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0032">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Wagnerian nervous excitement?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Addiction</div>
+    <div class="context">&ldquo;One walks into the sea, gradually loses one's secure footing, and finally gives oneself up to the elements.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0033">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Wagner is dangerous for culture</div>
+    <div class="mt ahb-left" style="text-transform: none;">Nietzsche in 1888</div>
+    <div class="mt ahb-right" style="text-transform: none;">Music critics in 2026</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Common Ground</div>
+    <div class="context">&ldquo;Wagner is a seducer on a grand scale.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0034">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit the music is just noise</div>
+    <div class="mt bottom" style="text-transform: none;">Pretend you understood the leitmotifs</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Wagnerite's Dilemma</div>
+    <div class="context">&ldquo;The Wagnerite has become master over our instincts.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0035">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Music that overwhelms the nervous system</div>
+    <div class="mt drake-bot" style="text-transform: none;">Music that makes your feet want to dance</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Music as Medicine</div>
+    <div class="context">&ldquo;I approach music with all my virtues and all my happiness.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0036">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Wagner is too long</div>
+    <div class="mt brain-2" style="text-transform: none;">Wagner is musically manipulative</div>
+    <div class="mt brain-3" style="text-transform: none;">Wagner represents cultural decadence</div>
+    <div class="mt brain-4" style="text-transform: none;">Wagner is a disease you must recover from</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Degrees of Wagner Criticism</div>
+    <div class="context">&ldquo;Wagner represents a great corruption of music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0037">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Wagnerian spectacle</div>
+    <div class="mt db-guy" style="text-transform: none;">German public</div>
+    <div class="mt db-gf" style="text-transform: none;">Actual musical development</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; German Culture's Temptation</div>
+    <div class="context">&ldquo;Nothing has preoccupied me more profoundly than the problem of decadence.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0038">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Unite Germany through art</div>
+    <div class="mt gru-2" style="text-transform: none;">Build a temple at Bayreuth</div>
+    <div class="mt gru-3" style="text-transform: none;">Germans worship the spectacle not the music</div>
+    <div class="mt gru-4" style="text-transform: none;">Germans worship the spectacle not the music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Cultural Plan</div>
+    <div class="context">&ldquo;The problems he presents on the stage are hysterics' problems.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0039">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Wagner has corrupted an entire nation's musical taste</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, we have Bayreuth tourism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Germany After Wagner</div>
+    <div class="context">&ldquo;Wagner almost single-handedly corrupted the Germans.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0040">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Wagner didn't advance music, he ended it</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Real Legacy</div>
+    <div class="context">&ldquo;What Wagner has in common with the others is the decline of organizing power.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="where-wagner-belongs">&mdash; Where Wagner Belongs &mdash;</div>
+
+<div class="meme-card" data-id="W-0041">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">Wagner belongs in the history of mus--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Wagner belongs in the history of acting</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Categorizing Wagner</div>
+    <div class="context">&ldquo;Wagner was not a musician by instinct.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0042">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Wagner is the end of German music</div>
+    <div class="mt pkp-2" style="text-transform: none;">At least he's in good company with Goethe</div>
+    <div class="mt pkp-3" style="text-transform: none;">He's actually closer to Victor Hugo</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Place in History</div>
+    <div class="context">&ldquo;He has in common with Victor Hugo the love of big walls.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0043">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't fail as a composer</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you invent a new category called total artwork</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Art Strategy</div>
+    <div class="context">&ldquo;He became a musician, he became a poet because the tyrant within him forced him.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0044">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Place Wagner among the great musicians</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Understanding Wagner</div>
+    <div class="context">&ldquo;His artistic means are the same as all other masters of seduction.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0045">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Grandiose theatrical experiences</div>
+    <div class="mt trade-right" style="text-transform: none;">Your capacity for subtle musical appreciation</div>
+    <div class="mt trade-bottom" style="text-transform: none;">German Romanticism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Cultural Trade</div>
+    <div class="context">&ldquo;Wagner belongs elsewhere, not in the history of music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0046">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should write music for its own sake</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Make every note serve the theatrical spectacle</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Dark Side</div>
+    <div class="context">&ldquo;The whole of his art is nothing but the means to an end.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0047">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Wagner is the greatest opera composer</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Wagner is the most effective mass hypnotist</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Classification</div>
+    <div class="context">&ldquo;Wagner's inventive capacity is not in music but in the invention of motifs.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0048">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Richard Wagner</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Theatrical manipulation techniques</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this the highest form of music?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Self-Delusion</div>
+    <div class="context">&ldquo;He tyrannizes. His manner has become nature.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0049">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Wagner's theatrical excess</div>
+    <div class="mt spidey-right" style="text-transform: none;">Modern blockbuster franchise excess</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner and Other Decadents</div>
+    <div class="context">&ldquo;Wagner belongs to the French late Romantic movement.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0050">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's placing me among Beethoven and Bach</div>
+    <div class="mt think-him" style="text-transform: none;">Wagner belongs next to Victor Hugo and Delacroix</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner Placement Anxiety</div>
+    <div class="context">&ldquo;In every art Wagner promises himself another thing than what he can do.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0051">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Wagner made theater music</div>
+    <div class="mt bell-center" style="text-transform: none;">Wagner transcended all artistic categories</div>
+    <div class="mt bell-right" style="text-transform: none;">Wagner made theater music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's True Genre</div>
+    <div class="context">&ldquo;He is merely a rhetorician of the theater.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0052">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Spent career arguing Wagner is the peak of music</div>
+    <div class="mt harold-bot" style="text-transform: none;">Reading Nietzsche's counter-argument for the first time</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Music History Professor</div>
+    <div class="context">&ldquo;Wagner is a neurosis.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0053">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Wagner is the summit of German musical genius!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat reading The Case of Wagner peacefully</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Place</div>
+    <div class="context">&ldquo;He does not belong among the masters of music.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0054">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">Wagner claimed to be purely German genius</div>
+    <div class="mt anakin-tr" style="text-transform: none;">He's purely German, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">...French late Romanticism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's French Roots</div>
+    <div class="context">&ldquo;As an artist Wagner has no home in Germany.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0055">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">The Gesamtkunstwerk transcends mere music</div>
+    <div class="mt sponge-bot" style="text-transform: none;">tHe GeSaMtKuNsTwErK tRaNsCeNdS mErE mUsIc</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Gesamtkunstwerk Defense</div>
+    <div class="context">&ldquo;A total art work &mdash; what a fraud.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0056">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Told he belongs with French romantics not German masters</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Sitting alone between categories</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Real Home</div>
+    <div class="context">&ldquo;Where does all the misery of the world come from? From Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0057">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for musicologists to agree</div>
+    <div class="mt skel-bot" style="text-transform: none;">On where Wagner actually belongs</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Classification</div>
+    <div class="context">&ldquo;Wagner has been an incomparable seducer.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0058">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To file Wagner under theater not music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Proper Categorization</div>
+    <div class="context">&ldquo;He walked in the footsteps of Berlioz.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0059">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche demoting Wagner from musician to actor</div>
+    <div class="mt bottom" style="text-transform: none;">Wagner's legacy burning in the background</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche Reclassifies Wagner</div>
+    <div class="context">&ldquo;There is nothing weary, nothing decrepit, nothing fatal in Wagner that he would not hide.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0060">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Keeping Wagner in the music section</div>
+    <div class="mt bottom" style="text-transform: none;">Moving Wagner to the theater section</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art History's Choice</div>
+    <div class="context">&ldquo;He found it necessary to convince himself that what he did was something other than what he could do.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="nietzsche-contra-wagner-selected-passages">&mdash; Nietzsche contra Wagner Selected Passages &mdash;</div>
+
+<div class="meme-card" data-id="W-0061">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche reaching for the old friendship</div>
+    <div class="mt bottom" style="text-transform: none;">Wagner drifting toward Bayreuth nationalism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Friendship Floating Away</div>
+    <div class="context">&ldquo;Star friendship: we were friends and have become estranged.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0062">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Accept that your Wagner worship was a mistake</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25 more Bayreuth pilgrimages</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Challenge</div>
+    <div class="context">&ldquo;My greatest experience was a recovery. Wagner is merely one of my sicknesses.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0063">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Honest non-manipulative music?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Post-Wagner Craving</div>
+    <div class="context">&ldquo;How happy I was when I found Bizet again!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0064">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Recovering from toxic relationships</div>
+    <div class="mt ahb-left" style="text-transform: none;">Nietzsche leaving Wagner</div>
+    <div class="mt ahb-right" style="text-transform: none;">Everyone who left a cult</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Shared Recovery</div>
+    <div class="context">&ldquo;When one gives up Wagner, one has the right to any other taste.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0065">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Stay loyal to Wagner and lie</div>
+    <div class="mt bottom" style="text-transform: none;">Destroy Wagner and be honest</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Choice</div>
+    <div class="context">&ldquo;It is not at all necessary, not even desirable, that you argue in my favor.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0066">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Music that drugs the listener into submission</div>
+    <div class="mt drake-bot" style="text-transform: none;">Music that liberates the spirit to dance</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; What Music Should Do</div>
+    <div class="context">&ldquo;I want music to be cheerful and profound like an October afternoon.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0067">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Skipping one performance</div>
+    <div class="mt brain-2" style="text-transform: none;">Questioning the Gesamtkunstwerk</div>
+    <div class="mt brain-3" style="text-transform: none;">Publishing The Case of Wagner</div>
+    <div class="mt brain-4" style="text-transform: none;">Publishing Nietzsche contra Wagner as the final nail</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Stages of Breaking Up With Wagner</div>
+    <div class="context">&ldquo;I speak for no one but myself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0068">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Intellectual honesty</div>
+    <div class="mt db-guy" style="text-transform: none;">Nietzsche</div>
+    <div class="mt db-gf" style="text-transform: none;">Comfortable Wagner friendship</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy's Greatest Breakup</div>
+    <div class="context">&ldquo;What was it that I never forgave Wagner? That he condescended to the Germans.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0069">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, Wagner's music is just propaganda?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Real Problem</div>
+    <div class="context">&ldquo;What I have never forgiven Wagner is that he deigned to become German.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0070">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Reading The Case of Wagner</div>
+    <div class="mt clown-2" style="text-transform: none;">Reading Nietzsche contra Wagner</div>
+    <div class="mt clown-3" style="text-transform: none;">Reading both twice</div>
+    <div class="mt clown-4" style="text-transform: none;">Still arguing Wagner is the GOAT</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Still Defending Wagner</div>
+    <div class="context">&ldquo;The typical Wagnerite has lost all taste.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0071">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Nietzsche after recovery</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Dancing in the Mediterranean sun to Bizet</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Average Wagnerite</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Sitting in dark Bayreuth for six hours</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Two Types of Music Lovers</div>
+    <div class="context">&ldquo;I require of music that it be cheerful.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0072">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Write a calm philosophical critique</div>
+    <div class="mt gru-2" style="text-transform: none;">Keep it measured and academic</div>
+    <div class="mt gru-3" style="text-transform: none;">It becomes the most personal attack in philosophy</div>
+    <div class="mt gru-4" style="text-transform: none;">It becomes the most personal attack in philosophy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Breakup Plan</div>
+    <div class="context">&ldquo;I write this to relieve my mind. It is not malice alone that makes me praise Bizet.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0073">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Best friend just published two books destroying you</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, posterity will vindicate me</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Legacy After Nietzsche</div>
+    <div class="context">&ldquo;The problem I here set forth is not one of speculation but of experience.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0074">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Nietzsche contra Wagner is the greatest breakup text ever written</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Ultimate Contra</div>
+    <div class="context">&ldquo;That I despise Wagner today is certainly not something that I would wish to deny.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0075">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But Nietzsche, your early work praised Wagn--</div>
+    <div class="mt bat-batman" style="text-transform: none;">That Nietzsche was sick and has recovered</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; No More Wagner</div>
+    <div class="context">&ldquo;One must first be Wagnerian and then cease to be one.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0076">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Birth of Tragedy praises Wagner!</div>
+    <div class="mt pkp-2" style="text-transform: none;">The Case of Wagner destroys him</div>
+    <div class="mt pkp-3" style="text-transform: none;">Nietzsche contra Wagner salts the earth</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Reading Nietzsche Chronologically</div>
+    <div class="context">&ldquo;In writing this essay I do not wish to conceal from myself or from others how much it is also against me.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0077">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't be accused of betraying Wagner</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you publish a second book explaining why</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Strategy</div>
+    <div class="context">&ldquo;It seems to me that my objections against Wagner's music are justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0078">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Recover from Wagner without writing two books about it</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Breaking Free</div>
+    <div class="context">&ldquo;We are antipodes.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0079">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Two devastating polemics about your art</div>
+    <div class="mt trade-right" style="text-transform: none;">The truth about what you became</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Friedrich Nietzsche</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Final Offer</div>
+    <div class="context">&ldquo;Where I object, where I am incompatible, there I am in my own country.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="W-0080">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I've said enough about Wagner</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Write one more book just to be absolutely clear</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Last Word</div>
+    <div class="context">&ldquo;I understood Wagner. I resisted Wagner.&rdquo;</div>
+  </div>
+</div>
+</div>
+
+<footer>Nietzsche Meme Collection &mdash; 80 memes &mdash; Generated by c_Callicles &amp; Kirk Automations</footer>
+</body>
+</html>

@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Birth of Tragedy &mdash; Nietzsche Memes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #9b59b6, #e74c3c);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 20px; }
+  .nav { text-align: center; margin-bottom: 40px; flex-wrap: wrap; display: flex; justify-content: center; gap: 8px; }
+  .nav a { color: #9b59b6; font-size: 0.95em; text-decoration: none; border: 1px solid #9b59b6;
+    padding: 6px 14px; border-radius: 8px; display: inline-block; white-space: nowrap; }
+  .nav a:hover { background: rgba(255,255,255,0.05); }
+  .nav a.active { background: #9b59b6; color: #fff; }
+  .toc { max-width: 800px; margin: 0 auto 40px; padding: 20px; background: #16213e; border-radius: 12px; }
+  .toc h2 { color: #9b59b6; margin-bottom: 12px; font-size: 1.3em; }
+  .toc ul { list-style: none; columns: 2; gap: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { color: #aaa; text-decoration: none; font-size: 0.95em; }
+  .toc a:hover { color: #9b59b6; }
+  .toc .count { color: #555; font-size: 0.85em; }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.drake-top { top: 8%;  left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.drake-bot { bottom: 8%; left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.db-girl   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 17px; }
+  .mt.db-guy    { bottom: 6%; left: 38%; max-width: 28%; font-size: 17px; }
+  .mt.db-gf     { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 17px; }
+  .mt.ahb-left  { top: 20%; left: 2%;  max-width: 40%; font-size: 20px; }
+  .mt.ahb-right { top: 20%; right: 2%; left: auto; max-width: 40%; font-size: 20px; }
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.gru-1 { top: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-2 { top: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-3 { bottom: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-4 { bottom: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.fine-left  { top: 6%; left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.fine-right { top: 6%; right: 2%; left: auto; max-width: 46%; font-size: 18px; }
+  .mt.cmm { bottom: 8%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #9b59b6; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #9b59b6;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+  @media (max-width: 600px) {
+    .meme-grid { grid-template-columns: 1fr; gap: 20px; }
+    h1 { font-size: 1.8em; }
+    .toc ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<h1>The Birth of Tragedy</h1>
+<p class="subtitle"> &mdash; 150 memes</p>
+<div class="nav">
+  <a href="nietzsche-index.html">&larr; Index</a>
+  <a href="nietzsche-antichrist.html">Antichrist</a>
+  <a href="nietzsche-beyond-good-and-evil.html">Beyond G&E</a>
+  <a href="nietzsche-birth-of-tragedy.html" class="active">Birth of Tragedy</a>
+  <a href="nietzsche-daybreak.html">Daybreak</a>
+  <a href="nietzsche-ecce-homo.html">Ecce Homo</a>
+  <a href="nietzsche-gay-science.html">Gay Science</a>
+  <a href="nietzsche-genealogy-of-morality.html">Genealogy</a>
+  <a href="nietzsche-human-all-too-human.html">Human</a>
+  <a href="nietzsche-life-and-legacy.html">Life and Legacy</a>
+  <a href="nietzsche-twilight-of-the-idols.html">Twilight</a>
+  <a href="nietzsche-untimely-meditations.html">Untimely</a>
+  <a href="nietzsche-wagner.html">Wagner</a>
+  <a href="nietzsche-will-to-power.html">Will to Power</a>
+  <a href="nietzsche-zarathustra.html">Zarathustra</a>
+</div>
+
+<div class="toc"><h2>Sections</h2><ul><li><a href="#the-apollonian-and-dionysian">The Apollonian and Dionysian <span class="count">(25)</span></a></li><li><a href="#the-birth-of-tragedy-from-music">The Birth of Tragedy from Music <span class="count">(25)</span></a></li><li><a href="#socrates-and-the-death-of-tragedy">Socrates and the Death of Tragedy <span class="count">(25)</span></a></li><li><a href="#art-as-the-supreme-task-of-life">Art as the Supreme Task of Life <span class="count">(25)</span></a></li><li><a href="#the-dionysian-worldview">The Dionysian Worldview <span class="count">(25)</span></a></li><li><a href="#wagner-and-the-rebirth-of-tragedy">Wagner and the Rebirth of Tragedy <span class="count">(25)</span></a></li></ul></div>
+
+<div class="meme-grid">
+
+<div class="section-title" id="the-apollonian-and-dionysian">&mdash; The Apollonian and Dionysian &mdash;</div>
+
+<div class="meme-card" data-id="N-0001">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Apollonian restraint and moderation</div>
+    <div class="mt drake-bot" style="text-transform: none;">Dionysian chaos and ecstatic dancing</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pick Your God</div>
+    <div class="context">&ldquo;The continuous development of art is bound up with the Apollonian and Dionysian duality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0002">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Enjoying pretty sculptures</div>
+    <div class="mt brain-2" style="text-transform: none;">Understanding dream symbolism</div>
+    <div class="mt brain-3" style="text-transform: none;">Feeling the Dionysian chorus</div>
+    <div class="mt brain-4" style="text-transform: none;">Realizing Apollo needs Dionysus to exist</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Appreciation Levels</div>
+    <div class="context">&ldquo;Apollo could not live without Dionysus.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0003">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Wild Dionysian festivals</div>
+    <div class="mt db-guy" style="text-transform: none;">Greek civilization</div>
+    <div class="mt db-gf" style="text-transform: none;">Apollonian order and restraint</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Greek Culture's Real Love</div>
+    <div class="context">&ldquo;Wherever the Dionysian prevailed, the Apollonian was checked and destroyed.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0004">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, existence needs art to justify it?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Hidden Truth</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0005">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">I'll study Apollo and Dionysus separately</div>
+    <div class="mt clown-2" style="text-transform: none;">They're clearly distinct principles</div>
+    <div class="mt clown-3" style="text-transform: none;">One is reason, one is passion</div>
+    <div class="mt clown-4" style="text-transform: none;">They were always intertwined in tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Separating the Drives</div>
+    <div class="context">&ldquo;The tragic myth is to be understood only as a symbolization of Dionysian wisdom through Apollonian artifices.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0006">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Dionysus</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Destroys individuation through ecstasy</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Apollo</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Makes pretty shapes in dreams</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Duality of Art</div>
+    <div class="context">&ldquo;By the mystical triumphant cry of Dionysus the spell of individuation is broken.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0007">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Create beautiful ordered forms</div>
+    <div class="mt gru-2" style="text-transform: none;">Maintain rational control over art</div>
+    <div class="mt gru-3" style="text-transform: none;">The Dionysian surges up from below</div>
+    <div class="mt gru-4" style="text-transform: none;">The Dionysian surges up from below</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Apollo's Plan</div>
+    <div class="context">&ldquo;The Apollonian Greek had to sense that his entire existence rested on a hidden substratum of suffering.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0008">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Dionysian worshippers destroying all boundaries</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, I have my dream veil</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Apollo at the Festival</div>
+    <div class="context">&ldquo;The beautiful illusion of the dream worlds is the prerequisite of all plastic art.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0009">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Apollo without Dionysus is just decoration</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Real Duality</div>
+    <div class="context">&ldquo;Apollo could not live without Dionysus.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0010">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">Apollo is reason and Dionysus is emotion--</div>
+    <div class="mt bat-batman" style="text-transform: none;">They're both aesthetic drives not rational categories</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Not That Simple</div>
+    <div class="context">&ldquo;Every artist is an imitator, either an Apollonian dream artist or a Dionysian ecstatic artist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0011">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Existence is suffering and meaningless</div>
+    <div class="mt pkp-2" style="text-transform: none;">Apollo creates beautiful illusions to cope</div>
+    <div class="mt pkp-3" style="text-transform: none;">The illusions only veil the Dionysian abyss</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Greek Experience</div>
+    <div class="context">&ldquo;What suffering these people must have known to be able to be so beautiful!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0012">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't confront the horror of existence</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you wrap it in beautiful dreams first</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Big Brain Apollo</div>
+    <div class="context">&ldquo;The beautiful illusion of the dream worlds is the prerequisite of all plastic art.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0013">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Experience the Dionysian without losing your individuality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dionysian Challenge</div>
+    <div class="context">&ldquo;By the mystical triumphant cry of Dionysus the spell of individuation is broken.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0014">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your submission to form and order</div>
+    <div class="mt trade-right" style="text-transform: none;">Beautiful dreams and the veil of Maya</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Apollo</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Apollonian Deal</div>
+    <div class="context">&ldquo;Dreams are the play of the individual human being with the real.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0015">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">Maintain Apollonian composure at the symposium</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Join the Dionysian revel and dissolve yourself</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Every Greek's Inner Conflict</div>
+    <div class="context">&ldquo;In song and in dance man expresses himself as a member of a higher community.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0016">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Getting drunk and dancing wildly</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Experiencing Dionysian dissolution of the principium individuationis</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Describing the Same Thing</div>
+    <div class="context">&ldquo;Under the charm of the Dionysian, not only is the union between man and man reaffirmed, but nature celebrates its reconciliation with its prodigal son, man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0017">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Enlightenment rationalists</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">The Apollonian-Dionysian duality</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this a metaphor for reason versus emotion?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Modern Confusion</div>
+    <div class="context">&ldquo;The continuous development of art is bound up with the Apollonian and Dionysian duality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0018">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Apollo calling Dionysus chaotic</div>
+    <div class="mt spidey-right" style="text-transform: none;">Dionysus calling Apollo lifeless</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Eternal Standoff</div>
+    <div class="context">&ldquo;Apollo could not live without Dionysus.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0019">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">He's probably thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If dreams are Apollonian are nightmares Dionysian</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Late Night Duality</div>
+    <div class="context">&ldquo;Dreams are the play of the individual human being with the real.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0020">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Art needs both order and chaos</div>
+    <div class="mt bell-center" style="text-transform: none;">The dialectical synthesis of form and content requires--</div>
+    <div class="mt bell-right" style="text-transform: none;">Art needs both order and chaos</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Understanding the Duality</div>
+    <div class="context">&ldquo;The continuous development of art is bound up with the Apollonian and Dionysian duality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0021">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Knows existence is unjustifiable suffering underneath</div>
+    <div class="mt harold-bot" style="text-transform: none;">Maintains the beautiful illusion anyway</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Apollonian Smile</div>
+    <div class="context">&ldquo;What suffering these people must have known to be able to be so beautiful!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0022">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">You're destroying civilization with your chaos!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">I am the foundation of all your art</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Eternal Argument</div>
+    <div class="context">&ldquo;Wherever the Dionysian prevailed, the Apollonian was checked and destroyed.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0023">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">I found the truth beneath Apollo's veil</div>
+    <div class="mt anakin-tr" style="text-transform: none;">And it's something beautiful right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">And it's something beautiful right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Discovering the Dionysian</div>
+    <div class="context">&ldquo;The Apollonian Greek had to sense that his entire existence rested on a hidden substratum of suffering.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0024">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Art is just decoration and entertainment</div>
+    <div class="mt sponge-bot" style="text-transform: none;">aRt Is JuSt DeCOrAtIoN aNd EnTeRtAiNmEnT</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking the Rationalists</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0025">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Built a perfect world of beautiful forms</div>
+    <div class="mt pablo-bot" style="text-transform: none;">None of it touches the truth of existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Apollo's Lonely Realization</div>
+    <div class="context">&ldquo;The beautiful illusion of the dream worlds is the prerequisite of all plastic art.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-birth-of-tragedy-from-music">&mdash; The Birth of Tragedy from Music &mdash;</div>
+
+<div class="meme-card" data-id="N-0026">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for scholars to admit tragedy came from music</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still waiting since 1872</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Chorus Waits</div>
+    <div class="context">&ldquo;Tragedy absorbed the highest musical ecstasy into itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0027">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To understand that music preceded tragic dialogue</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Request</div>
+    <div class="context">&ldquo;Music is the immediate language of the will.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0028">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">A perfectly orderly Apollonian festival</div>
+    <div class="mt bottom" style="text-transform: none;">The dithyrambic chorus has entered the chat</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Birth of the Chorus</div>
+    <div class="context">&ldquo;The satyr chorus of the dithyramb is the saving deed of Greek art.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0029">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Develop visual arts and epic poetry further</div>
+    <div class="mt bottom" style="text-transform: none;">Invent tragedy from the dithyrambic chorus</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Greek Art's Real Path</div>
+    <div class="context">&ldquo;The satyr chorus of the dithyramb is the saving deed of Greek art.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0030">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Musicologists explaining tragedy's origin without music</div>
+    <div class="mt bottom" style="text-transform: none;">The Dionysian spirit of music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Chasing Musical Truth</div>
+    <div class="context">&ldquo;The Dionysian musician is himself nothing but the primal pain and its primal re-echoing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0031">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit tragedy was born from the chorus</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Classical Scholars' Choice</div>
+    <div class="context">&ldquo;The chorus is the ideal spectator.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0032">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Dionysian dithyrambic ecstasy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche Wants More</div>
+    <div class="context">&ldquo;In the Dionysian dithyramb man is incited to the greatest exaltation of all his symbolic faculties.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0033">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Creating tragedy from the chorus</div>
+    <div class="mt ahb-left" style="text-transform: none;">Dionysian music</div>
+    <div class="mt ahb-right" style="text-transform: none;">Apollonian vision</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; What Tragedy United</div>
+    <div class="context">&ldquo;The tragic myth is to be understood only as a symbolization of Dionysian wisdom through Apollonian artifices.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0034">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Music as pure Dionysian expression</div>
+    <div class="mt bottom" style="text-transform: none;">Music shaped into Apollonian dramatic form</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Tragic Choice</div>
+    <div class="context">&ldquo;Tragedy absorbed the highest musical ecstasy into itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0035">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Tragedy evolved from spoken dialogue</div>
+    <div class="mt drake-bot" style="text-transform: none;">Tragedy was born from the spirit of music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Origins of Drama</div>
+    <div class="context">&ldquo;Music is the immediate language of the will.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0036">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Music is pleasant background noise</div>
+    <div class="mt brain-2" style="text-transform: none;">Music expresses human emotions</div>
+    <div class="mt brain-3" style="text-transform: none;">Music is the voice of the will itself</div>
+    <div class="mt brain-4" style="text-transform: none;">The chorus is the true origin of tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Levels of Musical Understanding</div>
+    <div class="context">&ldquo;The chorus is the ideal spectator.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0037">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">The ecstatic dithyrambic chorus</div>
+    <div class="mt db-guy" style="text-transform: none;">Greek culture</div>
+    <div class="mt db-gf" style="text-transform: none;">Rational Apollonian epic poetry</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; What Really Birthed Tragedy</div>
+    <div class="context">&ldquo;The satyr chorus of the dithyramb is the saving deed of Greek art.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0038">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, tragedy was always about the music?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Music's Hidden Role</div>
+    <div class="context">&ldquo;Tragedy absorbed the highest musical ecstasy into itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0039">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">I'll study tragedy through its plot structure</div>
+    <div class="mt clown-2" style="text-transform: none;">The dialogue is clearly the essential element</div>
+    <div class="mt clown-3" style="text-transform: none;">Character development drives the meaning</div>
+    <div class="mt clown-4" style="text-transform: none;">It was the chorus and music all along</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Analyzing Tragedy Wrong</div>
+    <div class="context">&ldquo;The chorus is the ideal spectator.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0040">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">The Tragic Chorus</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Channels the primal Dionysian will through music</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Dramatic Dialogue</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Just talks about what happened offstage</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Chorus vs Dialogue</div>
+    <div class="context">&ldquo;The Dionysian musician is himself nothing but the primal pain and its primal re-echoing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0041">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Create a chorus of satyrs to honor Dionysus</div>
+    <div class="mt gru-2" style="text-transform: none;">Let them sing and dance in wild abandon</div>
+    <div class="mt gru-3" style="text-transform: none;">They accidentally invent dramatic tragedy</div>
+    <div class="mt gru-4" style="text-transform: none;">They accidentally invent dramatic tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Satyr's Surprise</div>
+    <div class="context">&ldquo;The satyr chorus of the dithyramb is the saving deed of Greek art.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0042">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Nietzsche says all of philology misunderstands tragedy</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, he's just a young professor</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Scholars Reading Nietzsche</div>
+    <div class="context">&ldquo;Tragedy absorbed the highest musical ecstasy into itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0043">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Tragedy without music is just a philosophical dialogue</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Musical Thesis</div>
+    <div class="context">&ldquo;Music is the immediate language of the will.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0044">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">The chorus was just a primitive stage device--</div>
+    <div class="mt bat-batman" style="text-transform: none;">The chorus is the womb of all tragic dialogue</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Correcting the Record</div>
+    <div class="context">&ldquo;The chorus is the ideal spectator.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0045">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">The music dissolves all sense of self</div>
+    <div class="mt pkp-2" style="text-transform: none;">The Apollonian vision gives you images to hold</div>
+    <div class="mt pkp-3" style="text-transform: none;">The images reveal the full horror of existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dithyrambic Experience</div>
+    <div class="context">&ldquo;The Dionysian musician is himself nothing but the primal pain and its primal re-echoing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0046">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't misunderstand the origin of tragedy</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you just listen to the music first</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Musical Logic</div>
+    <div class="context">&ldquo;Music is the immediate language of the will.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0047">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Separate Greek tragedy from its musical origins</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Musical Tragedy</div>
+    <div class="context">&ldquo;Tragedy absorbed the highest musical ecstasy into itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0048">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your complete surrender to the music</div>
+    <div class="mt trade-right" style="text-transform: none;">Visions of tragic heroes and mythic wisdom</div>
+    <div class="mt trade-bottom" style="text-transform: none;">The Dithyrambic Chorus</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Chorus Deal</div>
+    <div class="context">&ldquo;In the Dionysian dithyramb man is incited to the greatest exaltation of all his symbolic faculties.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0049">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">Keep the music structured and formal</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Let the Dionysian spirit possess the melody entirely</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Musician's Dilemma</div>
+    <div class="context">&ldquo;The Dionysian musician is himself nothing but the primal pain and its primal re-echoing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0050">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Tragedy started with some guys singing</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Tragedy emerged from the dithyrambic chorus of satyrs</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Same Origin Story</div>
+    <div class="context">&ldquo;The satyr chorus of the dithyramb is the saving deed of Greek art.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="socrates-and-the-death-of-tragedy">&mdash; Socrates and the Death of Tragedy &mdash;</div>
+
+<div class="meme-card" data-id="N-0051">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Socrates</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Tragic suffering and Dionysian ecstasy</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this something that needs correcting?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Socratic Confusion</div>
+    <div class="context">&ldquo;Socrates is the archetype of the theoretical optimist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0052">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Euripides killing tragedy with logic</div>
+    <div class="mt spidey-right" style="text-transform: none;">Socrates telling him to do it</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Secret Partners in Crime</div>
+    <div class="context">&ldquo;Even Euripides was, in a sense, only a mask: the deity that spoke through him was not Dionysus but Socrates.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0053">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">He's probably thinking about virtue</div>
+    <div class="mt think-him" style="text-transform: none;">If I can't understand tragedy logically it must be irrational</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; What Socrates Really Thinks</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0054">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Life is suffering, embrace it through art</div>
+    <div class="mt bell-center" style="text-transform: none;">We can rationally optimize suffering away through dialectical--</div>
+    <div class="mt bell-right" style="text-transform: none;">Life is suffering, embrace it through art</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; On Tragic Wisdom</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0055">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Destroyed humanity's greatest art form with rationalism</div>
+    <div class="mt harold-bot" style="text-transform: none;">But at least everything is logically consistent now</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Socratic Optimism</div>
+    <div class="context">&ldquo;Socrates is the archetype of the theoretical optimist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0056">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">This art is irrational and morally confusing!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">I literally justify existence through beauty</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Socrates vs Tragedy</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0057">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">I'm going to make tragedy more rational</div>
+    <div class="mt anakin-tr" style="text-transform: none;">But you'll keep the Dionysian spirit right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">But you'll keep the Dionysian spirit right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Euripides' Reform</div>
+    <div class="context">&ldquo;Even Euripides was, in a sense, only a mask: the deity that spoke through him was not Dionysus but Socrates.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0058">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">The unexamined life is not worth living</div>
+    <div class="mt sponge-bot" style="text-transform: none;">tHe UnExAmInEd LiFe Is NoT wOrTh LiViNg</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking Socratic Wisdom</div>
+    <div class="context">&ldquo;Socrates is the archetype of the theoretical optimist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0059">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Socrates taught everyone to demand logical reasons</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Tragedy died because it couldn't justify itself rationally</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Tragedy's Last Day</div>
+    <div class="context">&ldquo;Tragedy perished by suicide, through an irresolvable conflict.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0060">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for Socratic rationalism to explain suffering</div>
+    <div class="mt skel-bot" style="text-transform: none;">Science still can't do it two millennia later</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Reason's Limits</div>
+    <div class="context">&ldquo;Science, spurred by its powerful illusion, speeds irresistibly toward its limits.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0061">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To stop worshipping Socrates as philosophy's hero</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Plea</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0062">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Two thousand years of Western rationalist tradition</div>
+    <div class="mt bottom" style="text-transform: none;">Euripides put Socrates on stage and called it drama</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Euripides' Legacy</div>
+    <div class="context">&ldquo;Even Euripides was, in a sense, only a mask: the deity that spoke through him was not Dionysus but Socrates.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0063">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Preserve tragic wisdom about suffering and art</div>
+    <div class="mt bottom" style="text-transform: none;">Follow Socrates into pure rationalism forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy's Wrong Turn</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0064">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Western civilization chasing Socratic reason</div>
+    <div class="mt bottom" style="text-transform: none;">Dionysian tragic insight floating away forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Losing Tragic Wisdom</div>
+    <div class="context">&ldquo;Tragedy perished by suicide, through an irresolvable conflict.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0065">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Accept that art surpasses rational understanding</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Socrates' Gamble</div>
+    <div class="context">&ldquo;Socrates is the archetype of the theoretical optimist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0066">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Pre-Socratic tragic wisdom we threw away</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Post-Socratic Culture</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0067">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Killing Dionysian art with rationalism</div>
+    <div class="mt ahb-left" style="text-transform: none;">Socrates</div>
+    <div class="mt ahb-right" style="text-transform: none;">Euripides</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Unlikely Allies Against Tragedy</div>
+    <div class="context">&ldquo;Even Euripides was, in a sense, only a mask: the deity that spoke through him was not Dionysus but Socrates.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0068">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Honor the Dionysian tradition of Aeschylus</div>
+    <div class="mt bottom" style="text-transform: none;">Make characters explain their motivations rationally</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Euripides' Dilemma</div>
+    <div class="context">&ldquo;Even Euripides was, in a sense, only a mask: the deity that spoke through him was not Dionysus but Socrates.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0069">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Embracing life's suffering through tragic art</div>
+    <div class="mt drake-bot" style="text-transform: none;">Demanding logical explanations for absolutely everything</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Socratic Switch</div>
+    <div class="context">&ldquo;Socrates is the archetype of the theoretical optimist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0070">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Euripides adds prologues explaining the plot</div>
+    <div class="mt brain-2" style="text-transform: none;">Characters justify actions with Socratic logic</div>
+    <div class="mt brain-3" style="text-transform: none;">The chorus becomes background decoration</div>
+    <div class="mt brain-4" style="text-transform: none;">Tragedy commits suicide from too much rationalism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Stages of Tragic Death</div>
+    <div class="context">&ldquo;Tragedy perished by suicide, through an irresolvable conflict.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0071">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Socratic dialectic and rational inquiry</div>
+    <div class="mt db-guy" style="text-transform: none;">Athenian culture</div>
+    <div class="mt db-gf" style="text-transform: none;">Aeschylean tragic wisdom and the chorus</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Athens' Fatal Attraction</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0072">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, philosophy killed humanity's greatest art form?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy's Dark Secret</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0073">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Reason can explain all of existence fully</div>
+    <div class="mt clown-2" style="text-transform: none;">Science will eliminate all human suffering</div>
+    <div class="mt clown-3" style="text-transform: none;">We just need more knowledge and progress</div>
+    <div class="mt clown-4" style="text-transform: none;">Staring into the void reason cannot fill</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Optimist's Journey</div>
+    <div class="context">&ldquo;Science, spurred by its powerful illusion, speeds irresistibly toward its limits.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0074">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Aeschylus</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Channels Dionysian wisdom through tragic myth</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Euripides</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Has characters explain their feelings out loud</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pre vs Post Socrates</div>
+    <div class="context">&ldquo;Even Euripides was, in a sense, only a mask: the deity that spoke through him was not Dionysus but Socrates.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0075">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Use reason to understand all of reality</div>
+    <div class="mt gru-2" style="text-transform: none;">Eliminate irrational art and mythology completely</div>
+    <div class="mt gru-3" style="text-transform: none;">Reason hits its own limits at the edge</div>
+    <div class="mt gru-4" style="text-transform: none;">Reason hits its own limits at the edge</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Socrates' Tragic Irony</div>
+    <div class="context">&ldquo;Science, spurred by its powerful illusion, speeds irresistibly toward its limits.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="art-as-the-supreme-task-of-life">&mdash; Art as the Supreme Task of Life &mdash;</div>
+
+<div class="meme-card" data-id="N-0076">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Raw meaningless existence without aesthetic justification</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, we have science and spreadsheets</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Existence Without Art</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0077">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Art is the only honest response to existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Over Everything</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0078">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">Art exists to entertain and decorate spaces--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Art is the supreme metaphysical activity of life</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's Real Purpose</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0079">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Existence has no inherent meaning or purpose</div>
+    <div class="mt pkp-2" style="text-transform: none;">Art gives everything aesthetic justification beautifully</div>
+    <div class="mt pkp-3" style="text-transform: none;">The art itself reveals how much suffering exists</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Aesthetic Revelation</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0080">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't despair at meaningless existence</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you make it all an aesthetic phenomenon</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Life Hack</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0081">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Live without art and expect existence to make sense</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Aesthetic Imperative</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0082">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your confrontation with suffering and destruction</div>
+    <div class="mt trade-right" style="text-transform: none;">The eternal justification of existence through beauty</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Tragic Art</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's Bargain</div>
+    <div class="context">&ldquo;Here, when the danger to his will is greatest, art approaches as a saving sorceress, expert at healing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0083">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">Create art within safe Apollonian boundaries</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Plunge into the Dionysian abyss for real truth</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Artist's Temptation</div>
+    <div class="context">&ldquo;Here, when the danger to his will is greatest, art approaches as a saving sorceress, expert at healing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0084">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Art is a nice hobby for creative people</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Art is the supreme metaphysical activity justifying existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Why We Make Art</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0085">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Art critics</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">The eternal justification of existence through beauty</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this content for social media engagement?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Modern Art Critics</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0086">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Art trying to justify existence aesthetically</div>
+    <div class="mt spidey-right" style="text-transform: none;">Existence producing more art to justify itself</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Same Mission Different Methods</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0087">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">He's probably thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If art justifies existence who justifies the artist</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Artist's Real Thoughts</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0088">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Art saves us from the truth</div>
+    <div class="mt bell-center" style="text-transform: none;">The socio-economic conditions of artistic production necessitate--</div>
+    <div class="mt bell-right" style="text-transform: none;">Art saves us from the truth</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Why Art Matters</div>
+    <div class="context">&ldquo;We have art in order not to die of the truth.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0089">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Knows art only works because existence is horrifying</div>
+    <div class="mt harold-bot" style="text-transform: none;">Keeps creating beautiful things anyway with a smile</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Saving Sorceress</div>
+    <div class="context">&ldquo;Here, when the danger to his will is greatest, art approaches as a saving sorceress, expert at healing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0090">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Art is irrational and serves no practical purpose!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">I literally justify the existence of the world</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Science vs Art</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0091">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">Art is the supreme task of life itself</div>
+    <div class="mt anakin-tr" style="text-transform: none;">Because life is beautiful and worth celebrating right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">Because life is beautiful and worth celebrating right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's Dark Foundation</div>
+    <div class="context">&ldquo;What suffering these people must have known to be able to be so beautiful!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0092">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Art is just entertainment for leisure time</div>
+    <div class="mt sponge-bot" style="text-transform: none;">aRt Is JuSt EnTeRtAiNmEnT fOr LeIsUrE tImE</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking Aesthetic Dismissal</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0093">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Art is the only thing that justifies existence</div>
+    <div class="mt pablo-bot" style="text-transform: none;">The artist must stare into the abyss to create</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Artist's Burden</div>
+    <div class="context">&ldquo;Here, when the danger to his will is greatest, art approaches as a saving sorceress, expert at healing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0094">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for science to justify existence like art does</div>
+    <div class="mt skel-bot" style="text-transform: none;">The skeleton has turned to dust by now</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Science</div>
+    <div class="context">&ldquo;Science, spurred by its powerful illusion, speeds irresistibly toward its limits.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0095">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To treat art as metaphysical necessity not a luxury</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche on Art Funding</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0096">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">An entire civilization's sacred artistic tradition</div>
+    <div class="mt bottom" style="text-transform: none;">Burned down by Socratic rationalism in one century</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Rationalism Burns It Down</div>
+    <div class="context">&ldquo;The influence of Socrates necessitated an ever-increasing destruction of Dionysian tragedy.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0097">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Embrace art as the supreme metaphysical task</div>
+    <div class="mt bottom" style="text-transform: none;">Build more spreadsheets and efficiency metrics instead</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Humanity's Wrong Turn</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0098">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Modern civilization chasing material progress desperately</div>
+    <div class="mt bottom" style="text-transform: none;">The aesthetic justification of existence floating away</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Losing What Matters</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0099">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Acknowledge art as humanity's highest purpose</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Philistine's Gamble</div>
+    <div class="context">&ldquo;Art is the supreme task and the truly metaphysical activity of this life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0100">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Aesthetic justification for existence and the world</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Craving Justification</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-dionysian-worldview">&mdash; The Dionysian Worldview &mdash;</div>
+
+<div class="meme-card" data-id="N-0101">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Affirming life including all its suffering</div>
+    <div class="mt ahb-left" style="text-transform: none;">The Dionysian worldview</div>
+    <div class="mt ahb-right" style="text-transform: none;">Tragic wisdom of the Greeks</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Saying Yes Together</div>
+    <div class="context">&ldquo;Joy is more profound than grief.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0102">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Deny suffering and pretend life is comfortable</div>
+    <div class="mt bottom" style="text-transform: none;">Embrace suffering and say yes to all of it</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dionysian Choice</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0103">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Optimistically denying that suffering even exists</div>
+    <div class="mt drake-bot" style="text-transform: none;">Dionysian affirmation of life including all suffering</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; How to Handle Suffering</div>
+    <div class="context">&ldquo;Joy is more profound than grief.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0104">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Avoiding suffering at all costs</div>
+    <div class="mt brain-2" style="text-transform: none;">Stoically enduring suffering with cold reason</div>
+    <div class="mt brain-3" style="text-transform: none;">Finding meaning in suffering through religion</div>
+    <div class="mt brain-4" style="text-transform: none;">Joyfully affirming suffering as essential to life</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Levels of Suffering Response</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0105">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Ecstatic union with primal nature itself</div>
+    <div class="mt db-guy" style="text-transform: none;">The Dionysian worldview</div>
+    <div class="mt db-gf" style="text-transform: none;">Comfortable bourgeois individual existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Dionysus Knows What He Wants</div>
+    <div class="context">&ldquo;Under the charm of the Dionysian, not only is the union between man and man reaffirmed, but nature celebrates its reconciliation with its prodigal son, man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0106">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, joy is actually deeper than suffering?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Deepest Truth</div>
+    <div class="context">&ldquo;Joy is more profound than grief.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0107">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">I'll just appreciate some wine and music</div>
+    <div class="mt clown-2" style="text-transform: none;">Actually I'm losing my sense of self entirely</div>
+    <div class="mt clown-3" style="text-transform: none;">Nature itself is speaking through me now</div>
+    <div class="mt clown-4" style="text-transform: none;">I am one with all existence and suffering</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Becoming Dionysian</div>
+    <div class="context">&ldquo;By the mystical triumphant cry of Dionysus the spell of individuation is broken.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0108">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Dionysian Greeks</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Stare into the abyss and dance anyway</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Modern Pessimists</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Write sad blog posts about meaninglessness</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Facing Life's Horror</div>
+    <div class="context">&ldquo;What suffering these people must have known to be able to be so beautiful!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0109">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Dissolve your individuality in ecstatic music</div>
+    <div class="mt gru-2" style="text-transform: none;">Become one with the primal unity of nature</div>
+    <div class="mt gru-3" style="text-transform: none;">All suffering and destruction is necessary too</div>
+    <div class="mt gru-4" style="text-transform: none;">All suffering and destruction is necessary too</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dionysian Revelation</div>
+    <div class="context">&ldquo;Everything that comes to be must be ready for sorrowful end.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0110">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">All of existence is suffering and destruction and chaos</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, it's all eternally justified as beauty</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Dionysian Acceptance</div>
+    <div class="context">&ldquo;All that exists is just and unjust and equally justified in both.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0111">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Suffering is not the opposite of joy but its condition</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Deepest Joy</div>
+    <div class="context">&ldquo;Joy is more profound than grief.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0112">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">Life is suffering so we should reject existence--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Life is suffering so we should affirm it harder</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Correcting Pessimism</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0113">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Individual existence is a fragile illusion</div>
+    <div class="mt pkp-2" style="text-transform: none;">The primal unity connects all things beautifully</div>
+    <div class="mt pkp-3" style="text-transform: none;">You must be destroyed and reborn endlessly forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dionysian Cycle</div>
+    <div class="context">&ldquo;Everything that comes to be must be ready for sorrowful end.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0114">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't fear death and destruction</div>
+    <div class="mt roll-bot" style="text-transform: none;">If individuation was the real illusion all along</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Dionysian Logic</div>
+    <div class="context">&ldquo;By the mystical triumphant cry of Dionysus the spell of individuation is broken.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0115">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Say yes to life without also saying yes to suffering</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dionysian Demand</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0116">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your comfortable individual existence entirely</div>
+    <div class="mt trade-right" style="text-transform: none;">Union with all of nature and primal joy</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Dionysus</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Dionysus' Offer</div>
+    <div class="context">&ldquo;Under the charm of the Dionysian, not only is the union between man and man reaffirmed, but nature celebrates its reconciliation with its prodigal son, man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0117">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">Maintain your precious sense of individual identity</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Let it dissolve into the primal unity of being</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Call of Dissolution</div>
+    <div class="context">&ldquo;By the mystical triumphant cry of Dionysus the spell of individuation is broken.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0118">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Bad things happen sometimes I guess</div>
+    <div class="mt winnie-bot" style="text-transform: none;">All destruction is necessary within the eternal play of existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Accepting Reality</div>
+    <div class="context">&ldquo;Everything that comes to be must be ready for sorrowful end.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0119">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Reddit philosophers</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Dionysian affirmation of all suffering and life</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this nihilism?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Misreading Nietzsche</div>
+    <div class="context">&ldquo;Joy is more profound than grief.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0120">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Saying yes to all joy in existence</div>
+    <div class="mt spidey-right" style="text-transform: none;">Saying yes to all suffering in existence too</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Two Sides of Affirmation</div>
+    <div class="context">&ldquo;All that exists is just and unjust and equally justified in both.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0121">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">He's probably thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If joy is deeper than grief then grief is inside joy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Dionysian Late Nights</div>
+    <div class="context">&ldquo;Joy is more profound than grief.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0122">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Suffering is part of life, deal with it</div>
+    <div class="mt bell-center" style="text-transform: none;">The phenomenological reduction of suffering through dialectical--</div>
+    <div class="mt bell-right" style="text-transform: none;">Suffering is part of life, deal with it</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; On Embracing Suffering</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0123">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Everything you love will be destroyed eventually</div>
+    <div class="mt harold-bot" style="text-transform: none;">But it's all eternally justified as aesthetic phenomenon</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Eternal Justification</div>
+    <div class="context">&ldquo;It is only as an aesthetic phenomenon that existence and the world are eternally justified.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0124">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">How can you celebrate when everything ends in destruction!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">That's literally why I'm celebrating right now</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Dionysus vs the Pessimist</div>
+    <div class="context">&ldquo;Everything that comes to be must be ready for sorrowful end.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0125">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">The Dionysian says yes to ALL of life</div>
+    <div class="mt anakin-tr" style="text-transform: none;">Mostly the beautiful joyful parts right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">Mostly the beautiful joyful parts right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Full Affirmation</div>
+    <div class="context">&ldquo;The struggle, the pain, the destruction of phenomena, now appear necessary to us.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="wagner-and-the-rebirth-of-tragedy">&mdash; Wagner and the Rebirth of Tragedy &mdash;</div>
+
+<div class="meme-card" data-id="N-0126">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Wagner's operas are just overlong spectacles</div>
+    <div class="mt sponge-bot" style="text-transform: none;">wAgNeR's OpErAs ArE jUsT oVeRlOnG sPeCtAcLeS</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking Wagner's Critics</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0127">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Wagner showed Germany the rebirth of tragic culture</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Germany chose nationalism over Dionysian wisdom instead</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Germany's Lost Potential</div>
+    <div class="context">&ldquo;Only a horizon ringed about with myths can unify a whole cultural movement.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0128">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for culture to produce a new Aeschylus</div>
+    <div class="mt skel-bot" style="text-transform: none;">Two thousand years since Euripides killed tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Tragic Rebirth</div>
+    <div class="context">&ldquo;Without myth every culture loses the healthy natural power of its creativity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0129">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To recognize Wagner as the rebirth of tragic culture</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Young Nietzsche's Appeal</div>
+    <div class="context">&ldquo;German music, in its mighty solar orbit from Bach to Beethoven, from Beethoven to Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0130">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Two millennia of Western rational artistic tradition</div>
+    <div class="mt bottom" style="text-transform: none;">One German composer with a Dionysian vision burns it down</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Total Art</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0131">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Maintain scholarly objectivity about contemporary music</div>
+    <div class="mt bottom" style="text-transform: none;">Declare Wagner the literal rebirth of Greek tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Early Choice</div>
+    <div class="context">&ldquo;German music, in its mighty solar orbit from Bach to Beethoven, from Beethoven to Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0132">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Modern culture chasing scientific progress relentlessly</div>
+    <div class="mt bottom" style="text-transform: none;">Living mythology floating away into dusty history books</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Losing Living Myth</div>
+    <div class="context">&ldquo;Without myth every culture loses the healthy natural power of its creativity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0133">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit Wagner restored the spirit of Greek tragedy</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Accept Wagner's Genius</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0134">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Living mythology to give culture creative power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mythless Culture</div>
+    <div class="context">&ldquo;Without myth every culture loses the healthy natural power of its creativity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0135">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Channeling the Dionysian through total musical drama</div>
+    <div class="mt ahb-left" style="text-transform: none;">Ancient Greek tragedy</div>
+    <div class="mt ahb-right" style="text-transform: none;">Wagner's music dramas at Bayreuth</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Musical Lineage</div>
+    <div class="context">&ldquo;German music, in its mighty solar orbit from Bach to Beethoven, from Beethoven to Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0136">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Embrace Wagnerian tragic culture and living myth</div>
+    <div class="mt bottom" style="text-transform: none;">Continue with Socratic scientific rationalism forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Germany's Cultural Choice</div>
+    <div class="context">&ldquo;Only a horizon ringed about with myths can unify a whole cultural movement.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0137">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Italian opera as pleasant aristocratic entertainment</div>
+    <div class="mt drake-bot" style="text-transform: none;">Wagnerian music drama as reborn Greek tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Right Musical Heir</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0138">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Music as entertainment at royal courts</div>
+    <div class="mt brain-2" style="text-transform: none;">Bach discovers music's deep spiritual power</div>
+    <div class="mt brain-3" style="text-transform: none;">Beethoven unleashes symphonic Dionysian forces</div>
+    <div class="mt brain-4" style="text-transform: none;">Wagner reunites music with myth and tragedy completely</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Musical Evolution to Wagner</div>
+    <div class="context">&ldquo;German music, in its mighty solar orbit from Bach to Beethoven, from Beethoven to Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0139">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Wagner's vision of the total artwork</div>
+    <div class="mt db-guy" style="text-transform: none;">Young Nietzsche</div>
+    <div class="mt db-gf" style="text-transform: none;">His actual philology career at Basel</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Young Nietzsche's Priorities</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0140">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, Wagner's operas are actually Greek tragedies reborn?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Secret Identity</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0141">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">I'll write a sober academic philology book</div>
+    <div class="mt clown-2" style="text-transform: none;">Maybe I should mention Wagner once or twice</div>
+    <div class="mt clown-3" style="text-transform: none;">Half the book is now about Wagner somehow</div>
+    <div class="mt clown-4" style="text-transform: none;">I dedicated it to Wagner and my career is over</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Philologist's Descent</div>
+    <div class="context">&ldquo;German music, in its mighty solar orbit from Bach to Beethoven, from Beethoven to Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0142">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Wagner</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Reunites Apollonian myth with Dionysian music completely</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Italian Opera</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Has nice melodies and very pretty costumes</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Musical Drama Showdown</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0143">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Write a groundbreaking book on Greek tragedy</div>
+    <div class="mt gru-2" style="text-transform: none;">Include Wagner as the modern parallel to Aeschylus</div>
+    <div class="mt gru-3" style="text-transform: none;">Every classicist in Germany hates the book</div>
+    <div class="mt gru-4" style="text-transform: none;">Every classicist in Germany hates the book</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Publishing Plan</div>
+    <div class="context">&ldquo;German music, in its mighty solar orbit from Bach to Beethoven, from Beethoven to Wagner.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0144">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Culture has no living myth and is creatively sterile</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, we have newspapers and science</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mythless Modernity</div>
+    <div class="context">&ldquo;Without myth every culture loses the healthy natural power of its creativity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0145">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Wagner is the modern Aeschylus and nobody is ready</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner as Modern Aeschylus</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0146">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">Opera is entertainment for the aristocratic class--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Opera is the vessel for reborn Dionysian tragedy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Opera's True Purpose</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0147">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Modern culture has lost all living mythology entirely</div>
+    <div class="mt pkp-2" style="text-transform: none;">Wagner's music dramas are creating glorious new myths</div>
+    <div class="mt pkp-3" style="text-transform: none;">Nietzsche later disowns Wagner completely forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Wagner Situation</div>
+    <div class="context">&ldquo;Without myth every culture loses the healthy natural power of its creativity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0148">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't have a mythless dying culture</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you let Wagner write all the operas first</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Wagner Solution</div>
+    <div class="context">&ldquo;Only a horizon ringed about with myths can unify a whole cultural movement.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0149">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Rebuild tragic culture without the spirit of music</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Rebirth Challenge</div>
+    <div class="context">&ldquo;Tragedy absorbed the highest musical ecstasy into itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0150">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Twelve hours of opera across four nights</div>
+    <div class="mt trade-right" style="text-transform: none;">The complete rebirth of Dionysian tragic culture</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Richard Wagner</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Wagner's Proposition</div>
+    <div class="context">&ldquo;With the re-awakening of Dionysian music, myth was reborn.&rdquo;</div>
+  </div>
+</div>
+</div>
+
+<footer>Nietzsche Meme Collection &mdash; 150 memes &mdash; Generated by c_Callicles &amp; Kirk Automations</footer>
+</body>
+</html>

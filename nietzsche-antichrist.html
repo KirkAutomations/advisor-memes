@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Antichrist &mdash; Nietzsche Memes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 20px; }
+  .nav { text-align: center; margin-bottom: 40px; flex-wrap: wrap; display: flex; justify-content: center; gap: 8px; }
+  .nav a { color: #e74c3c; font-size: 0.95em; text-decoration: none; border: 1px solid #e74c3c;
+    padding: 6px 14px; border-radius: 8px; display: inline-block; white-space: nowrap; }
+  .nav a:hover { background: rgba(255,255,255,0.05); }
+  .nav a.active { background: #e74c3c; color: #fff; }
+  .toc { max-width: 800px; margin: 0 auto 40px; padding: 20px; background: #16213e; border-radius: 12px; }
+  .toc h2 { color: #e74c3c; margin-bottom: 12px; font-size: 1.3em; }
+  .toc ul { list-style: none; columns: 2; gap: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { color: #aaa; text-decoration: none; font-size: 0.95em; }
+  .toc a:hover { color: #e74c3c; }
+  .toc .count { color: #555; font-size: 0.85em; }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.drake-top { top: 8%;  left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.drake-bot { bottom: 8%; left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.db-girl   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 17px; }
+  .mt.db-guy    { bottom: 6%; left: 38%; max-width: 28%; font-size: 17px; }
+  .mt.db-gf     { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 17px; }
+  .mt.ahb-left  { top: 20%; left: 2%;  max-width: 40%; font-size: 20px; }
+  .mt.ahb-right { top: 20%; right: 2%; left: auto; max-width: 40%; font-size: 20px; }
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.gru-1 { top: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-2 { top: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-3 { bottom: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-4 { bottom: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.fine-left  { top: 6%; left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.fine-right { top: 6%; right: 2%; left: auto; max-width: 46%; font-size: 18px; }
+  .mt.cmm { bottom: 8%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #e74c3c; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #e74c3c;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+  @media (max-width: 600px) {
+    .meme-grid { grid-template-columns: 1fr; gap: 20px; }
+    h1 { font-size: 1.8em; }
+    .toc ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<h1>The Antichrist</h1>
+<p class="subtitle"> &mdash; 140 memes</p>
+<div class="nav">
+  <a href="nietzsche-index.html">&larr; Index</a>
+  <a href="nietzsche-antichrist.html" class="active">Antichrist</a>
+  <a href="nietzsche-beyond-good-and-evil.html">Beyond G&E</a>
+  <a href="nietzsche-birth-of-tragedy.html">Birth of Tragedy</a>
+  <a href="nietzsche-daybreak.html">Daybreak</a>
+  <a href="nietzsche-ecce-homo.html">Ecce Homo</a>
+  <a href="nietzsche-gay-science.html">Gay Science</a>
+  <a href="nietzsche-genealogy-of-morality.html">Genealogy</a>
+  <a href="nietzsche-human-all-too-human.html">Human</a>
+  <a href="nietzsche-life-and-legacy.html">Life and Legacy</a>
+  <a href="nietzsche-twilight-of-the-idols.html">Twilight</a>
+  <a href="nietzsche-untimely-meditations.html">Untimely</a>
+  <a href="nietzsche-wagner.html">Wagner</a>
+  <a href="nietzsche-will-to-power.html">Will to Power</a>
+  <a href="nietzsche-zarathustra.html">Zarathustra</a>
+</div>
+
+<div class="toc"><h2>Sections</h2><ul><li><a href="#christianity-as-decadence">Christianity as Decadence <span class="count">(23)</span></a></li><li><a href="#the-psychology-of-the-redeemer">The Psychology of the Redeemer <span class="count">(23)</span></a></li><li><a href="#the-history-of-christianity">The History of Christianity <span class="count">(24)</span></a></li><li><a href="#pity-and-the-will-to-nothingness">Pity and the Will to Nothingness <span class="count">(23)</span></a></li><li><a href="#paul-and-the-falsification-of-jesus">Paul and the Falsification of Jesus <span class="count">(24)</span></a></li><li><a href="#the-law-against-christianity">The Law Against Christianity <span class="count">(23)</span></a></li></ul></div>
+
+<div class="meme-grid">
+
+<div class="section-title" id="christianity-as-decadence">&mdash; Christianity as Decadence &mdash;</div>
+
+<div class="meme-card" data-id="N-0001">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Affirming life and growing stronger</div>
+    <div class="mt drake-bot" style="text-transform: none;">Worshipping weakness as a virtue</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Decadent Preferences</div>
+    <div class="context">&ldquo;Christianity has sided with everything weak, base, ill-constituted.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0002">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Disliking strong people</div>
+    <div class="mt brain-2" style="text-transform: none;">Calling weakness a choice</div>
+    <div class="mt brain-3" style="text-transform: none;">Making suffering holy</div>
+    <div class="mt brain-4" style="text-transform: none;">Declaring God hates the healthy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Levels of Decline</div>
+    <div class="context">&ldquo;God degenerated into the contradiction of life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0003">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Guilt and self-denial</div>
+    <div class="mt db-guy" style="text-transform: none;">Western civilization</div>
+    <div class="mt db-gf" style="text-transform: none;">Vitality and strength</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Decadence Is Tempting</div>
+    <div class="context">&ldquo;The Christian conception of God is one of the most corrupt conceptions of God arrived at on earth.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0004">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, Christianity is just decadence?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Always Been Decay</div>
+    <div class="context">&ldquo;In Christianity neither morality nor religion come into contact with reality at any point.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0005">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">The meek shall inherit the earth</div>
+    <div class="mt clown-2" style="text-transform: none;">Strength is sinful actually</div>
+    <div class="mt clown-3" style="text-transform: none;">Suffering is a gift from God</div>
+    <div class="mt clown-4" style="text-transform: none;">Making a whole religion out of losing</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Clown of Values</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0006">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Pagan gods</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Celebrating strength and beauty</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Christian God</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Please feel bad about existing</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Ancient vs Modern Gods</div>
+    <div class="context">&ldquo;Almost two thousand years and not a single new god!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0007">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Build a civilization on Christian values</div>
+    <div class="mt gru-2" style="text-transform: none;">Watch it dominate the world</div>
+    <div class="mt gru-3" style="text-transform: none;">It makes everyone sickly and guilty</div>
+    <div class="mt gru-4" style="text-transform: none;">It makes everyone sickly and guilty</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Gru Discovers Decadence</div>
+    <div class="context">&ldquo;To make sick is the true hidden purpose of the whole system.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0008">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Two thousand years of declining instincts</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Fine With Decay</div>
+    <div class="context">&ldquo;Under Christianity, the instincts of the subjugated come to the fore.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0009">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Christianity is a rebellion of everything that crawls on the ground against what has height</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Natural Order Disrupted</div>
+    <div class="context">&ldquo;The poison of the doctrine of 'equal rights for all' has been spread most thoroughly by Christianity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0010">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But blessed are the meek who--</div>
+    <div class="mt bat-batman" style="text-transform: none;">The strong shall live fully, not apologize</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Slapping the Meek</div>
+    <div class="context">&ldquo;What is good? Everything that heightens the feeling of power in man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0011">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Life is suffering and meaningless</div>
+    <div class="mt pkp-2" style="text-transform: none;">God promises eternal paradise after death</div>
+    <div class="mt pkp-3" style="text-transform: none;">You have to hate life to get there</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Decadence Panic Cycle</div>
+    <div class="context">&ldquo;God as declared enemy of life, of nature, of the will to live.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0012">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't fail at life</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you make failure the whole point</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Big Brain Decadence</div>
+    <div class="context">&ldquo;Christianity has sided with everything weak, base, ill-constituted.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0013">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Read the New Testament without gloves</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Walking Into a Church</div>
+    <div class="context">&ldquo;One does well to put gloves on when reading the New Testament.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0014">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your vitality, pride, and every healthy instinct</div>
+    <div class="mt trade-right" style="text-transform: none;">Guilt, shame, and the promise of paradise</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Christianity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Christianity's Deal</div>
+    <div class="context">&ldquo;The concept of God invented as a counter-concept to life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0015">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should celebrate life and strength</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Grovel before a God who hates both</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Dark Side of Faith</div>
+    <div class="context">&ldquo;What is bad? Everything that is born of weakness.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0016">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Society is getting worse</div>
+    <div class="mt winnie-bot" style="text-transform: none;">We are experiencing a transvaluation of all values</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Refined Decline</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0017">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Christianity</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Systematic hostility toward life</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this morality?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mistaken Identity</div>
+    <div class="context">&ldquo;In Christianity neither morality nor religion come into contact with reality at any point.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0018">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Christianity calling pagans decadent</div>
+    <div class="mt spidey-right" style="text-transform: none;">Pagans calling Christians decadent</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Decadence Meets Decadence</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0019">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other girls</div>
+    <div class="mt think-him" style="text-transform: none;">Two thousand years and not a single new god</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Late Night Decadence</div>
+    <div class="context">&ldquo;Almost two thousand years and not a single new god!&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0020">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Christianity is cope</div>
+    <div class="mt bell-center" style="text-transform: none;">Well actually it provides moral framework and--</div>
+    <div class="mt bell-right" style="text-transform: none;">Christianity is cope</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Bell Curve of Christianity</div>
+    <div class="context">&ldquo;Faith means not wanting to know what is true.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0021">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Realizing your whole moral system is anti-life</div>
+    <div class="mt harold-bot" style="text-transform: none;">Smiling through Sunday service anyway</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Harold Reads the Bible</div>
+    <div class="context">&ldquo;The Christian conception of God is one of the most corrupt conceptions of God arrived at on earth.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0022">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Stop having natural healthy instincts right now!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat just vibing with the will to power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Yelling at Nature</div>
+    <div class="context">&ldquo;Christianity has sided with everything weak, base, ill-constituted.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0023">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">We're making a religion about love and peace</div>
+    <div class="mt anakin-tr" style="text-transform: none;">That sounds life-affirming, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">Right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Anakin Discovers the Church</div>
+    <div class="context">&ldquo;God degenerated into the contradiction of life.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-psychology-of-the-redeemer">&mdash; The Psychology of the Redeemer &mdash;</div>
+
+<div class="meme-card" data-id="N-0024">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">The Kingdom of Heaven is within you</div>
+    <div class="mt sponge-bot" style="text-transform: none;">tHe KiNgDoM oF hEaVeN iS wItHiN yOu</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking the Kingdom</div>
+    <div class="context">&ldquo;The 'Kingdom of Heaven' is a condition of the heart.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0025">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Jesus dying before he could outgrow his own ideas</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Staring at the cross from the afterlife</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Jesus Died Too Early</div>
+    <div class="context">&ldquo;Jesus died too early; he himself would have recanted his doctrine had he reached my age.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0026">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for Jesus to reach a mature age</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still waiting on the cross</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Recantation</div>
+    <div class="context">&ldquo;Jesus died too early; he himself would have recanted his doctrine had he reached my age.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0027">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking</div>
+    <div class="mt bottom" style="text-transform: none;">Why you worship a psychology of escape</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bernie Asks About the Redeemer</div>
+    <div class="context">&ldquo;The 'Kingdom of God' is not something one waits for; it has no yesterday or tomorrow.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0028">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">The only real Christian died on the cross</div>
+    <div class="mt bottom" style="text-transform: none;">The rest is just fan fiction</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Only Christian</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0029">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Following Jesus's actual inner practice</div>
+    <div class="mt bottom" style="text-transform: none;">Building an institutional revenge religion</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Exit Toward Truth</div>
+    <div class="context">&ldquo;The 'Kingdom of Heaven' is a condition of the heart.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0030">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">The redeemer chasing inner peace</div>
+    <div class="mt bottom" style="text-transform: none;">Contact with actual reality flying away</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Reality Floats Away</div>
+    <div class="context">&ldquo;In Christianity neither morality nor religion come into contact with reality at any point.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0031">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Engage with reality like a grown-up</div>
+    <div class="mt bottom" style="text-transform: none;">Jesus draws 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Jesus or Draw 25</div>
+    <div class="context">&ldquo;The 'Kingdom of God' is not something one waits for; it has no yesterday or tomorrow.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0032">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Non-resistance to evil and total passivity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Any More Non-Resistance</div>
+    <div class="context">&ldquo;The life of the Redeemer was nothing else than this practice &mdash; his death was nothing else.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0033">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Fleeing from reality into inner states</div>
+    <div class="mt ahb-left" style="text-transform: none;">Jesus</div>
+    <div class="mt ahb-right" style="text-transform: none;">Buddha</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Redeemer and Buddha Agree</div>
+    <div class="context">&ldquo;Buddhism is a hundred times more austere, more honest, more objective.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0034">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Resist nothing, even evil</div>
+    <div class="mt bottom" style="text-transform: none;">Have any effect on the real world</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Redeemer's Dilemma</div>
+    <div class="context">&ldquo;The life of the Redeemer was nothing else than this practice &mdash; his death was nothing else.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0035">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">An organized church with dogma and power</div>
+    <div class="mt drake-bot" style="text-transform: none;">A private inner experience of blessedness</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; What Jesus Actually Wanted</div>
+    <div class="context">&ldquo;The 'Kingdom of Heaven' is a condition of the heart.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0036">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Jesus was the Son of God</div>
+    <div class="mt brain-2" style="text-transform: none;">Jesus was a great moral teacher</div>
+    <div class="mt brain-3" style="text-transform: none;">Jesus was a fascinating pathological type</div>
+    <div class="mt brain-4" style="text-transform: none;">Jesus was the only Christian and died on the cross</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Understanding the Redeemer</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0037">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Church doctrine and ritual</div>
+    <div class="mt db-guy" style="text-transform: none;">Christianity</div>
+    <div class="mt db-gf" style="text-transform: none;">What Jesus actually practiced</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Distracted by Dogma</div>
+    <div class="context">&ldquo;The 'Kingdom of God' is not something one waits for; it has no yesterday or tomorrow.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0038">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, there was only one real Christian?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been. He died on the cross.</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Always Just One</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0039">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Jesus preaches inner peace and non-resistance</div>
+    <div class="mt clown-2" style="text-transform: none;">His followers form militant institutions</div>
+    <div class="mt clown-3" style="text-transform: none;">They launch crusades in his name</div>
+    <div class="mt clown-4" style="text-transform: none;">Two thousand years of organized violence for the Prince of Peace</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Becoming a Clown Redeemer</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0040">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Jesus</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Died practicing what he preached</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Christians</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Please don't read what he actually said</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Jesus vs Christians</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0041">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Study Jesus's actual psychology closely</div>
+    <div class="mt gru-2" style="text-transform: none;">Discover he practiced total non-resistance</div>
+    <div class="mt gru-3" style="text-transform: none;">Realize he'd cringe at organized Christianity</div>
+    <div class="mt gru-4" style="text-transform: none;">Realize he'd cringe at organized Christianity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Gru Studies the Redeemer</div>
+    <div class="context">&ldquo;Jesus died too early; he himself would have recanted his doctrine had he reached my age.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0042">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">The entire religion contradicts its founder's practice</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Fine with Fan Fiction</div>
+    <div class="context">&ldquo;The life of the Redeemer was nothing else than this practice &mdash; his death was nothing else.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0043">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Jesus would have outgrown Christianity if he'd lived longer</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Only One Christian</div>
+    <div class="context">&ldquo;Jesus died too early; he himself would have recanted his doctrine had he reached my age.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0044">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But Jesus founded the Christian chur--</div>
+    <div class="mt bat-batman" style="text-transform: none;">He was an inner-world mystic, not an institution builder</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Batman Corrects Robin on Jesus</div>
+    <div class="context">&ldquo;The 'Kingdom of Heaven' is a condition of the heart.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0045">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Jesus couldn't handle any resistance to his teaching</div>
+    <div class="mt pkp-2" style="text-transform: none;">He taught non-resistance as a philosophy</div>
+    <div class="mt pkp-3" style="text-transform: none;">That's just pathological avoidance with extra steps</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Redeemer Psychology Panic</div>
+    <div class="context">&ldquo;The life of the Redeemer was nothing else than this practice &mdash; his death was nothing else.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0046">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't be wrong about reality</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you never engage with reality at all</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Roll Safe Redeemer</div>
+    <div class="context">&ldquo;In Christianity neither morality nor religion come into contact with reality at any point.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-history-of-christianity">&mdash; The History of Christianity &mdash;</div>
+
+<div class="meme-card" data-id="N-0047">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Look at Church history and see morality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Walking Into Church History</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0048">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your natural instincts, reason, and science</div>
+    <div class="mt trade-right" style="text-transform: none;">Guilt, obedience, and imaginary afterlife</div>
+    <div class="mt trade-bottom" style="text-transform: none;">The Church</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Church's Offer</div>
+    <div class="context">&ldquo;The priest knows only one great danger: that is science.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0049">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should pursue truth through science</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Become a priest and declare truth a sin</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Priestly Temptation</div>
+    <div class="context">&ldquo;Faith means not wanting to know what is true.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0050">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Freeloading off society</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Ecclesiastical parasitism as sacred vocation</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Refined Parasitism</div>
+    <div class="context">&ldquo;Parasitism as the only practice of the church.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0051">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">The Christian Church</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Every natural value and healthy instinct</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this sinfulness?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Church Mistakes Everything</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0052">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">The Church calling Rome corrupt</div>
+    <div class="mt spidey-right" style="text-transform: none;">Rome calling the Church parasitic</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Church vs Empire</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0053">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other girls</div>
+    <div class="mt think-him" style="text-transform: none;">Pilate was the only respectable person in the New Testament</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Thinking About Pilate</div>
+    <div class="context">&ldquo;In the entire New Testament there is only one figure worthy of respect: Pilate.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0054">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">The Church is a scam</div>
+    <div class="mt bell-center" style="text-transform: none;">Well actually the Church preserved civilization and--</div>
+    <div class="mt bell-right" style="text-transform: none;">The Church is a scam</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bell Curve of Church History</div>
+    <div class="context">&ldquo;Parasitism as the only practice of the church.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0055">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Learning the Church destroyed every culture it touched</div>
+    <div class="mt harold-bot" style="text-transform: none;">Smiling at the cathedral architecture though</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Harold Studies Church History</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0056">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Stop discovering things that contradict scripture!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Science just sitting there being empirical</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Yelling at Science</div>
+    <div class="context">&ldquo;The priest knows only one great danger: that is science.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0057">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">We're spreading the religion of love across the world</div>
+    <div class="mt anakin-tr" style="text-transform: none;">Peacefully, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">Right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Anakin Studies the Crusades</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0058">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Faith is the highest virtue</div>
+    <div class="mt sponge-bot" style="text-transform: none;">fAiTh MeAnS nOt WaNtInG tO kNoW wHaT iS tRuE</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking Faith</div>
+    <div class="context">&ldquo;Faith means not wanting to know what is true.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0059">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Christianity defeating the Roman Empire from within</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Sitting in the ruins of classical culture</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Sad About the Renaissance</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0060">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for the Church to admit it's about power</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still waiting after two millennia</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Honesty</div>
+    <div class="context">&ldquo;Parasitism as the only practice of the church.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0061">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking</div>
+    <div class="mt bottom" style="text-transform: none;">Why priests consider science their greatest enemy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bernie Asks About Priests</div>
+    <div class="context">&ldquo;The priest knows only one great danger: that is science.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0062">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">The Library of Alexandria in the background</div>
+    <div class="mt bottom" style="text-transform: none;">The Church smiling in the foreground</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Burning Classical Knowledge</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0063">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Staying with dishonest Western religion</div>
+    <div class="mt bottom" style="text-transform: none;">Acknowledging Buddhism is more honest</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Exit Toward Buddhism</div>
+    <div class="context">&ldquo;Buddhism is a hundred times more austere, more honest, more objective.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0064">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">The Church chasing intellectual credibility</div>
+    <div class="mt bottom" style="text-transform: none;">Actual truth floating away forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Truth Escapes the Church</div>
+    <div class="context">&ldquo;Faith means not wanting to know what is true.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0065">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Acknowledge science as valid</div>
+    <div class="mt bottom" style="text-transform: none;">The priesthood draws 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Priests or Draw 25</div>
+    <div class="context">&ldquo;The priest knows only one great danger: that is science.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0066">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of those</div>
+    <div class="mt bottom" style="text-transform: none;">Values the Church hasn't corrupted yet</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Any More Natural Values</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0067">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Being a continuation of the same impulse</div>
+    <div class="mt ahb-left" style="text-transform: none;">Christianity</div>
+    <div class="mt ahb-right" style="text-transform: none;">Judaism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Christianity and Judaism Agree</div>
+    <div class="context">&ldquo;The Christian is simply a Jew of a more liberal persuasion.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0068">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Preserve ancient knowledge for humanity</div>
+    <div class="mt bottom" style="text-transform: none;">Suppress it to maintain priestly power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Church's Two Buttons</div>
+    <div class="context">&ldquo;The priest knows only one great danger: that is science.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0069">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Respecting any apostle or saint in the New Testament</div>
+    <div class="mt drake-bot" style="text-transform: none;">Respecting Pontius Pilate, the one decent person there</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Historical Respect</div>
+    <div class="context">&ldquo;In the entire New Testament there is only one figure worthy of respect: Pilate.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0070">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">The Church preserved civilization</div>
+    <div class="mt brain-2" style="text-transform: none;">The Church had some moral failings</div>
+    <div class="mt brain-3" style="text-transform: none;">The Church systematically corrupted every value</div>
+    <div class="mt brain-4" style="text-transform: none;">The Church is two thousand years of organized parasitism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Church History Enlightenment</div>
+    <div class="context">&ldquo;Parasitism as the only practice of the church.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="pity-and-the-will-to-nothingness">&mdash; Pity and the Will to Nothingness &mdash;</div>
+
+<div class="meme-card" data-id="N-0071">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Feeling sorry for every failure</div>
+    <div class="mt db-guy" style="text-transform: none;">Humanity</div>
+    <div class="mt db-gf" style="text-transform: none;">Actually helping the strong flourish</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Distracted by Pity</div>
+    <div class="context">&ldquo;What is more harmful than any vice? Active pity for all the failures and all the weak.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0072">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, pity is just nihilism in disguise?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pity Always Nihilism</div>
+    <div class="context">&ldquo;Pity is the practice of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0073">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Feeling bad for someone struggling</div>
+    <div class="mt clown-2" style="text-transform: none;">Making their suffering your identity</div>
+    <div class="mt clown-3" style="text-transform: none;">Celebrating weakness as moral superiority</div>
+    <div class="mt clown-4" style="text-transform: none;">Pitying literally everything that breathes</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Clown Stages of Pity</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0074">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Tonic emotions</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Power is growing, resistance is overcome</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Pity</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Please multiply everyone's suffering</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Tonic Emotions vs Pity</div>
+    <div class="context">&ldquo;What is happiness? The feeling that power is growing, that resistance is overcome.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0075">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Feel pity for the weak and suffering</div>
+    <div class="mt gru-2" style="text-transform: none;">Help them through compassionate action</div>
+    <div class="mt gru-3" style="text-transform: none;">Pity just drains your own vitality and helps nobody</div>
+    <div class="mt gru-4" style="text-transform: none;">Pity just drains your own vitality and helps nobody</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Gru Tries Pity</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0076">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Pity multiplying suffering wherever it touches</div>
+    <div class="mt fine-right" style="text-transform: none;">This is a virtue somehow</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Fine With Nihilism</div>
+    <div class="context">&ldquo;Pity is the practice of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0077">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Pity is more harmful than any vice</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pity Is the Problem</div>
+    <div class="context">&ldquo;What is more harmful than any vice? Active pity for all the failures and all the weak.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0078">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But we should feel sorry for the weak and--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Pity depresses vitality, you sentimental fool</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Batman Slaps Pity</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0079">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Someone is suffering</div>
+    <div class="mt pkp-2" style="text-transform: none;">I feel deep pity for them</div>
+    <div class="mt pkp-3" style="text-transform: none;">Now we're both suffering and nothing improved</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pity Panic Loop</div>
+    <div class="context">&ldquo;Pity is the practice of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0080">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't lose your vitality to pity</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you never had strong instincts to begin with</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Roll Safe on Pity</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0081">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Feel pity without multiplying the suffering in the world</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Simply Feel Pity</div>
+    <div class="context">&ldquo;Pity is the practice of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0082">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your energy, joy, and will to power</div>
+    <div class="mt trade-right" style="text-transform: none;">The warm glow of feeling morally superior</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Pity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pity's Trade</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0083">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should help people grow stronger</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Enable their weakness so they need you forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Evil Kermit on Weakness</div>
+    <div class="context">&ldquo;The weak and the failures shall perish: first principle of our love of man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0084">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Feeling bad for losers</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Practicing nihilism through the affect of pity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Refined Nihilism</div>
+    <div class="context">&ldquo;Pity is the practice of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0085">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Christianity</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Systematically draining human vitality through pity</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this the highest virtue?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pity Misidentified</div>
+    <div class="context">&ldquo;Christianity is called the religion of pity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0086">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Pity as Christian virtue</div>
+    <div class="mt spidey-right" style="text-transform: none;">Nihilism as will to nothingness</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Pity and Nihilism Point</div>
+    <div class="context">&ldquo;Pity is the practice of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0087">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other girls</div>
+    <div class="mt think-him" style="text-transform: none;">Active pity is worse than any actual vice</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Thinking About Pity</div>
+    <div class="context">&ldquo;What is more harmful than any vice? Active pity for all the failures and all the weak.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0088">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Pity is weakness</div>
+    <div class="mt bell-center" style="text-transform: none;">Actually compassion is the foundation of morality and--</div>
+    <div class="mt bell-right" style="text-transform: none;">Pity is weakness</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bell Curve of Compassion</div>
+    <div class="context">&ldquo;Christianity is called the religion of pity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0089">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Pity has drained all your life force</div>
+    <div class="mt harold-bot" style="text-transform: none;">Smiling because at least you're virtuous</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Harold Feels Pity</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0090">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">The failures must be preserved at all costs!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat thriving without anyone's pity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Yelling About Weakness</div>
+    <div class="context">&ldquo;The weak and the failures shall perish: first principle of our love of man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0091">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">We should have compassion for all suffering beings</div>
+    <div class="mt anakin-tr" style="text-transform: none;">Without draining our own vitality, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">Right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Anakin Discovers Pity</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0092">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Compassion is the highest moral virtue</div>
+    <div class="mt sponge-bot" style="text-transform: none;">cOmPaSsIoN iS tHe HiGhEsT mOrAl ViRtUe</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking Compassion</div>
+    <div class="context">&ldquo;What is more harmful than any vice? Active pity for all the failures and all the weak.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0093">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Spending all your energy pitying the weak</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Having no vitality left for your own life</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Sad About Vitality Lost</div>
+    <div class="context">&ldquo;Pity stands opposed to the tonic emotions which heighten our vitality.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="paul-and-the-falsification-of-jesus">&mdash; Paul and the Falsification of Jesus &mdash;</div>
+
+<div class="meme-card" data-id="N-0094">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for Christians to read what Jesus actually said</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still getting Paul's revenge theology</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for the Real Gospel</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0095">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking</div>
+    <div class="mt bottom" style="text-transform: none;">Why you follow Paul instead of Jesus</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bernie on Paul</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0096">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Jesus's actual teaching in the background</div>
+    <div class="mt bottom" style="text-transform: none;">Paul smiling as he invents a revenge religion</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul Burns It Down</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0097">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Following Jesus's practice of inner peace</div>
+    <div class="mt bottom" style="text-transform: none;">Inventing an entire revenge theology instead</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul's Exit Ramp</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0098">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Paul chasing institutional power</div>
+    <div class="mt bottom" style="text-transform: none;">Jesus's actual teachings floating into oblivion</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Jesus's Message Floats Away</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0099">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Faithfully transmit what Jesus actually taught</div>
+    <div class="mt bottom" style="text-transform: none;">Paul draws 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul or Draw 25</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0100">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Falsifying the founder's teachings for power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Any More Falsification</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0101">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Hating everything noble and powerful</div>
+    <div class="mt ahb-left" style="text-transform: none;">Paul</div>
+    <div class="mt ahb-right" style="text-transform: none;">The priestly class</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul and Resentment Agree</div>
+    <div class="context">&ldquo;Under Christianity, the instincts of the subjugated come to the fore.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0102">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Preserve Jesus's inner-world mysticism</div>
+    <div class="mt bottom" style="text-transform: none;">Weaponize the cross for revenge on Rome</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul's Two Buttons</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0103">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">What Jesus actually lived and died practicing</div>
+    <div class="mt drake-bot" style="text-transform: none;">A revenge fantasy against the strong and noble</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul's Real Preference</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0104">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Paul was a faithful apostle</div>
+    <div class="mt brain-2" style="text-transform: none;">Paul slightly misunderstood Jesus</div>
+    <div class="mt brain-3" style="text-transform: none;">Paul deliberately invented a new religion</div>
+    <div class="mt brain-4" style="text-transform: none;">Paul was history's greatest revenge genius</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Understanding Paul</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0105">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Revenge against Roman nobility</div>
+    <div class="mt db-guy" style="text-transform: none;">Paul</div>
+    <div class="mt db-gf" style="text-transform: none;">Jesus's actual message of non-resistance</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul Distracted</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0106">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, Christianity is just Paul's revenge scheme?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Always Been Revenge</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0107">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Jesus practices inner peace and dies on the cross</div>
+    <div class="mt clown-2" style="text-transform: none;">Paul says the cross means cosmic guilt</div>
+    <div class="mt clown-3" style="text-transform: none;">He adds eternal punishment for nonbelievers</div>
+    <div class="mt clown-4" style="text-transform: none;">Calls it the religion of love</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul's Clown Arc</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0108">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Jesus</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Kingdom of Heaven is within your heart</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Paul</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Please accept this guilt or burn forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Jesus vs Paul Energy</div>
+    <div class="context">&ldquo;The 'Kingdom of Heaven' is a condition of the heart.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0109">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Follow Paul's version of Christianity</div>
+    <div class="mt gru-2" style="text-transform: none;">Spread it across the entire Roman Empire</div>
+    <div class="mt gru-3" style="text-transform: none;">Realize it contradicts everything Jesus practiced</div>
+    <div class="mt gru-4" style="text-transform: none;">Realize it contradicts everything Jesus practiced</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Gru Follows Paul</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0110">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Paul replaced Jesus's teaching with revenge theology</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, it's only the world's largest religion</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Fine with Falsification</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0111">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Paul invented Christianity more than Jesus did</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul Was the Problem</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0112">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But Paul was spreading the Good News of--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Paul was spreading his own revenge, not Jesus's practice</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Batman Corrects on Paul</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0113">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Jesus died and left no organized church</div>
+    <div class="mt pkp-2" style="text-transform: none;">Paul steps in to organize everything</div>
+    <div class="mt pkp-3" style="text-transform: none;">Paul turns it into a revenge cult against nobility</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul Panic</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0114">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't be accused of falsifying Jesus</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you make the cross mean something Jesus never intended</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Roll Safe Paul</div>
+    <div class="context">&ldquo;There was only one Christian, and he died on the cross.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0115">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Let Paul near a religious movement without revenge happening</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Simply Transmit Jesus</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0116">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Your connection to Jesus's actual inner practice</div>
+    <div class="mt trade-right" style="text-transform: none;">A revenge theology that conquers empires</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Paul</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul's Trade</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0117">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should faithfully preserve the master's teaching</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Rewrite everything to punish the strong and noble</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Paul's Inner Voice</div>
+    <div class="context">&ldquo;Paul was the greatest of all apostles of revenge.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-law-against-christianity">&mdash; The Law Against Christianity &mdash;</div>
+
+<div class="meme-card" data-id="N-0118">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">I don't like Christianity</div>
+    <div class="mt winnie-bot" style="text-transform: none;">I raise against the Christian church the most terrible of all accusations</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Refined Accusation</div>
+    <div class="context">&ldquo;I condemn Christianity. I raise against the Christian church the most terrible of all accusations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0119">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Nietzsche</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">The entire history of Christianity</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this the one great immortal blemish on mankind?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Identifying the Curse</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0120">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Christianity calling the world sinful</div>
+    <div class="mt spidey-right" style="text-transform: none;">The world calling Christianity the one great curse</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Corruption Points at Corruption</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0121">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other girls</div>
+    <div class="mt think-him" style="text-transform: none;">We need a complete revaluation of all values</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Thinking About the Revaluation</div>
+    <div class="context">&ldquo;I condemn Christianity. I raise against the Christian church the most terrible of all accusations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0122">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Christianity is the great curse</div>
+    <div class="mt bell-center" style="text-transform: none;">Well actually the moral arc of civilization shows that--</div>
+    <div class="mt bell-right" style="text-transform: none;">Christianity is the great curse</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bell Curve of Christianity Takes</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0123">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Realizing your civilization's values are upside down</div>
+    <div class="mt harold-bot" style="text-transform: none;">Smiling at the Christmas decorations</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Harold Faces the Law</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0124">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">I condemn Christianity most terribly!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat unbothered, living beyond good and evil</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Yelling the Accusation</div>
+    <div class="context">&ldquo;I condemn Christianity. I raise against the Christian church the most terrible of all accusations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0125">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">Nietzsche is critiquing Christianity pretty hard</div>
+    <div class="mt anakin-tr" style="text-transform: none;">But he still respects the moral foundation, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">Right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Anakin Reads The Antichrist</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0126">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Christianity teaches love and forgiveness</div>
+    <div class="mt sponge-bot" style="text-transform: none;">cHrIsTiAnItY tEaChEs LoVe AnD fOrGiVeNeSs</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking the Accusation</div>
+    <div class="context">&ldquo;The Christian church has left nothing untouched by its depravity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0127">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Two thousand years of corrupted values</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Sitting with the weight of the revaluation ahead</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Sad About the Whole Thing</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0128">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for the revaluation of all values</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still stuck with Christian morality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Revaluation</div>
+    <div class="context">&ldquo;I condemn Christianity. I raise against the Christian church the most terrible of all accusations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0129">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking</div>
+    <div class="mt bottom" style="text-transform: none;">For a complete revaluation of all values</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Bernie Demands the Law</div>
+    <div class="context">&ldquo;I condemn Christianity. I raise against the Christian church the most terrible of all accusations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0130">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Two millennia of Christian morality behind her</div>
+    <div class="mt bottom" style="text-transform: none;">Nietzsche grinning at the revaluation</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Burning the Old Values</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0131">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Continuing with inverted Christian values</div>
+    <div class="mt bottom" style="text-transform: none;">Complete revaluation of all values</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Exit Toward Revaluation</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0132">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Civilization chasing moral progress</div>
+    <div class="mt bottom" style="text-transform: none;">Natural healthy values floating away from Christianity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Healthy Values Escape</div>
+    <div class="context">&ldquo;The concept of God invented as a counter-concept to life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0133">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Honestly examine your inherited Christian morality</div>
+    <div class="mt bottom" style="text-transform: none;">Western civilization draws 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Revalue or Draw 25</div>
+    <div class="context">&ldquo;I condemn Christianity. I raise against the Christian church the most terrible of all accusations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0134">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of those</div>
+    <div class="mt bottom" style="text-transform: none;">Terrible accusations against Christianity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Any More Accusations</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0135">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Rejecting slave morality completely</div>
+    <div class="mt ahb-left" style="text-transform: none;">The Antichrist</div>
+    <div class="mt ahb-right" style="text-transform: none;">The Ubermensch</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Antichrist and the Ubermensch Agree</div>
+    <div class="context">&ldquo;What is good? Everything that heightens the feeling of power in man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0136">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Inscribe the eternal accusation on every wall</div>
+    <div class="mt bottom" style="text-transform: none;">Also inscribe it on every remaining wall</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Two Buttons</div>
+    <div class="context">&ldquo;Wherever there are walls I shall inscribe this eternal accusation against Christianity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0137">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Christianity is the one great curse upon mankind</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The One Great Curse</div>
+    <div class="context">&ldquo;I call Christianity the one great curse.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0138">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">Everyone deserves equal rights and dignity</div>
+    <div class="mt sponge-bot" style="text-transform: none;">eVeRyOnE dEsErVeS eQuAl RiGhTs AnD dIgNiTy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mocking Equal Rights</div>
+    <div class="context">&ldquo;The poison of the doctrine of 'equal rights for all' has been spread most thoroughly by Christianity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0139">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't have corrupted values</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you revalue absolutely everything from scratch</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Roll Safe Revaluation</div>
+    <div class="context">&ldquo;It has turned every value into an un-value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="N-0140">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Accept the eternal accusation against Christianity</div>
+    <div class="mt bottom" style="text-transform: none;">Humanity draws 25</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Accept or Draw 25</div>
+    <div class="context">&ldquo;Wherever there are walls I shall inscribe this eternal accusation against Christianity.&rdquo;</div>
+  </div>
+</div>
+</div>
+
+<footer>Nietzsche Meme Collection &mdash; 140 memes &mdash; Generated by c_Callicles &amp; Kirk Automations</footer>
+</body>
+</html>

@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Will to Power (Notebooks) &mdash; Nietzsche Memes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #e63946, #8e44ad);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 20px; }
+  .nav { text-align: center; margin-bottom: 40px; flex-wrap: wrap; display: flex; justify-content: center; gap: 8px; }
+  .nav a { color: #e63946; font-size: 0.95em; text-decoration: none; border: 1px solid #e63946;
+    padding: 6px 14px; border-radius: 8px; display: inline-block; white-space: nowrap; }
+  .nav a:hover { background: rgba(255,255,255,0.05); }
+  .nav a.active { background: #e63946; color: #fff; }
+  .toc { max-width: 800px; margin: 0 auto 40px; padding: 20px; background: #16213e; border-radius: 12px; }
+  .toc h2 { color: #e63946; margin-bottom: 12px; font-size: 1.3em; }
+  .toc ul { list-style: none; columns: 2; gap: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { color: #aaa; text-decoration: none; font-size: 0.95em; }
+  .toc a:hover { color: #e63946; }
+  .toc .count { color: #555; font-size: 0.85em; }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; max-width: 90%; }
+  .mt.drake-top { top: 8%;  left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.drake-bot { bottom: 8%; left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.db-girl   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 17px; }
+  .mt.db-guy    { bottom: 6%; left: 38%; max-width: 28%; font-size: 17px; }
+  .mt.db-gf     { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 17px; }
+  .mt.ahb-left  { top: 20%; left: 2%;  max-width: 40%; font-size: 20px; }
+  .mt.ahb-right { top: 20%; right: 2%; left: auto; max-width: 40%; font-size: 20px; }
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.gru-1 { top: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-2 { top: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-3 { bottom: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-4 { bottom: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.fine-left  { top: 6%; left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.fine-right { top: 6%; right: 2%; left: auto; max-width: 46%; font-size: 18px; }
+  .mt.cmm { bottom: 8%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #e63946; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #e63946;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+  @media (max-width: 600px) {
+    .meme-grid { grid-template-columns: 1fr; gap: 20px; }
+    h1 { font-size: 1.8em; }
+    .toc ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<h1>The Will to Power (Notebooks)</h1>
+<p class="subtitle"> &mdash; 120 memes</p>
+<div class="nav">
+  <a href="nietzsche-index.html">&larr; Index</a>
+  <a href="nietzsche-antichrist.html">Antichrist</a>
+  <a href="nietzsche-beyond-good-and-evil.html">Beyond G&E</a>
+  <a href="nietzsche-birth-of-tragedy.html">Birth of Tragedy</a>
+  <a href="nietzsche-daybreak.html">Daybreak</a>
+  <a href="nietzsche-ecce-homo.html">Ecce Homo</a>
+  <a href="nietzsche-gay-science.html">Gay Science</a>
+  <a href="nietzsche-genealogy-of-morality.html">Genealogy</a>
+  <a href="nietzsche-human-all-too-human.html">Human</a>
+  <a href="nietzsche-life-and-legacy.html">Life and Legacy</a>
+  <a href="nietzsche-twilight-of-the-idols.html">Twilight</a>
+  <a href="nietzsche-untimely-meditations.html">Untimely</a>
+  <a href="nietzsche-wagner.html">Wagner</a>
+  <a href="nietzsche-will-to-power.html" class="active">Will to Power</a>
+  <a href="nietzsche-zarathustra.html">Zarathustra</a>
+</div>
+
+<div class="toc"><h2>Sections</h2><ul><li><a href="#european-nihilism">European Nihilism <span class="count">(20)</span></a></li><li><a href="#critique-of-morality">Critique of Morality <span class="count">(20)</span></a></li><li><a href="#critique-of-philosophy">Critique of Philosophy <span class="count">(20)</span></a></li><li><a href="#critique-of-religion">Critique of Religion <span class="count">(20)</span></a></li><li><a href="#the-will-to-power-as-knowledge">The Will to Power as Knowledge <span class="count">(20)</span></a></li><li><a href="#the-will-to-power-as-art">The Will to Power as Art <span class="count">(20)</span></a></li></ul></div>
+
+<div class="meme-grid">
+
+<div class="section-title" id="european-nihilism">&mdash; European Nihilism &mdash;</div>
+
+<div class="meme-card" data-id="WP-0001">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Passive nihilism that gives up</div>
+    <div class="mt drake-bot" style="text-transform: none;">Active nihilism that destroys to create</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Types of Nihilism</div>
+    <div class="context">&ldquo;What does nihilism mean? That the highest values devaluate themselves.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0002">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">God is dead, now what?</div>
+    <div class="mt brain-2" style="text-transform: none;">All values are groundless</div>
+    <div class="mt brain-3" style="text-transform: none;">Existence has no inherent meaning</div>
+    <div class="mt brain-4" style="text-transform: none;">Creating your own meaning through power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Stages of Nihilism</div>
+    <div class="context">&ldquo;Nihilism stands at the door: whence comes this uncanniest of all guests?&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0003">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Comfortable passive nihilism</div>
+    <div class="mt db-guy" style="text-transform: none;">European culture</div>
+    <div class="mt db-gf" style="text-transform: none;">Active self-overcoming</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Europe's Temptation</div>
+    <div class="context">&ldquo;The most extreme form of nihilism would be that every belief is necessarily false.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0004">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, all our values are baseless?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Nihilism Revelation</div>
+    <div class="context">&ldquo;The aim is lacking; why? finds no answer.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0005">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Shopping to fill the void</div>
+    <div class="mt clown-2" style="text-transform: none;">Social media validation</div>
+    <div class="mt clown-3" style="text-transform: none;">Self-help books about purpose</div>
+    <div class="mt clown-4" style="text-transform: none;">Realizing you're a textbook passive nihilist</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Coping With Meaninglessness</div>
+    <div class="context">&ldquo;Nihilism as a normal condition.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0006">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Active nihilist</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Destroys old values and creates new ones</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Passive nihilist</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Watches Netflix and says nothing matters</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Active vs Passive Nihilism</div>
+    <div class="context">&ldquo;Nihilism represents a pathological transitional stage.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0007">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Build a moral system on God</div>
+    <div class="mt gru-2" style="text-transform: none;">Make God the source of all meaning</div>
+    <div class="mt gru-3" style="text-transform: none;">God dies and takes all meaning with him</div>
+    <div class="mt gru-4" style="text-transform: none;">God dies and takes all meaning with him</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Christianity's Endgame</div>
+    <div class="context">&ldquo;The nihilistic consequence: belief in valuelessness as consequence of moral valuation.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0008">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">All foundational values have collapsed</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, we still have GDP growth</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; European Civilization</div>
+    <div class="context">&ldquo;What I relate is the history of the next two centuries.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0009">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Nihilism is not a choice but an inevitable historical event</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nihilism Is Coming</div>
+    <div class="context">&ldquo;Nihilism is not only a preoccupation with the 'in vain' but the pathos of the 'in vain.'&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0010">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But at least we still have objective moral--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Those were always a fiction too</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Comfort Denied</div>
+    <div class="context">&ldquo;The highest values devaluate themselves.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0011">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">God is dead</div>
+    <div class="mt pkp-2" style="text-transform: none;">Science will provide meaning instead</div>
+    <div class="mt pkp-3" style="text-transform: none;">Science also says the universe is indifferent</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Modern Nihilism</div>
+    <div class="context">&ldquo;Attempts to escape nihilism without revaluing our values: they produce the opposite.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0012">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't lose your meaning in life</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you never had any to begin with</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nihilist Logic</div>
+    <div class="context">&ldquo;One interpretation has collapsed; but because it was considered the interpretation, it now seems as if there were no meaning at all.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0013">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Replace God with science and call it solved</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Escaping Nihilism</div>
+    <div class="context">&ldquo;The ways of self-narcotization: the deep sleep of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0014">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Freedom from all illusions</div>
+    <div class="mt trade-right" style="text-transform: none;">Your entire sense of purpose</div>
+    <div class="mt trade-bottom" style="text-transform: none;">European nihilism</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nihilism's Bargain</div>
+    <div class="context">&ldquo;That there is no truth; that there is no absolute nature of things; that the thing in itself is an invention.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0015">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should find new grounds for meaning</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Nothing matters and that's liberating</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Nihilist Whisper</div>
+    <div class="context">&ldquo;Extreme positions are not succeeded by moderate ones, but by contrary extreme positions.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0016">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Life has no meaning</div>
+    <div class="mt winnie-bot" style="text-transform: none;">The absence of meaning is itself a creative opportunity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Upgraded Despair</div>
+    <div class="context">&ldquo;The question of nihilism is: to what end?&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0017">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Modern society</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Consumerism and distraction</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this overcoming nihilism?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Misidentifying Nihilism</div>
+    <div class="context">&ldquo;European nihilism: its cause is the devaluation of cosmological values.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0018">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Nietzsche's European nihilism</div>
+    <div class="mt spidey-right" style="text-transform: none;">21st century existential dread</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Same Crisis Different Century</div>
+    <div class="context">&ldquo;For why has the advent of nihilism become necessary?&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0019">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If nihilism is inevitable does resisting it even matter</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nihilism at 3am</div>
+    <div class="context">&ldquo;Nihilism. It is ambiguous.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0020">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Nothing matters lol</div>
+    <div class="mt bell-center" style="text-transform: none;">Nihilism requires sophisticated philosophical analysis</div>
+    <div class="mt bell-right" style="text-transform: none;">Nothing matters lol</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nihilism Takes</div>
+    <div class="context">&ldquo;The most extreme form of nihilism: chaos, the abyss.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="critique-of-morality">&mdash; Critique of Morality &mdash;</div>
+
+<div class="meme-card" data-id="WP-0021">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Spent your whole life being good</div>
+    <div class="mt harold-bot" style="text-transform: none;">Learning morality was invented by the weak</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Moral Foundations</div>
+    <div class="context">&ldquo;There are no moral phenomena at all, but only a moral interpretation of phenomena.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0022">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Morality is the foundation of civilization!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat reading about herd instinct</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Morality Debate</div>
+    <div class="context">&ldquo;Morality is the best of all devices for leading mankind by the nose.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0023">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">The weak created morality to restrain the strong</div>
+    <div class="mt anakin-tr" style="text-transform: none;">But the strong can just ignore it, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">...guilt and bad conscience</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Moral Origins</div>
+    <div class="context">&ldquo;The concept 'God' was until now the greatest objection to existence.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0024">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">You should be humble and selfless</div>
+    <div class="mt sponge-bot" style="text-transform: none;">yOu ShOuLd Be HuMbLe AnD sElFlEsS</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Moral Scolding</div>
+    <div class="context">&ldquo;What is the counterfeiting morality of 'improvement'? It is the morality of taming.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0025">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Was told my natural instincts are evil</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Internalizing guilt for being excellent</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Strong After Morality</div>
+    <div class="context">&ldquo;The great majority of men have no right to existence.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0026">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for the revaluation of all values</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still stuck with Christian morality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Revaluation</div>
+    <div class="context">&ldquo;A revaluation of all values: this question mark, so black, so tremendous.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0027">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To stop calling your weakness a virtue</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Moral Demand</div>
+    <div class="context">&ldquo;What is good? Everything that heightens the feeling of power in man.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0028">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche smiling at his notebooks</div>
+    <div class="mt bottom" style="text-transform: none;">Two thousand years of moral philosophy burning</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Burning Down Morality</div>
+    <div class="context">&ldquo;The problem of morality is the problem of its value.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0029">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Following herd morality obediently</div>
+    <div class="mt bottom" style="text-transform: none;">Creating your own values through power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Moral Fork</div>
+    <div class="context">&ldquo;My demand of the philosopher: to take his stand beyond good and evil.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0030">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Humanity chasing moral certainty</div>
+    <div class="mt bottom" style="text-transform: none;">Objective morality floating away forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Losing Your Morals</div>
+    <div class="context">&ldquo;Morality is merely an interpretation of certain phenomena.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0031">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit morality is a power strategy</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25 more commandments</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Moral Challenge</div>
+    <div class="context">&ldquo;What is bad? Everything that proceeds from weakness.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0032">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Guilt-based self-regulation?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Morality Addiction</div>
+    <div class="context">&ldquo;The whole of morality is a long, audacious falsification.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0033">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Morality is just a social construct</div>
+    <div class="mt ahb-left" style="text-transform: none;">Nietzsche</div>
+    <div class="mt ahb-right" style="text-transform: none;">Postmodern sociology</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Unlikely Agreement</div>
+    <div class="context">&ldquo;Moral judgments are never to be taken literally.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0034">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Live by your own values and be hated</div>
+    <div class="mt bottom" style="text-transform: none;">Follow the herd and be comfortable</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Moral Choice</div>
+    <div class="context">&ldquo;The domestication of man: what definite value can it have?&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0035">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Virtue as obedience and self-denial</div>
+    <div class="mt drake-bot" style="text-transform: none;">Virtue as strength and self-mastery</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Real Virtue</div>
+    <div class="context">&ldquo;Virtue is the result of immorality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0036">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Following rules because God said so</div>
+    <div class="mt brain-2" style="text-transform: none;">Following rules because society says so</div>
+    <div class="mt brain-3" style="text-transform: none;">Questioning who made the rules</div>
+    <div class="mt brain-4" style="text-transform: none;">Making your own rules through power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Moral Evolution</div>
+    <div class="context">&ldquo;The strong are free. What is the sign of freedom? No longer being ashamed of oneself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0037">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Honest analysis of moral origins</div>
+    <div class="mt db-guy" style="text-transform: none;">Western philosophy</div>
+    <div class="mt db-gf" style="text-transform: none;">Comfortable moral assumptions</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy's Temptation</div>
+    <div class="context">&ldquo;Every morality is a rationalization of fear.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0038">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Teach people selflessness is the highest good</div>
+    <div class="mt gru-2" style="text-transform: none;">Make them sacrifice their strength for others</div>
+    <div class="mt gru-3" style="text-transform: none;">The strong become weak and resentful</div>
+    <div class="mt gru-4" style="text-transform: none;">The strong become weak and resentful</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Altruism Trap</div>
+    <div class="context">&ldquo;Altruism is the morality of decline.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0039">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">Your entire moral framework is a power play by the weak</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, I still feel guilty</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Morality Unmasked</div>
+    <div class="context">&ldquo;Morality as a problem: this is the highest demand.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0040">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Compassion for the weak is just the weak's strategy to survive</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Moral Truth</div>
+    <div class="context">&ldquo;Pity preserves things that are ripe for decline.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="critique-of-philosophy">&mdash; Critique of Philosophy &mdash;</div>
+
+<div class="meme-card" data-id="WP-0041">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But Kant proved that the thing-in-its--</div>
+    <div class="mt bat-batman" style="text-transform: none;">The thing-in-itself is a contradiction</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; No More Metaphysics</div>
+    <div class="context">&ldquo;The thing-in-itself is nonsensical. If we remove all relationships, all properties, all activities, then nothing remains.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0042">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Nietzsche destroys metaphysics</div>
+    <div class="mt pkp-2" style="text-transform: none;">At least we still have logic</div>
+    <div class="mt pkp-3" style="text-transform: none;">Logic is also just a useful fiction</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy Student</div>
+    <div class="context">&ldquo;Logic is bound to the condition: assume there are identical cases.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0043">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't be wrong about reality</div>
+    <div class="mt roll-bot" style="text-transform: none;">If reality itself is just an interpretation</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophical Hack</div>
+    <div class="context">&ldquo;There are no facts, only interpretations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0044">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Reason your way to absolute truth</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Limits of Reason</div>
+    <div class="context">&ldquo;Rational thought is interpretation according to a scheme we cannot throw off.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0045">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">A comforting illusion of objective truth</div>
+    <div class="mt trade-right" style="text-transform: none;">Your intellectual honesty</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Western philosophy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy's Bargain</div>
+    <div class="context">&ldquo;The will to truth is the will to power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0046">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should seek truth humbly and honestly</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Construct a system that secretly justifies your prejudices</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Philosopher's Temptation</div>
+    <div class="context">&ldquo;Every great philosophy has been the confession of its author.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0047">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Seeking objective truth</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Recognizing truth as a mobile army of metaphors</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophical Upgrade</div>
+    <div class="context">&ldquo;Truth is the kind of error without which a certain species could not live.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0048">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Western philosophers</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Their personal prejudices and fears</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this objective metaphysics?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophers and Truth</div>
+    <div class="context">&ldquo;Gradually it has become clear to me what every great philosophy is: a confession.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0049">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Philosophy claiming objectivity</div>
+    <div class="mt spidey-right" style="text-transform: none;">Theology claiming revelation</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Same Thing Different Name</div>
+    <div class="context">&ldquo;Metaphysics, morality, religion, science are considered only as different forms of lies.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0050">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If truth is a type of error what does that make this thought</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Late Night Philosophy</div>
+    <div class="context">&ldquo;The falseness of a judgment is not for us necessarily an objection.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0051">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Truth doesn't exist lol</div>
+    <div class="mt bell-center" style="text-transform: none;">Truth is a complex epistemological problem requiring careful analysis</div>
+    <div class="mt bell-right" style="text-transform: none;">Truth doesn't exist lol</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy Takes</div>
+    <div class="context">&ldquo;There are many kinds of eyes. Even the Sphinx has eyes: and there are many kinds of truths.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0052">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Spent ten years studying the correspondence theory of truth</div>
+    <div class="mt harold-bot" style="text-transform: none;">Reading Nietzsche say truth is just useful error</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Philosophy PhD</div>
+    <div class="context">&ldquo;Against positivism, which halts at phenomena: there are only interpretations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0053">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Cause and effect is the foundation of science!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat noting causality is a useful habit not a fact</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Causality Debate</div>
+    <div class="context">&ldquo;Cause and effect: there is probably never any such duality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0054">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">We can know the world through reason</div>
+    <div class="mt anakin-tr" style="text-transform: none;">The subject who reasons is also constructed, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">...</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Subject and Object</div>
+    <div class="context">&ldquo;The subject is a fiction: the ego of which one speaks does not exist.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0055">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">I have discovered the true nature of reality</div>
+    <div class="mt sponge-bot" style="text-transform: none;">i HaVe DiScOvErEd ThE tRuE nAtUrE oF rEaLiTy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Metaphysical Claims</div>
+    <div class="context">&ldquo;It is we alone who have fabricated causes, succession, reciprocity, relativity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0056">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Spent two millennia building metaphysical systems</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Nietzsche says they were all just autobiographies</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; After Metaphysics</div>
+    <div class="context">&ldquo;Philosophy is this tyrannical drive itself, the most spiritual will to power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0057">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for philosophy to discover absolute truth</div>
+    <div class="mt skel-bot" style="text-transform: none;">It's been twenty-five hundred years</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Truth</div>
+    <div class="context">&ldquo;The will to a system is a lack of integrity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0058">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking philosophers</div>
+    <div class="mt bottom" style="text-transform: none;">To admit their systems are just autobiography</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche's Demand</div>
+    <div class="context">&ldquo;The will to truth requires a critique.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0059">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche smiling at his notebook</div>
+    <div class="mt bottom" style="text-transform: none;">The entire Western philosophical tradition in flames</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Destroying Philosophy</div>
+    <div class="context">&ldquo;A critique of the concept of being is unavoidable.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0060">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Building another metaphysical system</div>
+    <div class="mt bottom" style="text-transform: none;">Admitting all philosophy is will to power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Philosophical Fork</div>
+    <div class="context">&ldquo;The will to truth is a making firm, a making true and durable.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="critique-of-religion">&mdash; Critique of Religion &mdash;</div>
+
+<div class="meme-card" data-id="WP-0061">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Humanity chasing divine meaning</div>
+    <div class="mt bottom" style="text-transform: none;">God floating away from modernity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; God Escaping</div>
+    <div class="context">&ldquo;God is dead; but given the way of men, there may still be caves for thousands of years in which his shadow will be shown.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0062">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit religion is a power structure</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25 more papal encyclicals</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Theological Challenge</div>
+    <div class="context">&ldquo;The Christian conception of God is one of the most corrupt conceptions of the divine.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0063">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Transcendent cosmic meaning?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Post-God Cravings</div>
+    <div class="context">&ldquo;Christianity was from the beginning, essentially and fundamentally, nausea and disgust with life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0064">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Demanding obedience from the masses</div>
+    <div class="mt ahb-left" style="text-transform: none;">Organized religion</div>
+    <div class="mt ahb-right" style="text-transform: none;">Political ideology</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Unlikely Religious Allies</div>
+    <div class="context">&ldquo;The concept of God is an objection to life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0065">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Face the void honestly</div>
+    <div class="mt bottom" style="text-transform: none;">Keep praying to a God you suspect is dead</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Believer's Dilemma</div>
+    <div class="context">&ldquo;Faith means not wanting to know what is true.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0066">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">God who punishes and rewards like a schoolteacher</div>
+    <div class="mt drake-bot" style="text-transform: none;">The sacred yes to life without divine permission</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Religious Preference</div>
+    <div class="context">&ldquo;Christianity is a revolt of everything that crawls on the ground against that which has height.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0067">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">God as angry sky father</div>
+    <div class="mt brain-2" style="text-transform: none;">God as loving shepherd</div>
+    <div class="mt brain-3" style="text-transform: none;">God as abstract philosophical concept</div>
+    <div class="mt brain-4" style="text-transform: none;">Admitting God was always a human projection</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Evolution of God</div>
+    <div class="context">&ldquo;The Christian God has become the greatest objection to existence.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0068">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Progress and humanism</div>
+    <div class="mt db-guy" style="text-transform: none;">Post-Christian society</div>
+    <div class="mt db-gf" style="text-transform: none;">Actual confrontation with meaninglessness</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Secular Replacements</div>
+    <div class="context">&ldquo;When one gives up Christian faith, one pulls the right to Christian morality from under one's feet.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0069">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, religion is just a power tool?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Religion Unmasked</div>
+    <div class="context">&ldquo;The priest rules through the invention of sin.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0070">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">Killing God with science</div>
+    <div class="mt clown-2" style="text-transform: none;">Replacing him with the state</div>
+    <div class="mt clown-3" style="text-transform: none;">Replacing the state with the market</div>
+    <div class="mt clown-4" style="text-transform: none;">Wondering why nothing fills the void</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Replacing God</div>
+    <div class="context">&ldquo;After Buddha was dead, his shadow was still shown for centuries.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0071">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Active response</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Creates new values from the rubble</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Passive response</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Replaces God with Netflix subscription</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Two Approaches to God's Death</div>
+    <div class="context">&ldquo;He who has a why to live can bear almost any how.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0072">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Kill God with Enlightenment reason</div>
+    <div class="mt gru-2" style="text-transform: none;">Establish secular humanist ethics</div>
+    <div class="mt gru-3" style="text-transform: none;">The ethics are just Christianity without the cross</div>
+    <div class="mt gru-4" style="text-transform: none;">The ethics are just Christianity without the cross</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Secular Christianity</div>
+    <div class="context">&ldquo;They are rid of the Christian God and now believe all the more firmly in Christian morality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0073">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">The foundation of all Western values has collapsed</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, we still have human rights</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Death of God</div>
+    <div class="context">&ldquo;The decline of the interpretation of the world that centres in the concept God.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0074">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Sin was invented by priests to create demand for their product</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Real Sin</div>
+    <div class="context">&ldquo;The concept of sin was invented alongside the instrument of punishment.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0075">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">At least we can replace God with Reas--</div>
+    <div class="mt bat-batman" style="text-transform: none;">You're just worshipping a different abstraction</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; No Secular Substitutes</div>
+    <div class="context">&ldquo;After the concept God has fallen, the feeling of the cosmological has also fallen.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0076">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Stopped going to church</div>
+    <div class="mt pkp-2" style="text-transform: none;">Found meaning in secular philosophy</div>
+    <div class="mt pkp-3" style="text-transform: none;">Secular philosophy is just Christianity in disguise</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Losing Religion Gradually</div>
+    <div class="context">&ldquo;Buddhism is a hundred times more realistic than Christianity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0077">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't lose your flock</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you convince them they're born sinful</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Priestly Logic</div>
+    <div class="context">&ldquo;The priest lives on sins. It is essential for him that people sin.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0078">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Kill God and keep his morality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Killing God Properly</div>
+    <div class="context">&ldquo;Morality will gradually perish now: this is the great spectacle in a hundred acts reserved for the next two centuries.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0079">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Comfort, community, and cosmic meaning</div>
+    <div class="mt trade-right" style="text-transform: none;">Your intellectual honesty and natural instincts</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Christianity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Religion's Deal</div>
+    <div class="context">&ldquo;In Christianity neither morality nor religion has even a single point of contact with reality.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0080">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I've moved beyond religion entirely</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Keep all of Christianity's moral assumptions though</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Secular Temptation</div>
+    <div class="context">&ldquo;Naivete: as if morality could survive when the God who sanctions it is missing.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-will-to-power-as-knowledge">&mdash; The Will to Power as Knowledge &mdash;</div>
+
+<div class="meme-card" data-id="WP-0081">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Seeking truth for its own sake</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Recognizing knowledge as a tool of power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Upgraded Epistemology</div>
+    <div class="context">&ldquo;Knowledge works as a tool of power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0082">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Scientists</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Useful fictions and simplifications</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this objective knowledge of reality?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Science's Self-Image</div>
+    <div class="context">&ldquo;Physics too is only an interpretation and arrangement of the world, not an explanation.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0083">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Science claiming objectivity</div>
+    <div class="mt spidey-right" style="text-transform: none;">Will to power claiming the world</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Same Drive Different Costume</div>
+    <div class="context">&ldquo;The will to truth is a will to power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0084">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If all knowledge is will to power then this thought is too</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Epistemology at Night</div>
+    <div class="context">&ldquo;Not to know but to schematize: to impose regularity and form as much as our practical needs require.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0085">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Science is just opinions</div>
+    <div class="mt bell-center" style="text-transform: none;">Science is a complex system of verified objective truths</div>
+    <div class="mt bell-right" style="text-transform: none;">Science is just very useful opinions</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Knowledge Takes</div>
+    <div class="context">&ldquo;The criterion of truth resides in the enhancement of the feeling of power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0086">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Dedicated life to discovering objective truth</div>
+    <div class="mt harold-bot" style="text-transform: none;">Nietzsche says you're just imposing schemas on chaos</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Scientist's Pain</div>
+    <div class="context">&ldquo;We have arranged for ourselves a world in which we can live.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0087">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling At Cat" loading="lazy">
+    <div class="mt wyc-woman" style="text-transform: none;">Science discovers objective facts about nature!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">Cat reading that knowledge is perspectival</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Knowledge Debate</div>
+    <div class="context">&ldquo;There is only a perspective seeing, only a perspective knowing.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0088">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme" loading="lazy">
+    <div class="mt anakin-tl" style="text-transform: none;">Math describes the true structure of reality</div>
+    <div class="mt anakin-tr" style="text-transform: none;">The true structure, right?</div>
+    <div class="mt anakin-br" style="text-transform: none;">...just our most durable useful fiction</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Mathematics and Truth</div>
+    <div class="context">&ldquo;Mathematics is only a means of general and final knowledge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0089">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob" loading="lazy">
+    <div class="mt sponge-top" style="text-transform: none;">My findings are completely objective and value-free</div>
+    <div class="mt sponge-bot" style="text-transform: none;">mY fInDiNgS aRe CoMpLeTeLy ObJeCtIvE aNd VaLuE-fReE</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Scientific Objectivity</div>
+    <div class="context">&ldquo;The belief in the categories of reason is the cause of nihilism.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0090">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo" loading="lazy">
+    <div class="mt pablo-top" style="text-transform: none;">Learned that all knowledge is perspectival</div>
+    <div class="mt pablo-bot" style="text-transform: none;">Still needing to make decisions somehow</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; After Objectivity</div>
+    <div class="context">&ldquo;Everything of which we become conscious is arranged, simplified, schematized, interpreted.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0091">
+  <div class="meme-container">
+    <img src="images/2fm6x.jpg" alt="Waiting Skeleton" loading="lazy">
+    <div class="mt skel-top" style="text-transform: none;">Waiting for humans to achieve a view from nowhere</div>
+    <div class="mt skel-bot" style="text-transform: none;">Still trapped in perspective</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Waiting for Objectivity</div>
+    <div class="context">&ldquo;We cannot establish any fact in itself. Perhaps it is just as absurd to try.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0092">
+  <div class="meme-container">
+    <img src="images/3oevdk.jpg" alt="Bernie" loading="lazy">
+    <div class="mt top" style="text-transform: none;">I am once again asking you</div>
+    <div class="mt bottom" style="text-transform: none;">To admit science is also a form of faith</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche to Scientists</div>
+    <div class="context">&ldquo;It is still a metaphysical faith upon which our faith in science rests.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0093">
+  <div class="meme-container">
+    <img src="images/23ls.jpg" alt="Disaster Girl" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Nietzsche smiling at his notebook</div>
+    <div class="mt bottom" style="text-transform: none;">The entire concept of objective knowledge burning</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Nietzsche Destroys Epistemology</div>
+    <div class="context">&ldquo;What then is truth? A mobile army of metaphors.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0094">
+  <div class="meme-container">
+    <img src="images/22bdq6.jpg" alt="Left Exit 12" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Pretending knowledge is neutral and objective</div>
+    <div class="mt bottom" style="text-transform: none;">Admitting knowledge is always will to power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Knowledge Fork</div>
+    <div class="context">&ldquo;To impose upon becoming the character of being: that is the supreme will to power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0095">
+  <div class="meme-container">
+    <img src="images/261o3j.jpg" alt="Running Away Balloon" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Epistemology chasing the view from nowhere</div>
+    <div class="mt bottom" style="text-transform: none;">Objectivity floating away on the wind</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Chasing Objectivity</div>
+    <div class="context">&ldquo;The inventive force that invented categories labored in the service of our needs.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0096">
+  <div class="meme-container">
+    <img src="images/3lmzyx.jpg" alt="UNO Draw 25" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Accept that all knowledge is perspectival</div>
+    <div class="mt bottom" style="text-transform: none;">Draw 25 more claims about objectivity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Perspectivism Challenge</div>
+    <div class="context">&ldquo;Perspectivism: it is our needs that interpret the world.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0097">
+  <div class="meme-container">
+    <img src="images/21uy0f.jpg" alt="Y'all Got Any More" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Y'all got any more of that</div>
+    <div class="mt bottom" style="text-transform: none;">Non-perspectival objective knowledge?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Knowledge Cravings</div>
+    <div class="context">&ldquo;The world has become infinite for us: we cannot reject the possibility that it may include infinite interpretations.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0098">
+  <div class="meme-container">
+    <img src="images/28j0te.jpg" alt="Epic Handshake" loading="lazy">
+    <div class="mt top" style="text-transform: none;">All knowledge is situated and partial</div>
+    <div class="mt ahb-left" style="text-transform: none;">Nietzsche's notebooks</div>
+    <div class="mt ahb-right" style="text-transform: none;">Thomas Kuhn's paradigm shifts</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Perspectivism Agreement</div>
+    <div class="context">&ldquo;Not things but interpretations of things: that is the fundamental prejudice.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0099">
+  <div class="meme-container">
+    <img src="images/1g8my4.jpg" alt="Two Buttons" loading="lazy">
+    <div class="mt top" style="text-transform: none;">Admit your work is perspectival</div>
+    <div class="mt bottom" style="text-transform: none;">Claim divine objectivity for your p-values</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Scientist's Dilemma</div>
+    <div class="context">&ldquo;The question is to what extent it is life-furthering, life-preserving.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0100">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake" loading="lazy">
+    <div class="mt drake-top" style="text-transform: none;">Knowledge as mirror of reality</div>
+    <div class="mt drake-bot" style="text-transform: none;">Knowledge as tool for mastering reality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Knowledge Upgrade</div>
+    <div class="context">&ldquo;The world with which we are concerned is false. It is not a fact but a fable.&rdquo;</div>
+  </div>
+</div>
+<div class="section-title" id="the-will-to-power-as-art">&mdash; The Will to Power as Art &mdash;</div>
+
+<div class="meme-card" data-id="WP-0101">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain" loading="lazy">
+    <div class="mt brain-1" style="text-transform: none;">Art as entertainment</div>
+    <div class="mt brain-2" style="text-transform: none;">Art as self-expression</div>
+    <div class="mt brain-3" style="text-transform: none;">Art as the highest will to power</div>
+    <div class="mt brain-4" style="text-transform: none;">Art as the only justification for existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's True Role</div>
+    <div class="context">&ldquo;Art is the great stimulus to life.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0102">
+  <div class="meme-container">
+    <img src="images/1ur9b0.jpg" alt="Distracted Boyfriend" loading="lazy">
+    <div class="mt db-girl" style="text-transform: none;">Art and creation</div>
+    <div class="mt db-guy" style="text-transform: none;">Nietzsche</div>
+    <div class="mt db-gf" style="text-transform: none;">Truth and morality</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Real Higher Value</div>
+    <div class="context">&ldquo;We have art in order not to die of the truth.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0103">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been" loading="lazy">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, art is worth more than truth?</div>
+    <div class="mt ahb-right" style="text-transform: none;">Always has been</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Over Truth</div>
+    <div class="context">&ldquo;Art is worth more than truth.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0104">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown Applying Makeup" loading="lazy">
+    <div class="mt clown-1" style="text-transform: none;">I create art to express my feelings</div>
+    <div class="mt clown-2" style="text-transform: none;">I create art to reveal hidden truths</div>
+    <div class="mt clown-3" style="text-transform: none;">I create art to change the world</div>
+    <div class="mt clown-4" style="text-transform: none;">I create art because will to power made me</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Artist as Truth-Seeker</div>
+    <div class="context">&ldquo;The artist gradually comes to love for their own sake the means that reveal a condition of power.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0105">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems" loading="lazy">
+    <div class="mt buff-left-top" style="text-transform: none;">Art</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">Creates new values and transforms life</div>
+    <div class="mt buff-right-top" style="text-transform: none;">Philosophy</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">Argues about what truth means for centuries</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art vs Philosophy</div>
+    <div class="context">&ldquo;Art as the redemption of the man of knowledge.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0106">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan" loading="lazy">
+    <div class="mt gru-1" style="text-transform: none;">Use art to escape ugly reality</div>
+    <div class="mt gru-2" style="text-transform: none;">Realize art is the highest reality</div>
+    <div class="mt gru-3" style="text-transform: none;">Now you can't tell art from life</div>
+    <div class="mt gru-4" style="text-transform: none;">Now you can't tell art from life</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Aesthete's Journey</div>
+    <div class="context">&ldquo;Life itself is essentially appropriation, injury, overpowering of what is alien and weaker.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0107">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine" loading="lazy">
+    <div class="mt fine-left" style="text-transform: none;">The universe has no inherent meaning</div>
+    <div class="mt fine-right" style="text-transform: none;">This is fine, we have art</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art in a Meaningless World</div>
+    <div class="context">&ldquo;Without music, life would be an error.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0108">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind" loading="lazy">
+    <div class="mt cmm" style="text-transform: none;">Art is the only metaphysical activity justified by existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's Supremacy</div>
+    <div class="context">&ldquo;The phenomenon artist is the most transparent phenomenon.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0109">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap" loading="lazy">
+    <div class="mt bat-robin" style="text-transform: none;">But shouldn't art serve moral purpo--</div>
+    <div class="mt bat-batman" style="text-transform: none;">Art serves life, not your moral agenda</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Over Morality</div>
+    <div class="context">&ldquo;Art affirms. It is a tonic. It blesses.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0110">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik" loading="lazy">
+    <div class="mt pkp-1" style="text-transform: none;">Truth doesn't exist</div>
+    <div class="mt pkp-2" style="text-transform: none;">But art creates its own truth!</div>
+    <div class="mt pkp-3" style="text-transform: none;">Art's truth is also will to power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Artist's Realization</div>
+    <div class="context">&ldquo;The will to appearance, to illusion, to deception is here understood as deeper.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0111">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe" loading="lazy">
+    <div class="mt roll-top" style="text-transform: none;">Can't be wrong about reality</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you're creating reality through art</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Logic</div>
+    <div class="context">&ldquo;Art is the proper task of life, art as its metaphysical activity.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0112">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply" loading="lazy">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Create art without expressing will to power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's Power</div>
+    <div class="context">&ldquo;In the main, I agree with the artists more than with any philosopher.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0113">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer" loading="lazy">
+    <div class="mt trade-left" style="text-transform: none;">Illusions that enhance life</div>
+    <div class="mt trade-right" style="text-transform: none;">Your comfortable belief in truth</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Will to power as art</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art's Offer</div>
+    <div class="context">&ldquo;As an aesthetic phenomenon existence is still bearable to us.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0114">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit" loading="lazy">
+    <div class="mt kermit-good" style="text-transform: none;">I should create humble representative art</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Impose your vision on reality like a god</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Artist's Will</div>
+    <div class="context">&ldquo;Art raises its head where the religions relax their hold.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0115">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie" loading="lazy">
+    <div class="mt winnie-top" style="text-transform: none;">Making art to express yourself</div>
+    <div class="mt winnie-bot" style="text-transform: none;">Making art to impose your will on existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Upgraded Creativity</div>
+    <div class="context">&ldquo;Every artist knows how far from any feeling of letting go his most natural condition is.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0116">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon" loading="lazy">
+    <div class="mt pigeon-guy" style="text-transform: none;">Nietzsche</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Literally everything in existence</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this an aesthetic phenomenon?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Life as Art</div>
+    <div class="context">&ldquo;The world as a work of art that gives birth to itself.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0117">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing" loading="lazy">
+    <div class="mt spidey-left" style="text-transform: none;">Creating art</div>
+    <div class="mt spidey-right" style="text-transform: none;">Exercising will to power</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art and Power</div>
+    <div class="context">&ldquo;Genuine artists are those who make things the way things really ought to be.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0118">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking" loading="lazy">
+    <div class="mt think-her" style="text-transform: none;">I bet he's thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If art is the highest will to power then shitposting is philosophy</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Philosophy at Night</div>
+    <div class="context">&ldquo;To experience a thing as beautiful means to experience it necessarily wrongly.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0119">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve" loading="lazy">
+    <div class="mt bell-left" style="text-transform: none;">Art is just pretty pictures lol</div>
+    <div class="mt bell-center" style="text-transform: none;">Art is a complex interplay of aesthetics and cultural production</div>
+    <div class="mt bell-right" style="text-transform: none;">Art is just pretty pictures that justify existence</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Art Takes</div>
+    <div class="context">&ldquo;One is an artist at the cost of regarding what all non-artists call form as content.&rdquo;</div>
+  </div>
+</div>
+<div class="meme-card" data-id="WP-0120">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold" loading="lazy">
+    <div class="mt harold-top" style="text-transform: none;">Dedicated your life to finding truth</div>
+    <div class="mt harold-bot" style="text-transform: none;">Nietzsche says art was the real answer all along</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Truth vs Art Problem</div>
+    <div class="context">&ldquo;Art and nothing but art! It is the great means of making life possible.&rdquo;</div>
+  </div>
+</div>
+</div>
+
+<footer>Nietzsche Meme Collection &mdash; 120 memes &mdash; Generated by c_Callicles &amp; Kirk Automations</footer>
+</body>
+</html>
