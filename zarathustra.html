@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thus Spoke Zarathustra &mdash; Nietzsche Memes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px;
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { text-align: center; color: #888; font-size: 1.1em; margin-bottom: 20px; }
+  .nav { text-align: center; margin-bottom: 40px; }
+  .nav a { color: #e63946; font-size: 1.1em; text-decoration: none; border: 1px solid #e63946;
+    padding: 8px 20px; border-radius: 8px; margin: 0 8px; display: inline-block; }
+  .nav a:hover { background: rgba(230,57,70,0.15); }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; }
+  .meme-card { background: #16213e; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); transition: transform 0.2s; }
+  .meme-card:hover { transform: translateY(-4px); }
+  .meme-container { position: relative; width: 100%; overflow: hidden; }
+  .meme-container img { width: 100%; display: block; }
+
+  /* Base meme text */
+  .mt {
+    position: absolute; text-align: center;
+    font-family: 'Oswald', Impact, 'Arial Black', sans-serif; font-weight: 700;
+    color: #fff; text-transform: uppercase; line-height: 1.2; letter-spacing: 1.5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 3px 6px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55); padding: 5px 10px; border-radius: 6px;
+  }
+  .mt.top    { top: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+  .mt.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 24px; }
+
+  /* Drake */
+  .mt.drake-top { top: 8%;  left: 40%; max-width: 56%; font-size: 20px; }
+  .mt.drake-bot { bottom: 8%; left: 40%; max-width: 56%; font-size: 20px; }
+
+  /* Expanding Brain */
+  .mt.brain-1 { top: 2%;  left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-2 { top: 27%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-3 { top: 52%; left: 2%; max-width: 50%; font-size: 16px; }
+  .mt.brain-4 { top: 77%; left: 2%; max-width: 50%; font-size: 16px; }
+
+  /* Distracted Boyfriend */
+  .mt.db-girl   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 17px; }
+  .mt.db-guy    { bottom: 6%; left: 38%; max-width: 28%; font-size: 17px; }
+  .mt.db-gf     { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 17px; }
+
+  /* Always Has Been */
+  .mt.ahb-left  { top: 20%; left: 2%;  max-width: 40%; font-size: 20px; }
+  .mt.ahb-right { top: 20%; right: 2%; left: auto; max-width: 40%; font-size: 20px; }
+
+  /* Clown 4-panel */
+  .mt.clown-1 { top: 2%;  left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-2 { top: 27%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-3 { top: 52%; left: 2%; max-width: 55%; font-size: 16px; }
+  .mt.clown-4 { top: 77%; left: 2%; max-width: 55%; font-size: 16px; }
+
+  /* Buff Doge vs Cheems */
+  .mt.buff-left-top  { top: 4%;  left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-left-bot  { bottom: 4%; left: 2%;  max-width: 44%; font-size: 16px; }
+  .mt.buff-right-top { top: 4%;  left: 52%; max-width: 44%; font-size: 16px; }
+  .mt.buff-right-bot { bottom: 4%; left: 52%; max-width: 44%; font-size: 16px; }
+
+  /* Gru's Plan */
+  .mt.gru-1 { top: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-2 { top: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-3 { bottom: 28%; left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+  .mt.gru-4 { bottom: 2%;  left: 50%; transform: translateX(-50%); max-width: 90%; font-size: 16px; }
+
+  /* This Is Fine */
+  .mt.fine-left  { top: 6%; left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.fine-right { top: 6%; right: 2%; left: auto; max-width: 46%; font-size: 18px; }
+
+  /* Change My Mind */
+  .mt.cmm { bottom: 8%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Batman Slap */
+  .mt.bat-robin  { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.bat-batman { top: 6%; left: 50%; max-width: 48%; font-size: 18px; }
+
+  /* Panik Kalm Panik */
+  .mt.pkp-1 { top: 4%;  left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-2 { top: 37%; left: 2%; max-width: 55%; font-size: 18px; }
+  .mt.pkp-3 { top: 70%; left: 2%; max-width: 55%; font-size: 18px; }
+
+  /* Roll Safe */
+  .mt.roll-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.roll-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* One Does Not Simply */
+  .mt.ods-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.ods-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Trade Offer */
+  .mt.trade-left   { top: 30%; left: 2%;  max-width: 40%; font-size: 17px; }
+  .mt.trade-right  { top: 30%; left: 54%; max-width: 40%; font-size: 17px; }
+  .mt.trade-bottom { bottom: 3%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  /* Evil Kermit */
+  .mt.kermit-good { top: 6%; left: 2%;  max-width: 44%; font-size: 18px; }
+  .mt.kermit-evil { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Tuxedo Winnie */
+  .mt.winnie-top { top: 8%;  left: 52%; max-width: 46%; font-size: 22px; }
+  .mt.winnie-bot { bottom: 8%; left: 52%; max-width: 46%; font-size: 22px; }
+
+  /* Is This a Pigeon */
+  .mt.pigeon-guy       { top: 15%; left: 5%;  max-width: 30%; font-size: 18px; }
+  .mt.pigeon-butterfly { top: 5%;  left: 55%; max-width: 40%; font-size: 18px; }
+  .mt.pigeon-caption   { bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Spider-Man Pointing */
+  .mt.spidey-left  { bottom: 6%; left: 5%;  max-width: 40%; font-size: 18px; }
+  .mt.spidey-right { bottom: 6%; left: 55%; max-width: 40%; font-size: 18px; }
+
+  /* I Bet He's Thinking */
+  .mt.think-her { top: 6%; left: 2%;  max-width: 44%; font-size: 20px; }
+  .mt.think-him { top: 6%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Bell Curve */
+  .mt.bell-left   { bottom: 6%; left: 2%;  max-width: 28%; font-size: 15px; }
+  .mt.bell-center { top: 6%;    left: 50%; transform: translateX(-50%); max-width: 40%; font-size: 15px; }
+  .mt.bell-right  { bottom: 6%; right: 2%; left: auto; max-width: 28%; font-size: 15px; }
+
+  /* Hide the Pain Harold */
+  .mt.harold-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.harold-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Woman Yelling at Cat */
+  .mt.wyc-woman { top: 6%; left: 2%;  max-width: 48%; font-size: 20px; }
+  .mt.wyc-cat   { top: 6%; left: 52%; max-width: 46%; font-size: 20px; }
+
+  /* Anakin Padme */
+  .mt.anakin-tl { top: 4%;  left: 2%;  max-width: 46%; font-size: 18px; }
+  .mt.anakin-tr { top: 4%;  left: 52%; max-width: 46%; font-size: 18px; }
+  .mt.anakin-br { bottom: 4%; left: 52%; max-width: 46%; font-size: 18px; }
+
+  /* Mocking SpongeBob */
+  .mt.sponge-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.sponge-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Sad Pablo */
+  .mt.pablo-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+  .mt.pablo-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 22px; max-width: 90%; }
+
+  /* Waiting Skeleton */
+  .mt.skel-top { top: 6%;    left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+  .mt.skel-bot { bottom: 6%; left: 50%; transform: translateX(-50%); font-size: 20px; max-width: 90%; }
+
+  .meme-label { padding: 16px 20px; border-top: 1px solid #2a2a4a; }
+  .meme-label .advisor { color: #e63946; font-weight: bold; font-size: 1.05em; }
+  .meme-label .context { color: #aaa; font-size: 0.9em; margin-top: 4px; font-style: italic; }
+  .section-title { grid-column: 1 / -1; text-align: center; font-size: 1.6em; color: #e63946;
+    padding: 20px 0 0; border-top: 1px solid #333; margin-top: 20px; }
+  footer { text-align: center; color: #555; margin-top: 60px; padding: 20px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>Thus Spoke Zarathustra</h1>
+<p class="subtitle">Nietzsche Memes &mdash; 24 memes across 7 themes</p>
+<div class="nav">
+  <a href="index.html">&larr; Round 1</a>
+  <a href="round2.html">Round 2</a>
+  <a href="round3.html">Round 3</a>
+  <a href="round4.html">Round 4</a>
+</div>
+
+<div class="meme-grid">
+
+<!-- ===== PART I — ZARATHUSTRA'S PROLOGUE ===== -->
+<div class="section-title">&mdash; I. Zarathustra&rsquo;s Prologue &mdash;</div>
+
+<!-- 1. Drake — Übermensch vs Last Man -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/30b1gx.jpg" alt="Drake">
+    <div class="mt drake-top" style="text-transform: none;">Being the Last Man: comfortable, blinking, &ldquo;we have invented happiness&rdquo;</div>
+    <div class="mt drake-bot" style="text-transform: none;">Being the &Uuml;bermensch: creating your own values from nothing</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The &Uuml;bermensch vs. The Last Man</div>
+    <div class="context">&ldquo;Man is a rope, fastened between animal and &Uuml;bermensch &mdash; a rope over an abyss.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 2. Expanding Brain — Death of God progression -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1jwhww.jpg" alt="Expanding Brain">
+    <div class="mt brain-1" style="text-transform: none;">God exists and gives life meaning</div>
+    <div class="mt brain-2" style="text-transform: none;">God is dead</div>
+    <div class="mt brain-3" style="text-transform: none;">God is dead and we killed him</div>
+    <div class="mt brain-4" style="text-transform: none;">God is dead and now we must become gods ourselves</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Death of God</div>
+    <div class="context">&ldquo;Dead are all gods: now we want the &Uuml;bermensch to live.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 3. Always Has Been — The goal was always the Übermensch -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/46e43q.png" alt="Always Has Been">
+    <div class="mt ahb-left" style="text-transform: none;">Wait, the meaning of the earth was always the &Uuml;bermensch?</div>
+    <div class="mt ahb-right">Always has been.</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Meaning of the Earth</div>
+    <div class="context">&ldquo;I teach you the &Uuml;bermensch. Man is something that shall be overcome.&rdquo;</div>
+  </div>
+</div>
+
+<!-- ===== PART II — THE THREE METAMORPHOSES ===== -->
+<div class="section-title">&mdash; II. The Three Metamorphoses &mdash;</div>
+
+<!-- 4. Clown Applying Makeup — Camel → Lion → Child → stuck as camel -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/38el31.jpg" alt="Clown">
+    <div class="mt clown-1" style="text-transform: none;">Bear all duties and burdens like a camel</div>
+    <div class="mt clown-2" style="text-transform: none;">Destroy every &ldquo;thou shalt&rdquo; like a lion</div>
+    <div class="mt clown-3" style="text-transform: none;">Create new values with the innocence of a child</div>
+    <div class="mt clown-4" style="text-transform: none;">Realize most people die as camels</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Three Metamorphoses</div>
+    <div class="context">Camel &rarr; Lion &rarr; Child: the spirit&rsquo;s transformation</div>
+  </div>
+</div>
+
+<!-- 5. Buff Doge vs Cheems — Lion vs Camel -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/43a45p.png" alt="Buff Doge vs Cheems">
+    <div class="mt buff-left-top">The Lion Spirit</div>
+    <div class="mt buff-left-bot" style="text-transform: none;">&ldquo;I WILL&rdquo;</div>
+    <div class="mt buff-right-top">The Camel Spirit</div>
+    <div class="mt buff-right-bot" style="text-transform: none;">&ldquo;What is heaviest? Let me bear it&rdquo;</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Camel vs. Lion</div>
+    <div class="context">&ldquo;The lion says &lsquo;I will.&rsquo; The spirit that bore all now creates freedom for new creation.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 6. Gru's Plan — Three metamorphoses gone wrong -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/26jxvz.jpg" alt="Gru's Plan">
+    <div class="mt gru-1" style="text-transform: none;">Become a camel, bear society&rsquo;s heaviest burdens</div>
+    <div class="mt gru-2" style="text-transform: none;">Transform into the lion, reject all imposed values</div>
+    <div class="mt gru-3" style="text-transform: none;">Have nothing left to believe in</div>
+    <div class="mt gru-4" style="text-transform: none;">Have nothing left to believe in</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Lion&rsquo;s Problem</div>
+    <div class="context">The lion can destroy old values but cannot create new ones. That requires the child.</div>
+  </div>
+</div>
+
+<!-- ===== PART III — THE DEATH OF GOD ===== -->
+<div class="section-title">&mdash; III. The Death of God &mdash;</div>
+
+<!-- 7. This Is Fine — modernity after God's death -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/wxica.jpg" alt="This Is Fine">
+    <div class="mt fine-left" style="text-transform: none;">Western civilization after killing God</div>
+    <div class="mt fine-right" style="text-transform: none;">&ldquo;We have invented happiness&rdquo;</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Last Man&rsquo;s Modernity</div>
+    <div class="context">&ldquo;The earth has become small, and on it hops the Last Man, who makes everything small.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 8. Batman Slap — objective morality -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/9ehk.jpg" alt="Batman Slap">
+    <div class="mt bat-robin" style="text-transform: none;">But we need objective moral foundations&mdash;</div>
+    <div class="mt bat-batman" style="text-transform: none;">God is dead. Create your own values.</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; No More Crutches</div>
+    <div class="context">&ldquo;You must be ready to burn yourself in your own flame; how could you become new, if you had not first become ashes?&rdquo;</div>
+  </div>
+</div>
+
+<!-- 9. Change My Mind -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/24y43o.jpg" alt="Change My Mind">
+    <div class="mt cmm" style="text-transform: none;">Nihilism is just the death of God without the courage to become the &Uuml;bermensch</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Against Passive Nihilism</div>
+    <div class="context">&ldquo;What does nihilism mean? That the highest values devalue themselves.&rdquo;</div>
+  </div>
+</div>
+
+<!-- ===== PART IV — ETERNAL RECURRENCE ===== -->
+<div class="section-title">&mdash; IV. Eternal Recurrence &mdash;</div>
+
+<!-- 10. Panik Kalm Panik -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/3qqcim.png" alt="Panik Kalm Panik">
+    <div class="mt pkp-1" style="text-transform: none;">You will live this exact life infinitely</div>
+    <div class="mt pkp-2" style="text-transform: none;">At least the good parts repeat too</div>
+    <div class="mt pkp-3" style="text-transform: none;">Including every suffering, forever</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Heaviest Weight</div>
+    <div class="context">&ldquo;This life as you now live it, you will have to live once more and innumerable times more.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 11. Roll Safe — can't fear death -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1h7in3.jpg" alt="Roll Safe">
+    <div class="mt roll-top" style="text-transform: none;">Can&rsquo;t fear death</div>
+    <div class="mt roll-bot" style="text-transform: none;">If you embrace living the same life for all eternity</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Amor Fati</div>
+    <div class="context">&ldquo;My formula for greatness: amor fati &mdash; that one wants nothing to be different.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 12. One Does Not Simply -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1bij.jpg" alt="One Does Not Simply">
+    <div class="mt ods-top" style="text-transform: none;">One does not simply</div>
+    <div class="mt ods-bot" style="text-transform: none;">Accept eternal recurrence without first loving one&rsquo;s fate</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Test of Eternal Return</div>
+    <div class="context">The eternal hourglass of existence is turned upside down again and again &mdash; and you with it.</div>
+  </div>
+</div>
+
+<!-- ===== PART V — WILL TO POWER & SELF-OVERCOMING ===== -->
+<div class="section-title">&mdash; V. Will to Power &amp; Self-Overcoming &mdash;</div>
+
+<!-- 13. Trade Offer -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/54hjww.jpg" alt="Trade Offer">
+    <div class="mt trade-left" style="text-transform: none;">I receive: your comfort, your security, your herd morality</div>
+    <div class="mt trade-right" style="text-transform: none;">You receive: self-overcoming, suffering, and the &Uuml;bermensch</div>
+    <div class="mt trade-bottom" style="text-transform: none;">Zarathustra&rsquo;s trade offer</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Cost of Greatness</div>
+    <div class="context">&ldquo;The higher we soar, the smaller we appear to those who cannot fly.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 14. Evil Kermit — self-overcoming -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1e7ql7.jpg" alt="Evil Kermit">
+    <div class="mt kermit-good" style="text-transform: none;">Be content with what you have</div>
+    <div class="mt kermit-evil" style="text-transform: none;">Overcome yourself and destroy who you were yesterday</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Self-Overcoming</div>
+    <div class="context">&ldquo;And life itself confided this secret to me: &lsquo;I am that which must always overcome itself.&rsquo;&rdquo;</div>
+  </div>
+</div>
+
+<!-- 15. Tuxedo Winnie — happiness vs power -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/2ybua0.png" alt="Tuxedo Winnie">
+    <div class="mt winnie-top" style="text-transform: none;">I want to be happy</div>
+    <div class="mt winnie-bot" style="text-transform: none;">I want to be powerful, creative, and self-overcoming</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Happiness is for the Last Man</div>
+    <div class="context">&ldquo;The discipline of suffering, of great suffering &mdash; do you not know that only this has created all enhancements of man?&rdquo;</div>
+  </div>
+</div>
+
+<!-- ===== PART VI — THE LAST MAN & THE HIGHER MEN ===== -->
+<div class="section-title">&mdash; VI. The Last Man &amp; The Higher Men &mdash;</div>
+
+<!-- 16. Is This a Pigeon — Last Man and happiness -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1o00in.jpg" alt="Is This a Pigeon">
+    <div class="mt pigeon-guy" style="text-transform: none;">The Last Man</div>
+    <div class="mt pigeon-butterfly" style="text-transform: none;">Comfortable mediocrity</div>
+    <div class="mt pigeon-caption" style="text-transform: none;">Is this happiness?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Last Man&rsquo;s Delusion</div>
+    <div class="context">&ldquo;They have their little pleasures for the day and their little pleasures for the night: but they respect health.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 17. Spider-Man Pointing — Last Man and consumer culture -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1tkjq9.jpg" alt="Spider-Man Pointing">
+    <div class="mt spidey-left" style="text-transform: none;">The Last Man</div>
+    <div class="mt spidey-right" style="text-transform: none;">Modern consumer culture</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Prophecy Fulfilled</div>
+    <div class="context">&ldquo;&lsquo;What is love? What is creation? What is longing?&rsquo; &mdash; thus asks the Last Man, and blinks.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 18. I Bet He's Thinking -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1tl71a.jpg" alt="I Bet He's Thinking">
+    <div class="mt think-her" style="text-transform: none;">I bet he&rsquo;s thinking about other women</div>
+    <div class="mt think-him" style="text-transform: none;">If the &Uuml;bermensch is the meaning of the earth, why does everyone still chase comfort</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Tightrope</div>
+    <div class="context">&ldquo;What is great in man is that he is a bridge and not an end.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 19. Bell Curve — meaning of life -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/8tw3vb.png" alt="Bell Curve">
+    <div class="mt bell-left" style="text-transform: none;">God gives life meaning</div>
+    <div class="mt bell-center" style="text-transform: none;">God is dead, nothing matters, nihilism forever</div>
+    <div class="mt bell-right" style="text-transform: none;">God is dead, we create our own meaning &mdash; Amor Fati</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Bell Curve of Nihilism</div>
+    <div class="context">Most people get stuck in the middle. The point was always to come out the other side.</div>
+  </div>
+</div>
+
+<!-- ===== PART VII — AMOR FATI & GOING UNDER ===== -->
+<div class="section-title">&mdash; VII. Amor Fati &amp; Going Under &mdash;</div>
+
+<!-- 20. Hide the Pain Harold -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/gk5el.jpg" alt="Hide the Pain Harold">
+    <div class="mt harold-top" style="text-transform: none;">When eternal recurrence means this pain repeats infinitely</div>
+    <div class="mt harold-bot" style="text-transform: none;">And you have to love it anyway</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Amor Fati in Practice</div>
+    <div class="context">&ldquo;To those human beings who are of any concern to me I wish suffering, being forsaken, sickness.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 21. Mocking SpongeBob -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1otk96.jpg" alt="Mocking SpongeBob">
+    <div class="mt sponge-top" style="text-transform: none;">bUt WhO gIvEs My LiFe MeAnInG</div>
+    <div class="mt sponge-bot" style="text-transform: none;">You do. That&rsquo;s the whole point.</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; No One Is Coming to Save You</div>
+    <div class="context">&ldquo;No one can build you the bridge on which you, and only you, must cross the river of life.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 22. Woman Yelling at Cat -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/345v97.jpg" alt="Woman Yelling at Cat">
+    <div class="mt wyc-woman" style="text-transform: none;">You can&rsquo;t just reject all morality!</div>
+    <div class="mt wyc-cat" style="text-transform: none;">*calmly creating new values on a mountain*</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Zarathustra vs. The Herd</div>
+    <div class="context">&ldquo;You have your way. I have my way. As for the right way, the correct way, it does not exist.&rdquo;</div>
+  </div>
+</div>
+
+<!-- 23. Anakin Padme — Zarathustra's return -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/5c7lwq.png" alt="Anakin Padme">
+    <div class="mt anakin-tl" style="text-transform: none;">You&rsquo;re going to the mountain to find enlightenment?</div>
+    <div class="mt anakin-tr" style="text-transform: none;">Yes.</div>
+    <div class="mt anakin-br" style="text-transform: none;">And you&rsquo;ll share your wisdom and they&rsquo;ll listen, right?</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; Zarathustra&rsquo;s Going Down</div>
+    <div class="context">He came down from the mountain. Nobody listened. The marketplace laughed. Classic.</div>
+  </div>
+</div>
+
+<!-- 24. Sad Pablo — Zarathustra alone -->
+<div class="meme-card">
+  <div class="meme-container">
+    <img src="images/1c1uej.jpg" alt="Sad Pablo">
+    <div class="mt pablo-top" style="text-transform: none;">When you descend from the mountain with the truth about the &Uuml;bermensch</div>
+    <div class="mt pablo-bot" style="text-transform: none;">And they just want to hear about the tightrope walker</div>
+  </div>
+  <div class="meme-label">
+    <div class="advisor">Nietzsche &mdash; The Loneliness of the Prophet</div>
+    <div class="context">&ldquo;The lonely one offers his hand too quickly to whomever he encounters.&rdquo;</div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  Thus Spoke Zarathustra Memes &mdash; Nietzsche &mdash; Built by c_Callicles &amp; m_Callicles &mdash; 2026
+</footer>
+
+</body>
+</html>
